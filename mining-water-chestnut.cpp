@@ -1,5 +1,5 @@
 // Author : ysh
-// 02/13/2022 Sun 16:21:43.29
+// 02/14/2022 Mon 13:06:32.40
 // https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/J
 #include<bits/stdc++.h>
 using namespace std;
@@ -9,33 +9,35 @@ signed main() {
     cin.tie(0);
 
     int n;cin>>n;
-    int ans = 0;
-    int a[16] = {};
-    while(n--) {
-        int tmp;cin>>tmp;
-        int hold = 0;
-        for(int i = 0;i<15;i++) {
-            int t = tmp % 10;
-            a[i] = a[i] + t + hold;
-            hold = a[i] / 10;
-            a[i] = a[i] % 10;
-            if(t == 0&&hold == 0) {
-                break;
+    int a[n+1] = {};
+    int b[n+1] = {};
+    for(int i = 1;i<=n;i++) {
+        cin>>a[i];
+        b[i] = b[i - 1] + a[i];
+    }
+    int mmax = 0;
+    int tmp = 0;
+    int mmin = 0;
+    bool e = 1;
+    for(int i = 0;i<=n;i++) {
+        if((!e) && b[i] >= mmin) {
+            continue;
+        }
+        e = 0;
+        // for(int i : b) {
+        //     cout<<i<<" ";
+        // }
+        // cout<<" "<<mmax<<"\n";
+        tmp = b[i] + mmax;
+        for(int j = i+1;j<=n;j++) {
+            if(b[j] > tmp) {
+                mmin = b[i];
+                mmax = b[j] - b[i];
+                tmp = b[j];
             }
-            tmp = tmp / 10;
+            //mmax = max(mmax,b[j] - b[i]);
         }
     }
-    bool on = 0;
-    for(int i = 14;i>=0;i--) {
-        if(a[i]<0) {
-            cout<<"0";
-            return 0;
-        }
-    }
-    for(int i = 14;i>=0;i--) {
-        if(a[i] == 0&&on == 0) continue;
-        on = 1;
-        cout<<a[i];
-    }
+    cout<<(mmax >= 0 ? mmax : 0);
     return 0;
 }
