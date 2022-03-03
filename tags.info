@@ -1,5 +1,4 @@
 AGAR-king2.cpp priority_queue
-AGAR-king.cpp deque
 "palace emissary".cpp choj
 palace-emissary.cpp DFS
 palace-emissary.cpp BFS
@@ -38,3 +37,21 @@ mining-water-chestnut.cpp	contest
 Perfect-take.cpp	contest
 Water-problem.cpp	contest
 XOR-and-OR-problem.cpp	contest
+mining-water-chestnut.cpp	contest
+mining-water-chestnut.cpp	gp
+funny-woods2.cpp	deque
+kattis-Alphabet2.cpp	re
+kattis-Alphabet2.cpp	DP
+kattis-Radio_Commercials.cpp	DP
+Avoid-Local-Maximums.cpp	contest
+APCS-10901-03.cpp	list
+AP325-d020.cpp	set
+AP325-d020.cpp	pref
+AP325-d011.cpp	map
+AP325-d010.cpp	queue
+interval-calculation.cpp	choj
+interval-calculation.cpp	citrc
+interval-calculation.cpp	unordered_map
+interval-calculation.cpp	DP
+interval-calculation2.cpp	set
+Zerojudge-h029.cpp	tree

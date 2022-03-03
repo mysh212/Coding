@@ -11,13 +11,9 @@ int main() {
     int n;cin>>n;
     while(n--) {
         int tmp;cin>>tmp;
-        if(a.test(tmp) == 1) a[tmp] = 0;
-        else a[tmp] = 1;
+        if(a.test(tmp) == 1) a.reset(tmp);
+        else a.set(tmp);
     }
-    for(int i = 0;i<10000000;i++) {
-        if(a.test(i) == 1) {
-            cout<<i;
-            return 0;
-        }
-    }
+    cout<<a._Find_first();
+    return 0;
 }
