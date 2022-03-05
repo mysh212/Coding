@@ -11,6 +11,7 @@ struct box{
     box* right;
     int wei = 0;
 };
+box b[(((int) 1e5 ) << 1)+ 5];
 int count(box*,box*);
 int maketree(box*,box*);
 int check(box*,box*,int);
@@ -20,7 +21,6 @@ int main() {
     cin.tie(0);
 
     int n,m;cin>>n>>m;
-    box b[(n<<1)+5];
     queue<int>f;
     for(int i = n;i<=((n<<1) - 1);i++) {
         cin>>b[i].wei;
