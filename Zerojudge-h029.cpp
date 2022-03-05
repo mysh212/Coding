@@ -11,25 +11,26 @@ struct box{
     box* right;
     int wei = 0;
 };
-int count(box*,box*,int*);
+int count(box*,box*);
 int maketree(box*,box*);
-int check(box*,box*,int*,int);
+int check(box*,box*,int);
 int main() {
+    //freopen("3.in","r",stdin);
     ios::sync_with_stdio(false);
     cin.tie(0);
 
     int n,m;cin>>n>>m;
-    int a[(n<<1) + 5] = {};
+    box b[(n<<1)+5];
     queue<int>f;
     for(int i = n;i<=((n<<1) - 1);i++) {
-        cin>>a[i];
+        cin>>b[i].wei;
+        b[i].num = i;
     }
     int tmp;
    for(int i = 0;i<m;i++) {
        cin>>tmp;
        f.push(tmp);
     }
-    box b[(n<<1)+5];
     int tmpa,tmpb;
     for(int i = 1;i<n;i++) {
         cin>>tmp;
@@ -40,10 +41,6 @@ int main() {
         b[tmpa].up = &b[tmp];
         b[tmpb].up = &b[tmp];
     }
-    for(int i = n;i<=((n<<1) - 1);i++) {
-        b[i].wei = a[i];
-        b[i].num = i;
-    }
    maketree(&b[1],b);
    /*
     for(auto i : b) {
@@ -53,20 +50,20 @@ int main() {
     */
     while(!f.empty()) {
         //printf("%d",f.front());
-        cout<<check(&b[1],b,a,f.front())<<" ";f.pop();
+        cout<<check(&b[1],b,f.front())<<" ";f.pop();
         //printf("\n");
     }
     return 0;
 }
-int count(box* now,box* b,int* a) {
+int count(box* now,box* b) {
     if(now->no == 0) return now->wei;
-    return count(now->left,b,a) + count(now->right,b,a);
+    return count(now->left,b) + count(now->right,b);
 }
 int maketree(box* now,box* b) {
     if(now->no == 0) return now->wei;
     return now->wei = maketree(now->left,b) + maketree(now->right,b);
 }
-int check(box* now,box* b,int* a,int wei) {
+int check(box* now,box* b,int wei) {
     //printf("->%d",(now->no == 0 ? now->num : now->no));
     if(now->no == 0) {
         now->wei += wei;
@@ -74,9 +71,9 @@ int check(box* now,box* b,int* a,int wei) {
     } else {
         now->wei += wei;
         if(now->left->wei > now->right->wei) {
-            return check(now->right,b,a,wei);
+            return check(now->right,b,wei);
         } else {
-            return check(now->left,b,a,wei);
+            return check(now->left,b,wei);
         }
     }
 }

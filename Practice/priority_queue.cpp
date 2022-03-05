@@ -16,4 +16,9 @@ int main() {
         cout<<now.first<<" "<<now.second<<"\n";
         f.pop();
     }
+    set<int>e;
+    e.insert(3);
+    e.insert(5);
+    e.insert(7);
+    cout<<*next(e.begin());
 }

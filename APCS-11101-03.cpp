@@ -2,42 +2,27 @@
 // 01/10/2022 Mon 11:19:39.61
 #include<bits/stdc++.h>
 using namespace std;
-int check(string a,int b) {
-    if(b & 1 == 1) return 0;
-    b = b>>1;
-    for(int i = 0;i<b;i++) {
-        // printf("[%d,%d]",i,b+i);
-        if(a.at(i) != a.at(b + i)) return 0;
-    }
-    return 1;
-}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
     int n;cin>>n;
     vector<string>f(n);
-    int b[n] = {};
     for(int i = 0;i<n;i++) {
         cin>>f[i];
-        b[i] = f[i].length();
-        // cout<<b[i]<<"\n";
     }
+    sort(f.begin(),f.end());
     int ans = 0;
-    for(int i = 0;i<n;i++) {
-        for(int j = i + 1;j<n;j++) {
-            if(!(b[i] == b[j])) {
-                if(b[i]>b[j]) {
-                    if(f[i].find(f[j]) != -1) {
-                        ans+=check(f[i]+f[j],b[i]+b[j]);
-                    }
-                } else {
-                    if(f[j].find(f[i]) != -1) {
-                        ans+=check(f[i]+f[j],b[i]+b[j]);
-                    }
+    for(string i : f) {
+        int l = i.size();
+        for(int j = 1;(j * 2) < l;j++) {
+            if(i.substr(0,j) == i.substr(l - j)) {
+                //printf("if %s == %s then find %s\n",i.substr(0,j).c_str(),i.substr(l - j).c_str(),i.substr(j,l-(j*2)).c_str());
+                if(binary_search(f.begin(),f.end(),i.substr(j,l-(j*2))) == true) {
+                    //printf("!");
+                    ans++;
                 }
             }
-            // cout<<f[i]+f[j]<<"\n";
         }
     }
     cout<<ans;
