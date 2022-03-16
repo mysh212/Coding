@@ -60,3 +60,17 @@ APCS-11101-03-2.cpp	set
 APCS-11101-03-2.cpp	hash
 APCS-11101-03-2.cpp	unordered_set
 Zerojudge-h029.cpp	apcs
+Zerojudge-h028.cpp	struct
+Zerojudge-h028.cpp	greedy
+Zerojudge-h028.cpp	APCS
+Zerojudge-h028.cpp	re
+Zerojudge-h028.cpp	pointer
+AP325-d043.cpp	deque
+AP325-d043.cpp	greedy
+AP325-d015.cpp	set
+AP325-d028.cpp	vector
+AP325-d028.cpp	stack
+sweep-line	AP325-d050.cpp
+struct	AP325-d050.cpp
+AP325-d066.cpp	DP
+AP325-d067.cpp	DP

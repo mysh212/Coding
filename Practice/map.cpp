@@ -11,5 +11,5 @@ int main() {
     m[7]=6;
     m[9]=5;
     m[9]=7;
-    cout<<m.find(7)->first<<" "<<m.erase(1);
+    cout<<m.find(7)->second<<" "<<m.erase(10);
 }
