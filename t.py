@@ -1,12 +1,5 @@
 # Author : ysh
-# 04/12/2022 Tue 21:42:17.67
-a = 0
-while True:
-    try:
-        for i in input().split():
-            if i == '':
-                break
-            a = a + int(i)
-    except:
-        print(a)
-        break
+# 04/22/2022 Fri 21:35:05.81
+print("100 10000000")
+for i in range(200):
+    print(100000,end = ' ')
