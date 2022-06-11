@@ -115,3 +115,17 @@ APCS-11001-3.cpp	set
 APCS-11001-4.cpp	DP
 AP325-d080.cpp	DP
 AP325-d080.cpp	eg.
+Nearest-Smaller-Values.cpp  priority_queue
+Knapsack1.cpp	DP
+Cut.cpp	DP
+AP325-d079-3.cpp	DP
+AP325-d079-3.cpp	re
+Zerojudge-d784.cpp	DP
+Zerojudge-d784-3.cpp	DP
+Zerojudge-d784-2.cpp	DP
+Zerojudge-f315-3.cpp	seg_tree
+Zerojudge-d788.cpp	seg_tree
+seat.cpp	fast-power
+seat.cpp	fib
+Zerojudge-d828.cpp	fast-power
+Zerojudge-d828.cpp	fib
