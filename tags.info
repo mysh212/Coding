@@ -129,3 +129,9 @@ seat.cpp	fast-power
 seat.cpp	fib
 Zerojudge-d828.cpp	fast-power
 Zerojudge-d828.cpp	fib
+APCS-11106-4-3.cpp	DP
+APCS-11106-4-2.cpp	DP
+APCS-11106-4.cpp	DP
+APCS-11106-3-3.cpp	binary_search
+Zerojudge-f680-2.cpp	DFS
+Zerojudge-f680-2.cpp	class
