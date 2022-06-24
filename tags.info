@@ -70,8 +70,8 @@ AP325-d043.cpp	greedy
 AP325-d015.cpp	set
 AP325-d028.cpp	vector
 AP325-d028.cpp	stack
-sweep-line	AP325-d050.cpp
-struct	AP325-d050.cpp
+AP325-d050.cpp	sweep-line
+AP325-d050.cpp	struct
 AP325-d066.cpp	DP
 AP325-d067.cpp	DP
 Zerojudge-g774-2.cpp	DP
@@ -135,3 +135,13 @@ APCS-11106-4.cpp	DP
 APCS-11106-3-3.cpp	binary_search
 Zerojudge-f680-2.cpp	DFS
 Zerojudge-f680-2.cpp	class
+Zerojudge-c299.cpp	bitset
+Zerojudge-b051.cpp	compare
+Zerojudge-i426.cpp	list
+tcirc-b035.cpp	multiset
+tcirc-b035-2.cpp	gp_hash_table
+Zerojudge-f416-3.cpp	string
+Zerojudge-f416-3.cpp	KMP
+Zerojudge-a133.cpp	DP
+Zerojudge-d052.cpp	DP
+Zerojudge-a007-2.cpp	prime

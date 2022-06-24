@@ -5,18 +5,20 @@ a = []
 for i in input().split():
     if i == '0':
         break
-    a.append(int(i))
+    a.append((i))
 for i in range(int(input())):
     n = input()
     if n.find(' ') != -1:
-        a.append(int(n[4:]))
+        a.append((n[4:]))
     if n == "Qry":
         if len(a) == 0:
             print("Empty")
             continue
-        for j in a:
-            print(j,end = ' ')
-        print('')
+        for j in range(len(a)):
+            if(j == len(a) - 1):
+                print(a[j])
+                continue
+            print(a[j],end = ' ')
     if n == "Del":
         try:
             tmp = a.pop()

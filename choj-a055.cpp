@@ -7,10 +7,10 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    vector<int>f;
-    int n;
+    vector<string>f;
+    string n;
     while(cin>>n) {
-        if(n == 0) break;
+        if(n == "0") break;
         f.push_back(n);
     }
     int m;cin>>m;
@@ -18,7 +18,7 @@ int main() {
     while(m--) {
         cin>>a;
         if(a == "Add") {
-            int tmp;cin>>tmp;
+            string tmp;cin>>tmp;
             f.push_back(tmp);
         }
         if(a == "Qry") {
@@ -26,10 +26,9 @@ int main() {
                 cout<<"Empty\n";
                 continue;
             }
-            for(int i : f) {
-                cout<<i<<" ";
+            for(int i = 0,len = f.size();i<len;i++) {
+                cout<<f[i]<<" \n"[i == len - 1];
             }
-            cout<<"\n";
         }
         if(a == "Del") {
             if(f.empty()) {
