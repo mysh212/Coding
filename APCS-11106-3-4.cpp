@@ -28,7 +28,7 @@ int main() {
     int ans = -1;
     while(1) {
         ans++;
-        cerr<<x<<" "<<y<<"\n";
+        // cerr<<x<<" "<<y<<"\n";
         if(d == 0) {
             auto now = s.find(y);
             int nx = 0;
