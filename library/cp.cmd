@@ -1,0 +1,1 @@
+echo #include<C:\Users\user\Coding\library\strint.h>|clip
