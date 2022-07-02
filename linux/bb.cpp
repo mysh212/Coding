@@ -29,7 +29,7 @@ int main(int argc, char *args[]) {
         cerr<<" >Start building...\n";
         int tmp = system(x);
         if(tmp == 0) {
-            cerr<<" >Finished\n";
+            cerr<<" >Finished\n\n";
             tmp = system(y);
         }
         cerr<<"\n[Progress return "<<tmp<<"]\n";
@@ -58,7 +58,7 @@ int main(int argc, char *args[]) {
     cerr<<" >Start building...\n";
     int tmp = system(x);
     if(tmp == 0) {
-        cerr<<" >Finished\n";
+        cerr<<" >Finished\n\n";
         tmp = system(y);
     }
     cerr<<"\n[Progress return "<<tmp<<"]\n";
