@@ -12,11 +12,12 @@ int main(int argc, char *args[]) {
         return -1;
     }
     char x[10000];
-    strcat(x,"rer ");
+    strcat(x,"call ");
     strcat(x,args[1]);
     // cerr<<x;
     // system("pause");
-    system(x);
+    int tmp = system(x);
+    cerr<<"\n[Progress Return "<<tmp<<"]\n";
     cerr<<"[Running period "<<(clock() - t) / 1000.0<<" sec]\n";
     return 0;
 }
