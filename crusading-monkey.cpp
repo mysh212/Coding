@@ -2,7 +2,7 @@
 // 07/01/2022 Fri 20:16:50.82
 // https://choj.me/problem/c004
 #include<bits/stdc++.h>
-using namespace std; 
+using namespace std;
 struct box{
     int x,y,z,r;
     box(int a,int b,int c,int d = 0):
