@@ -1,4 +1,5 @@
 #include <iostream>
+#include<sstream>
 #include <ctime>
 #include<string.h>
 #include <sys/stat.h>
@@ -28,12 +29,23 @@ int main(int argc,char *args[]) {
             return 1;
         }
     }
-    freopen(y,"w",stdout);
+    freopen(y,"a",stdout);
     cout<<"// Author : ysh\n// ";
     time_t now = time(0);
     tm *ltm = localtime(&now);
     string a = ctime(&now);
     cout<<ltm->tm_mon<<'/'<<ltm->tm_mday<<'/'<<1900 + ltm->tm_year<<' '<<a.substr(0,3)<<' '<<ltm->tm_hour << ":"<<ltm->tm_min << ":"<<ltm->tm_sec << '\n';
+    char z[10000];
+    stringstream r;
+    r<<ltm->tm_mon<<'/'<<ltm->tm_mday<<'/'<<1900 + ltm->tm_year;
+    r<<a.substr(0,3);
+    r<<ltm->tm_hour << ":"<<ltm->tm_min << ":"<<ltm->tm_sec << '\n';
+    string t;
+    while(r >> t) {
+        cerr<<t<<"\n";
+        strcat(z,t.c_str());
+        strcat(z," ");
+    }
     if(argc == 3 && c) {
         cout<<"// "<<args[2]<<"\n";
     }
@@ -42,4 +54,7 @@ int main(int argc,char *args[]) {
     strcat(x,"code ");
     strcat(x,y);
     system(x);
+    auto f = fopen("mc.tmp","a");
+    fprintf(f,"%s        %s\n",z,y);
+    return 0;
 }
