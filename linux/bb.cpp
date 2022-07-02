@@ -2,6 +2,7 @@
 // 06/19/2022 Sun  8:06:59.77
 #include<bits/stdc++.h>
 using namespace std;
+#include</home/ysh/桌面/Coding/Coding/linux/strint.h>
 int main(int argc, char *args[]) {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -29,7 +30,7 @@ int main(int argc, char *args[]) {
         cerr<<" >Start building...\n";
         int tmp = system(x);
         if(tmp == 0) {
-            cerr<<" >Finished\n";
+            cerr<<" >Finished\n\n";
             tmp = system(y);
         }
         cerr<<"\n[Progress return "<<tmp<<"]\n";
@@ -58,7 +59,7 @@ int main(int argc, char *args[]) {
     cerr<<" >Start building...\n";
     int tmp = system(x);
     if(tmp == 0) {
-        cerr<<" >Finished\n";
+        cerr<<" >Finished\n\n";
         tmp = system(y);
     }
     cerr<<"\n[Progress return "<<tmp<<"]\n";

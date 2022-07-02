@@ -1,0 +1,1 @@
+xclip -selection c "Zerojudge-c379.cpp"
