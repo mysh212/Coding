@@ -6,6 +6,30 @@
 #include <unistd.h>
 #include <fstream>
 using namespace std;
+inline string tos(int a) {
+    if(a == 0) return "00";
+    string s;
+    while(a != 0) {
+        int now = a % 10;
+        char n = now + '0';
+        s = n + s;
+        a = a / 10;
+    }
+    if(s.size() == 1) s = '0' + s;
+    return s;
+}
+inline string tosp(int a) {
+    if(a == 0) return "00";
+    string s;
+    while(a != 0) {
+        int now = a % 10;
+        char n = now + '0';
+        s = n + s;
+        a = a / 10;
+    }
+    if(s.size() == 1) s = ' ' + s;
+    return s;
+}
 inline bool exists_test3 (const std::string& name) {
   struct stat buffer;   
   return (stat (name.c_str(), &buffer) == 0); 
@@ -17,11 +41,21 @@ int main(int argc,char *args[]) {
     }
     bool c = 1;
     char y[10000];
-    string s;
-    s.assign(args[1]);
-    if(s.find(".cpp") != -1) s.replace(s.find(".cpp"),4,"");
-    strcat(y,s.c_str());
-    strcat(y,".cpp");
+    if(argc == 3 && (args[2][0] == 'z' || args[2][0] == 'Z')) {
+        string s;
+        s.assign(args[1]);
+        if(s.find(".cpp") != -1) s.replace(s.find(".cpp"),4,"");
+        s = "Zerojudge-" + s;
+        strcat(y,s.c_str());
+        strcat(y,".cpp");
+        c = 0;
+    } else {
+        string s;
+        s.assign(args[1]);
+        if(s.find(".cpp") != -1) s.replace(s.find(".cpp"),4,"");
+        strcat(y,s.c_str());
+        strcat(y,".cpp");
+    }
     if(exists_test3(y)) {
         c = 0;
         if(!(argc == 3 && args[2][0] == 'S')) {
@@ -29,23 +63,23 @@ int main(int argc,char *args[]) {
             return 1;
         }
     }
-    freopen(y,"a",stdout);
+    freopen(y,"w",stdout);
     cout<<"// Author : ysh\n// ";
     time_t now = time(0);
     tm *ltm = localtime(&now);
     string a = ctime(&now);
-    cout<<ltm->tm_mon<<'/'<<ltm->tm_mday<<'/'<<1900 + ltm->tm_year<<' '<<a.substr(0,3)<<' '<<ltm->tm_hour << ":"<<ltm->tm_min << ":"<<ltm->tm_sec << '\n';
+    cout<<tos(ltm->tm_mon + 1)<<'/'<<tos(ltm->tm_mday)<<'/'<<1900 + ltm->tm_year<<' '<<a.substr(0,3)<<' '<<tosp(ltm->tm_hour) << ":"<<tos(ltm->tm_min) << ":"<<tos(ltm->tm_sec) << '\n';
     char z[10000];
     stringstream r;
-    r<<ltm->tm_mon<<'/'<<ltm->tm_mday<<'/'<<1900 + ltm->tm_year;
-    r<<a.substr(0,3);
-    r<<ltm->tm_hour << ":"<<ltm->tm_min << ":"<<ltm->tm_sec << '\n';
+    r<<tos(ltm->tm_mon + 1)<<'/'<<tos(ltm->tm_mday)<<'/'<<1900 + ltm->tm_year;
+    r<<'-'<<a.substr(0,3);
+    r<<'-'<<tosp(ltm->tm_hour) << ":"<<tos(ltm->tm_min) << ":"<<tos(ltm->tm_sec) << '\n';
     string t;
     while(r >> t) {
-        cerr<<t<<"\n";
+        while(t.find('-') != -1) t.replace(t.find('-'),1," ");
         strcat(z,t.c_str());
-        strcat(z," ");
     }
+    strcat(z,".14");
     if(argc == 3 && c) {
         cout<<"// "<<args[2]<<"\n";
     }
@@ -54,7 +88,7 @@ int main(int argc,char *args[]) {
     strcat(x,"code ");
     strcat(x,y);
     system(x);
-    auto f = fopen("mc.tmp","a");
+    auto f = fopen("mc.info","a");
     fprintf(f,"%s        %s\n",z,y);
     return 0;
 }
