@@ -1,293 +1,155 @@
-JNJ-c042.cpp
-APCS-10706-02.cpp
-JNJ-d087.cpp
-JNJ-c026.cpp
-Zerojudge-f493-T.cpp
-Zerojudge-a607[N].cpp
-APCS-10610-03.cpp
-Zerojudge-f493.cpp
-JNJ-c055.cpp
-Plates.cpp
-Zerojudge-f493-F.cpp
-JNJ-c025.cpp
-JNJ-c019.cpp
-APCS-10907-01.cpp
-APCS-10907-02.cpp
-JNJ-c049.cpp
-JNJ-c043.cpp
-Zerojudge-c173.cpp
-JNJ-b022.cpp
-decrypt.cpp
-Zerojudge-e156.cpp
-APCS-10910-02.cpp
-Zerojudge-f680.cpp
-Zerojudge-f680-show.cpp
-Zerojudge-a565-show.cpp
-Zerojudge-a565.cpp
-Zerojudge-f822-show.cpp
-Zerojudge-f822.cpp
-Zerojudge-g277-backup.cpp
-Zerojudge-g277.cpp
-Zerojudge-d472.cpp
-Zerojudge-e527.bkp.cpp
-Zerojudge-e527.cpp
-Zerojudge-d115.cpp
-Zerojudge-e605.cpp
-Zerojudge-f314.cpp
-Zerojudge-b123.cpp
-Zerojudge-z589.cpp
-Zerojudge-g277-backup2.cpp
-TOI-202110-01.cpp
-TOI-202110-02.cpp
-TOI-202110-03.cpp
-TOI-202110-advance-01.cpp
-TOI-202110-advance-02.cpp
-TOI-202110-advance-02-test.cpp
-TOI-202110-advance-03.cpp
-TOI-202110-advance-02-backup.cpp
-Zerojudge-g541.cpp
-Zerojudge-a289.cpp
-Zerojudge-f315.cpp
-APCS-11011-03.cpp
-APCS-11011-01.cpp
-APCS-11011-01-2.cpp
-Zerojudge-g555.cpp
-Zerojudge-b772.cpp
-Zerojudge-g730.cpp
-APCS-11101-03.cpp
-APCS-11001-04.cpp
-Zerojudge-d406.cpp
-Zerojudge-c291.cpp
-Zerojudge-a981.cpp
-two_to_ten.cpp
-kattis-Radio_Commercials.cpp
-kattis-Alphabet.cpp
-Zerojudge-d732.cpp
-Zerojudge-d732-2.cpp
-APCS-11101-04.cpp
-triplets.cpp
-triplets2.cpp
-triplets3.cpp
-Fraction Multiplication.cpp
-triangle-perimeter-calculate.cpp
-triangle-perimeter-calculate2.cpp
-resort.cpp
-AGAR-king.cpp
-AGAR-king2.cpp
-palace-emissary.cpp
-fast-power.cpp
-Untitled-1.cpp
-Equidistant-Letters.cpp
-a-city-without-myself.cpp
-fake-sun.cpp
-fake-sun2.cpp
-Reverse-and-Concatenate.cpp
-[P]Fortune-Telling.cpp
-OKEA.cpp
-lonelier.cpp
-funny-woods.cpp
-funny-woods2.cpp
-disappearing-number.cpp
-disappearing-number2.cpp
-flower-picking.cpp
-flower-picking-II.cpp
-flower-picking-II2.cpp
-Trips.cpp
-Number-compare.cpp
-Power-of-art.cpp
-Perfect-take.cpp
-Water-problem.cpp
-bamboo's-bamboo-sequence.cpp
-Colten's-math-problem.cpp
-XOR-and-OR-problem.cpp
-Colten-work-in-THSR.cpp
-mining-water-chestnut2.cpp
-Number-compare2.cpp
-mining-water-chestnut.cpp
-kattis-Alphabet2.cpp
-Min-Or-Sum.cpp
-Avoid-Local-Maximums.cpp
-Infinite-Set.cpp
-APCS-10901-03.cpp
-APCS-10901-03-2.cpp
-AP325-d011.cpp
-AP325-d010.cpp
-AP325-d010-2.cpp
-AP325-d020.cpp
-[P]AP325-d016.cpp
-interval-calculation.cpp
-interval-calculation2.cpp
-Zerojudge-h029.cpp
-[T]Zerojudge-h029.cpp
-std_sort_cp_times.cpp
-[P]APCS-10910-04.cpp
-APCS-11101-03-2.cpp
-Zerojudge-h028.cpp
-AP325-d043.cpp
-AP325-d015.cpp
-AP325-d028.cpp
-AP325-d079.cpp
-AP325-d050.cpp
-AP325-d050-2.cpp
-AP325-d066.cpp
-AP325-d067.cpp
-AP325-d052.cpp
-AP325-d068.cpp
-AP325-d118.cpp
-calculating.cpp
-maximum-gap (1).cpp
-maximum-gap.cpp
+a-city-without-myself.cpp	     seat-2.cpp
+AGAR-king2.cpp			     seat.cpp
+AGAR-king.cpp			     Seismic.cpp
+annia's-gift.cpp		     sigma-2.cpp
+AP325-d001.cpp			     sigma-3.cpp
+AP325-d010-2.cpp		     sigma-4.cpp
+AP325-d010.cpp			     sigma.cpp
+AP325-d011.cpp			     std_sort_cp_times.cpp
+AP325-d015.cpp			     sum-of-score.cpp
+AP325-d020.cpp			     tcirc-b035-2.cpp
+AP325-d028.cpp			     tcirc-b035.cpp
+AP325-d043.cpp			     tcirc-c024.cpp
+AP325-d050-2.cpp		     t.cpp
+AP325-d050.cpp			     tmp.cpp
+AP325-d052.cpp			     TOI-202110-01.cpp
+AP325-d066.cpp			     TOI-202110-02.cpp
+AP325-d066-show.cpp		     TOI-202110-03.cpp
+AP325-d067.cpp			     TOI-202110-advance-01.cpp
+AP325-d068.cpp			     TOI-202110-advance-02-backup.cpp
+AP325-d069.cpp			     TOI-202110-advance-02.cpp
+AP325-d070.cpp			     TOI-202110-advance-02-test.cpp
+AP325-d071.cpp			     TOI-202110-advance-03.cpp
+AP325-d072-2.cpp		     tower.cpp
+AP325-d072.cpp			     triangle-perimeter-calculate2.cpp
+AP325-d076.cpp			     triangle-perimeter-calculate.cpp
+AP325-d077-2.cpp		     triplets2.cpp
+AP325-d077-3.cpp		     triplets3.cpp
+AP325-d077-4.cpp		     triplets.cpp
+AP325-d077.cpp			     Trips.cpp
+AP325-d078-2.cpp		     Turn.cpp
+AP325-d078.cpp			     two_to_ten.cpp
+AP325-d079-2.cpp		     Typo.cpp
+AP325-d079-3.cpp		     [T]Zerojudge-h029.cpp
+AP325-d079.cpp			     Untitled-1.cpp
+AP325-d080.cpp			     UVA-10035.cpp
+AP325-d090.cpp			     Water-problem.cpp
+AP325-d090-show.cpp		     XOR-and-OR-problem.cpp
+AP325-d095.cpp			     Zerojudge-a007-2.cpp
+AP325-d118.cpp			     Zerojudge-a007.cpp
+APCS-10503-3.cpp		     Zerojudge-a009.cpp
+APCS-10503-4-2.cpp		     Zerojudge-a015.cpp
+APCS-10503-4-3.cpp		     Zerojudge-a022.cpp
+APCS-10503-4.cpp		     Zerojudge-a024-2.cpp
+APCS-10610-03.cpp		     Zerojudge-a024.cpp
+APCS-10610-3.cpp		     Zerojudge-a038.cpp
+APCS-10610-4.cpp		     Zerojudge-a065.cpp
+APCS-10706-02.cpp		     Zerojudge-a091.cpp
+APCS-10901-03-2.cpp		     Zerojudge-a121.cpp
+APCS-10901-03.cpp		     Zerojudge-a129.cpp
+APCS-10907-01.cpp		     Zerojudge-a133.cpp
+APCS-10907-02.cpp		     Zerojudge-a215.cpp
+APCS-10907-3.cpp		     Zerojudge-a224-2.cpp
+APCS-10910-02.cpp		     Zerojudge-a224.cpp
+APCS-10910-4.cpp		     Zerojudge-a289.cpp
+APCS-11001-04.cpp		     Zerojudge-a414.cpp
+APCS-11001-3.cpp		     Zerojudge-a518.cpp
+APCS-11001-4.cpp		     Zerojudge-a528.cpp
+APCS-11009-3.cpp		     Zerojudge-a565.cpp
+APCS-11011-01-2.cpp		     Zerojudge-a565-show.cpp
+APCS-11011-01.cpp		     Zerojudge-a607[N].cpp
+APCS-11011-03.cpp		     Zerojudge-a693.cpp
+APCS-11101-03-2.cpp		     Zerojudge-a738.cpp
+APCS-11101-03.cpp		     Zerojudge-a824.cpp
+APCS-11101-04.cpp		     Zerojudge-a915.cpp
+APCS-11106-3-2.cpp		     Zerojudge-a981.cpp
+APCS-11106-3-3.cpp		     Zerojudge-b051.cpp
+APCS-11106-3-4.cpp		     Zerojudge-b123.cpp
+APCS-11106-3-5.cpp		     Zerojudge-b184.cpp
+APCS-11106-3.cpp		     Zerojudge-b367.cpp
+APCS-11106-4-2.cpp		     Zerojudge-b430.cpp
+APCS-11106-4-3.cpp		     Zerojudge-b517.cpp
+APCS-11106-4.cpp		     Zerojudge-b552.cpp
+Avoid-Local-Maximums.cpp	     Zerojudge-b772.cpp
+award.cpp			     Zerojudge-b898.cpp
+bamboo's-bamboo-sequence.cpp	     Zerojudge-b967.cpp
+becoming-the-best-coser.cpp	     Zerojudge-c067.cpp
+calculating.cpp			     Zerojudge-c173.cpp
+choj-a055.cpp			     Zerojudge-c291.cpp
+clock.cpp			     Zerojudge-c299.cpp
+coin-game.cpp			     Zerojudge-c379.cpp
+Colten's-math-problem.cpp	     Zerojudge-c462.cpp
+Colten-work-in-THSR.cpp		     Zerojudge-d052.cpp
+crusading-monkey.cpp		     Zerojudge-d115.cpp
+Cut.cpp				     Zerojudge-d212-2.cpp
+decrypt.cpp			     Zerojudge-d212.cpp
+disappearing-number2.cpp	     Zerojudge-d406.cpp
+disappearing-number.cpp		     Zerojudge-d472.cpp
+EIKO's-concert.cpp		     Zerojudge-d539.cpp
+eo.cpp				     Zerojudge-d636-2.cpp
+Equidistant-Letters.cpp		     Zerojudge-d636.cpp
+fake-sun2.cpp			     Zerojudge-d652.cpp
+fake-sun.cpp			     Zerojudge-d732-2.cpp
+fast-power.cpp			     Zerojudge-d732.cpp
+flower-picking.cpp		     Zerojudge-d784-2.cpp
+flower-picking-II2.cpp		     Zerojudge-d784-3.cpp
+flower-picking-II.cpp		     Zerojudge-d784.cpp
+Fraction\ Multiplication.cpp	     Zerojudge-d788.cpp
+funny-woods2.cpp		     Zerojudge-d828.cpp
+funny-woods.cpp			     Zerojudge-e156.cpp
+going-out-at-night.cpp		     Zerojudge-e284.cpp
+I2.cpp				     Zerojudge-e527.bkp.cpp
+Infinite-Set.cpp		     Zerojudge-e527.cpp
+interval-calculation2.cpp	     Zerojudge-e605.cpp
+interval-calculation.cpp	     Zerojudge-e809-2.cpp
+JNJ-b022.cpp			     Zerojudge-e809-3.cpp
+JNJ-c019.cpp			     Zerojudge-e809.cpp
+JNJ-c025.cpp			     Zerojudge-e810-2.cpp
+JNJ-c026.cpp			     Zerojudge-e810-3.cpp
+JNJ-c042.cpp			     Zerojudge-e810.cpp
+JNJ-c043.cpp			     Zerojudge-f302.cpp
+JNJ-c049.cpp			     Zerojudge-f314-2.cpp
+JNJ-c055.cpp			     Zerojudge-f314-3.cpp
+JNJ-d087.cpp			     Zerojudge-f314.cpp
+kattis-Alphabet2.cpp		     Zerojudge-f315-2.cpp
+kattis-Alphabet.cpp		     Zerojudge-f315-3.cpp
+kattis-Increasing-Subsequence-2.cpp  Zerojudge-f315.cpp
+kattis-Increasing-Subsequence-3.cpp  Zerojudge-f416-2.cpp
+kattis-Increasing-Subsequence.cpp    Zerojudge-f416-3.cpp
+kattis-Knapsack-2.cpp		     Zerojudge-f416.cpp
+kattis-Knapsack-3.cpp		     Zerojudge-f493.cpp
+kattis-Knapsack-4.cpp		     Zerojudge-f493-F.cpp
+kattis-Radio_Commercials.cpp	     Zerojudge-f493-T.cpp
+kattis-Walrus-Weights.cpp	     Zerojudge-f640-2.cpp
+Knapsack1.cpp			     Zerojudge-f640.cpp
+Knapsack2.cpp			     Zerojudge-f680-2.cpp
+leetcode-26.cpp			     Zerojudge-f680.cpp
+leetcode-5270.cpp		     Zerojudge-f680-show.cpp
+leetcode-5289.cpp		     Zerojudge-f822.cpp
+leetcode-6094.cpp		     Zerojudge-f822-show.cpp
+lonelier.cpp			     Zerojudge-f987.cpp
+maximum-gap\ (1).cpp		     Zerojudge-g277-2.cpp
+maximum-gap.cpp			     Zerojudge-g277-3.cpp
+mining-water-chestnut2.cpp	     Zerojudge-g277-backup2.cpp
+mining-water-chestnut.cpp	     Zerojudge-g277-backup.cpp
+Min-Or-Sum.cpp			     Zerojudge-g277.cpp
+Nearest-Smaller-Values.cpp	     Zerojudge-g541.cpp
+Number-compare2.cpp		     Zerojudge-g555.cpp
+Number-compare.cpp		     Zerojudge-g556.cpp
+OKEA.cpp			     Zerojudge-g730.cpp
+palace-emissary.cpp		     Zerojudge-g774-2.cpp
+[P]AP325-d016.cpp		     Zerojudge-g774-3.cpp
+[P]APCS-10910-04.cpp		     Zerojudge-g774.cpp
+[P]APCS-11011-4.cpp		     Zerojudge-g776.cpp
+Pascal's-Triangle.cpp		     Zerojudge-h028.cpp
+Perfect-take.cpp		     Zerojudge-h029.cpp
+[P]Fortune-Telling.cpp		     Zerojudge-h319-2.cpp
+[P]kattis-Knapsack.cpp		     Zerojudge-h319-3.cpp
+Plates.cpp			     Zerojudge-h319-4.cpp
+plus.cpp			     Zerojudge-h319.cpp
+POJ-1703.cpp			     Zerojudge-h557.cpp
+Power-of-art.cpp		     Zerojudge-i426.cpp
+power-saving-path.cpp		     Zerojudge-i510-2.cpp
+resort.cpp			     Zerojudge-i510.cpp
+Reverse-and-Concatenate.cpp	     Zerojudge-z589.cpp
 search.cpp
-Zerojudge-g774.cpp
-Zerojudge-g774-2.cpp
-Zerojudge-g774-3.cpp
-Zerojudge-d636.cpp
-Zerojudge-d636-2.cpp
-Zerojudge-b430.cpp
-Zerojudge-g776.cpp
-Zerojudge-a738.cpp
-Zerojudge-a915.cpp
-Zerojudge-a528.cpp
-Zerojudge-a414.cpp
-Zerojudge-a224.cpp
-Zerojudge-a224-2.cpp
-Zerojudge-a022.cpp
-Zerojudge-a038.cpp
-Zerojudge-a065.cpp
-plus.cpp
-Zerojudge-h319.cpp
-Zerojudge-h319-2.cpp
-Zerojudge-h319-3.cpp
-Zerojudge-a024.cpp
-Zerojudge-d539.cpp
-Zerojudge-f640.cpp
-kattis-Walrus-Weights.cpp
-Zerojudge-b184.cpp
-Zerojudge-a009.cpp
-eo.cpp
-Zerojudge-b367.cpp
-[P]kattis-Knapsack.cpp
-kattis-Knapsack-2.cpp
-Zerojudge-a129.cpp
-award.cpp
-AP325-d090.cpp
-AP325-d090-show.cpp
-AP325-d095.cpp
-I2.cpp
-kattis-Increasing-Subsequence.cpp
-kattis-Knapsack-3.cpp
-Zerojudge-h557.cpp
-AP325-d069.cpp
-AP325-d070.cpp
-AP325-d071.cpp
-AP325-d076.cpp
-AP325-d077.cpp
-AP325-d077-2.cpp
-choj-a055.cpp
-Zerojudge-a091.cpp
-AP325-d078.cpp
-Zerojudge-f314-2.cpp
-Zerojudge-f314-3.cpp
-AP325-d077-3.cpp
-AP325-d066-show.cpp
-AP325-d078-2.cpp
-AP325-d077-4.cpp
-APCS-10503-3.cpp
-APCS-10503-4.cpp
-APCS-10503-4-2.cpp
-Zerojudge-b967.cpp
-APCS-10610-3.cpp
-sigma.cpp
-[P]APCS-11011-4.cpp
-sigma-2.cpp
-sigma-3.cpp
-sigma-4.cpp
-power-saving-path.cpp
-sum-of-score.cpp
-AP325-d072.cpp
-AP325-d072-2.cpp
-APCS-10610-4.cpp
-Zerojudge-g277-2.cpp
-APCS-11009-3.cpp
-Zerojudge-g277-3.cpp
-Zerojudge-d212.cpp
-Zerojudge-d212-2.cpp
-APCS-10907-3.cpp
-AP325-d079-2.cpp
-APCS-11001-3.cpp
-APCS-11001-4.cpp
-tower.cpp
-AP325-d080.cpp
-tcirc-c024.cpp
-APCS-10910-4.cpp
-Zerojudge-e809.cpp
-Zerojudge-e809-2.cpp
-Zerojudge-e809-3.cpp
-Zerojudge-e810.cpp
-Zerojudge-e810-2.cpp
-Zerojudge-e810-3.cpp
-POJ-1703.cpp
-Nearest-Smaller-Values.cpp
-Knapsack1.cpp
-kattis-Knapsack-4.cpp
-kattis-Increasing-Subsequence-2.cpp
-UVA-10035.cpp
-Pascal's-Triangle.cpp
-Turn.cpp
-Cut.cpp
-Seismic.cpp
-Typo.cpp
-tmp.cpp
-Zerojudge-d652.cpp
-AP325-d079-3.cpp
-Zerojudge-d784.cpp
-Zerojudge-d784-2.cpp
-Zerojudge-d784-3.cpp
-Knapsack2.cpp
-Zerojudge-f315-2.cpp
-Zerojudge-f315-3.cpp
-Zerojudge-d788.cpp
-seat.cpp
-Zerojudge-d828.cpp
-Zerojudge-f640-2.cpp
-Zerojudge-c462.cpp
-APCS-10503-4-3.cpp
-leetcode-26.cpp
-leetcode-5270.cpp
-leetcode-5289.cpp
-leetcode-6094.cpp
-APCS-11106-3.cpp
-APCS-11106-3-2.cpp
-APCS-11106-3-3.cpp
-APCS-11106-4.cpp
-APCS-11106-4-2.cpp
-Zerojudge-b898.cpp
-APCS-11106-4-3.cpp
-Zerojudge-f680-2.cpp
-APCS-11106-3-4.cpp
-Zerojudge-c299.cpp
-seat-2.cpp
-Zerojudge-b051.cpp
-Zerojudge-i426.cpp
-Zerojudge-a007.cpp
-clock.cpp
-Zerojudge-a518.cpp
-kattis-Increasing-Subsequence-3.cpp
-Zerojudge-a215.cpp
-tcirc-b035.cpp
-tcirc-b035-2.cpp
-Zerojudge-f416.cpp
-Zerojudge-f416-2.cpp
-Zerojudge-a015.cpp
-Zerojudge-f416-3.cpp
-Zerojudge-a133.cpp
-Zerojudge-d052.cpp
-Zerojudge-e284.cpp
-Zerojudge-a007-2.cpp
-Zerojudge-h319-4.cpp
-Zerojudge-f302.cpp
-Zerojudge-g556.cpp
-Zerojudge-b517.cpp
-Zerojudge-a824.cpp
-Zerojudge-b552.cpp
-Zerojudge-f987.cpp
