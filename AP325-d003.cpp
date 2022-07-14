@@ -1,9 +1,11 @@
 // Author : ysh
 // 07/08/2022 Fri 14:04:07
+// NF
 #include<bits/stdc++.h>
 using namespace std;
 int check(int,int);
 set<int>s;
+int t = 0;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -17,8 +19,9 @@ int main() {
     return 0;
 }
 int check(int l,int r) {
+    if(++t == 100) return -1;
     printf("[%d %d]\n",l,r);
-    assert(l <= r);
+    // assert(l < r);
     double mid = (l + r) / 2;
     auto found = s.lower_bound(mid);
     auto pv = prev(found);
@@ -42,5 +45,5 @@ int check(int l,int r) {
         rf = found;
         break;
     }
-    return check(*rf,r) + check(l,*rf) + (r - l);
+    return check(*rf + 1,r - 1) + check(l + 1,*rf - 1) + (r - l);
 }
