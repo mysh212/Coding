@@ -17,7 +17,9 @@ string findtroad(string s) {
 string readnow() {
     auto f = fopen("now.tmp","r");
     string s;
-    fscanf(f,"%s",&s);
+    char c[10000];
+    fscanf(f,"%s\n",&c);
+    s.assign(c);
     return s;
 }
 void writenow(string s) {
