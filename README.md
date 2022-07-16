@@ -29,12 +29,41 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d011.cpp)
 
+***[AP325-d012.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d012
+)***
+###### tags:  `fast-power`
+>[time=07,14,2022 Thu 22:28:10,35]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d012.cpp)
+
+***[AP325-d013.py](https://judge.tcirc.tw/ShowProblem?problemid=d013)***
+###### tags:  `fast-power`
+>[time=07,14,2022 Thu 23:03:13,67]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d013.py)
+
+***[AP325-d014.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d014)***
+###### tags:  `fib`
+>[time=07,14,2022 Thu 23:08:52,03]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d014.cpp)
+
 ***[AP325-d015.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d015)***
 ###### tags:  `set`
 >[time=03,09,2022 Wed 10:23:30,20]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d015.cpp)
+
+***[AP325-d019.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d019)***
+###### tags:  `half-brute`
+>[time=07,15,2022 Fri 19:13:53,14]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d019.cpp)
 
 ***[AP325-d020.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d020
 )***
@@ -43,6 +72,21 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d020.cpp)
+
+***[AP325-d021.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d021)***
+###### tags:  `set` `lower_bound` `brute`
+>[time=07,15,2022 Fri 22:50:36,14]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d021.cpp)
+
+***[AP325-d022.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d022
+)***
+###### tags:  `fast-power` `operator`
+>[time=07,16,2022 Sat  7:49:57,14]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d022.cpp)
 
 ***[AP325-d028.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d028)***
 ###### tags:  `vector` `stack`
@@ -185,6 +229,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/APCS-10503-4.cpp)
+
+***APCS-10610-3.cpp***
+###### tags:  `DP` `tree`
+>[time=05,01,2022 Sun 16:30:04,99]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/APCS-10610-3.cpp)
 
 ***APCS-10610-4.cpp***
 ###### tags:  `compare`
@@ -388,6 +439,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-a007-2.cpp)
+
+***[Zerojudge-a059-2.cpp](https://zerojudge.tw/ShowProblem?problemid=a059)***
+###### tags:  `pref` `map` `table`
+>[time=07,04,2022 Mon 16:56:48,47]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-a059-2.cpp)
 
 ***[Zerojudge-a121.cpp](https://zerojudge.tw/ShowProblem?problemid=a121)***
 ###### tags:  `prime`
@@ -801,7 +859,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=06,27,2022 Mon 11:30:29,62]
+>[time=07,02,2022 Sat 17:51:46,14]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -826,7 +884,7 @@
 ***APCS*** 1
 ***BFS*** 2
 ***DFS*** 3
-***DP*** 39
+***DP*** 40
 ***KMP*** 2
 ***TOI*** 1
 ***abba*** 1
@@ -834,6 +892,7 @@
 ***binary_search*** 2
 ***bit*** 5
 ***bitset*** 4
+***brute*** 1
 ***choj*** 17
 ***chsh-exam*** 6
 ***citrc*** 1
@@ -843,33 +902,37 @@
 ***deque*** 3
 ***eg.*** 1
 ***emissary".cpp*** 1
-***fast-power*** 4
-***fib*** 3
+***fast-power*** 7
+***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 1
 ***graph*** 2
 ***greedy*** 2
+***half-brute*** 1
 ***hash*** 1
 ***list*** 2
-***map*** 3
+***lower_bound*** 1
+***map*** 4
 ***multiset*** 1
+***operator*** 1
 ***pointer*** 1
-***pref*** 2
+***pref*** 3
 ***prime*** 3
 ***priority_queue*** 4
 ***queue*** 1
 ***re*** 3
 ***search*** 2
 ***seg_tree*** 5
-***set*** 5
+***set*** 6
 ***stack*** 1
 ***string*** 2
 ***struct*** 3
 ***sweep-line*** 1
+***table*** 1
 ***test*** 2
-***tree*** 3
+***tree*** 4
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-Á`ÃD¼Æ: 170
+ç¸½é¡Œæ•¸: 184

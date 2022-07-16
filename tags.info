@@ -174,3 +174,11 @@ Zerojudge-a059-2.cpp	table
 AP325-d014.cpp	fib
 AP325-d013.py	fast-power
 AP325-d012.cpp	fast-power
+AP325-d019.cpp	half-brute
+AP325-d021.cpp	set
+AP325-d021.cpp	lower_bound
+AP325-d021.cpp	brute
+AP325-d022.cpp	fast-power
+AP325-d022.cpp	operator
+APCS-10610-3.cpp	DP
+APCS-10610-3.cpp	tree
