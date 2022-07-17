@@ -183,3 +183,7 @@ AP325-d022.cpp	operator
 APCS-10610-3.cpp	DP
 APCS-10610-3.cpp	tree
 AP325-d031.cpp	map
+AP325-d032.cpp	priority_queue
+AP325-d032.cpp	DP
+AP325-d033.cpp	queue
+AP325-d033.cpp	sweep-line

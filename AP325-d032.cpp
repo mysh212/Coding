@@ -10,25 +10,33 @@ int main() {
     int a,b;cin>>a>>b;
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>g;
     priority_queue<pair<int,int>>s;
+    //g.push({0,-1});
+    //s.push({0,-1});
     int mmax = 0;
     for(int i = 0;i<a;i++) {
         int tmp;cin>>tmp;
+        g.push({tmp,i});
+        s.push({tmp,i});
+        if(i == 0) continue;
         int l = i - b;
         auto now = g.top();
         while(!g.empty()) {
-            if(now.second < l) {
+            if(now.second <= l) {
                 g.pop();now = g.top();
+                continue;
             }
+            break;
         }
         auto nows = s.top();
         while(!s.empty()) {
-            if(nows.second < l) {
+            if(nows.second <= l) {
                 s.pop();nows = s.top();
+                continue;
             }
+            break;
         }
+        //printf("%d %d\n",now.first,nows.first);
         mmax = max(mmax,abs(now.first - nows.first));
-        g.push({tmp,i});
-        s.push({tmp,i});
     }
     cout<<mmax;
     return 0;
