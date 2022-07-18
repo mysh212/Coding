@@ -2,7 +2,8 @@
 // 06/19/2022 Sun  8:06:59.77
 #include<bits/stdc++.h>
 using namespace std;
-#include</home/ysh/桌面/Coding/Coding/linux/strint.h>
+#include</home/ysh/桌面/Coding/Coding/library/strint.h>
+#include</home/ysh/桌面/Coding/Coding/library/linux.h>
 int main(int argc, char *args[]) {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -43,10 +44,11 @@ int main(int argc, char *args[]) {
     fprintf(f,"%s",args[1]);
     char x[10000];
     string a;
+    a = findtroad(a);
     a.assign(args[1]);
     a.replace(a.find(".cpp"),4,"");
     strcat(x,"g++ ");
-    strcat(x,args[1]);
+    strcat(x,(a + ".cpp").c_str());
     strcat(x," -O2 -std=c++11 -DLOCAL -o ");
     strcat(x,a.c_str());
     strcat(x,".o ");

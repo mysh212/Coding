@@ -187,3 +187,7 @@ AP325-d032.cpp	priority_queue
 AP325-d032.cpp	DP
 AP325-d033.cpp	queue
 AP325-d033.cpp	sweep-line
+AP325-d034.cpp	sweep-line
+AP325-d034.cpp	queue
+AP325-d034.cpp	map
+AP325-d035.cpp	sweep-line

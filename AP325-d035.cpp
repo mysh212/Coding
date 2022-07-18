@@ -1,6 +1,6 @@
 // Author : ysh
-// 07/17/2022 Sun 12:49:37
-// https://judge.tcirc.tw/ShowProblem?problemid=d034
+// 07/18/2022 Mon  7:04:23
+
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
@@ -8,36 +8,37 @@ int main() {
     cin.tie(0);
 
     int a;cin>>a;
-    map<int,int>m;
+    vector<int>m(a);
     queue<int>q;
     vector<int>f(a);
     for(int &i : f) {
         cin>>i;
-        m.insert({i,0});
+        // m.insert({i,0});
     }
     int all = m.size();
     int now = 0;
     int l = 0;
-    int mmin = INT_MAX;
+    int mmax = 0;
     for(int i : f) {
         q.push(i);
         m[i]++;
         l++;
-        if(m[i] == 1) {
+        if(m[i] == 2) {
             now++;
         }
         // cout<<now<<" "<<l<<"\n";
-        while(now == all) {
-            mmin = min(mmin,l);
+        while(now != 0) {
             int left = q.front();q.pop();
             m[left]--;
-            if(m[left] == 0) {
+            if(m[left] == 1) {
                 now--;
             }
             l--;
-            if(now == all) mmin = min(mmin,l);
+            // if(now == 0) mmax = max(mmax,l);
         }
+        // cout<<l<<" ";
+        if(now == 0) mmax = max(mmax,l);
     }
-    cout<<mmin;
+    cout<<mmax;
     return 0;
 }
