@@ -134,6 +134,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d035.cpp)
 
+***[AP325-d037.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d037
+)***
+###### tags:  `DP` `priority_queue` `sweep-line`
+>[time=07,20,2022 Wed 19:09:21,45]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d037.cpp)
+
+***[AP325-d038.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d038
+)***
+###### tags:  `DC`
+>[time=07,20,2022 Wed 19:43:31,70]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d038.cpp)
+
 ***[AP325-d043.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d043
 )***
 ###### tags:  `deque` `greedy`
@@ -142,12 +158,49 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d043.cpp)
 
+***[AP325-d045.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d045
+)***
+###### tags:  `greedy`
+>[time=07,20,2022 Wed 20:44:54,04]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d045.cpp)
+
+***[AP325-d046.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d046
+)***
+###### tags:  `greedy`
+>[time=07,21,2022 Thu 19:55:59,76]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d046.cpp)
+
+***[AP325-d049.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d049)***
+###### tags:  `greedy` `binary_search`
+>[time=07,21,2022 Thu 21:44:18,73]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d049.cpp)
+
 ***[AP325-d050.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d050)***
 ###### tags:  `sweep-line` `struct`
 >[time=03,11,2022 Fri  7:44:40,26]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d050.cpp)
+
+***[AP325-d051.py](https://judge.tcirc.tw/ShowProblem?problemid=d051)***
+###### tags:  `greedy` `DP`
+>[time=07,22,2022 Fri  6:19:41,82]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d051.py)
+
+***[AP325-d052-2.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d052)***
+###### tags:  `DC`
+>[time=]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d052-2.cpp)
 
 ***[AP325-d066.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d066)***
 ###### tags:  `DP`
@@ -246,6 +299,22 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d080.cpp)
+
+***[AP325-d086-2.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d086
+)***
+###### tags:  `DP`
+>[time=07,21,2022 Thu 16:31:59,32]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d086-2.cpp)
+
+***[AP325-d086.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d086
+)***
+###### tags:  `DP`
+>[time=07,21,2022 Thu  8:49:51,74]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d086.cpp)
 
 ***[AP325-d095.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d095
 )***
@@ -570,6 +639,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d636.cpp)
 
+***[Zerojudge-d652-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d652)***
+###### tags:  `DP`
+>[time=07,21,2022 Thu 17:29:13,99]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-2.cpp)
+
 ***[Zerojudge-d784-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d784)***
 ###### tags:  `DP`
 >[time=06,10,2022 Fri 13:52:41,37]
@@ -729,6 +805,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/bamboo's-bamboo-sequence.cpp)
+
+***[becoming-the-best-coser-2.cpp](http://choj.me/problem/c005
+)***
+###### tags:  `greedy`
+>[time=07,20,2022 Wed 20:58:28,23]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/becoming-the-best-coser-2.cpp)
 
 ***[becoming-the-best-coser.cpp](https://choj.me/problem/c005
 )***
@@ -922,13 +1006,14 @@
 :::spoiler ***algorithm***
 ***APCS*** 1
 ***BFS*** 2
+***DC*** 2
 ***DFS*** 3
-***DP*** 41
+***DP*** 46
 ***KMP*** 2
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
-***binary_search*** 2
+***binary_search*** 3
 ***bit*** 5
 ***bitset*** 4
 ***brute*** 1
@@ -946,7 +1031,7 @@
 ***gp*** 1
 ***gp_hash_table*** 1
 ***graph*** 2
-***greedy*** 2
+***greedy*** 7
 ***half-brute*** 1
 ***hash*** 1
 ***list*** 2
@@ -957,7 +1042,7 @@
 ***pointer*** 1
 ***pref*** 3
 ***prime*** 3
-***priority_queue*** 5
+***priority_queue*** 6
 ***queue*** 3
 ***re*** 3
 ***search*** 2
@@ -966,7 +1051,7 @@
 ***stack*** 1
 ***string*** 2
 ***struct*** 3
-***sweep-line*** 4
+***sweep-line*** 5
 ***table*** 1
 ***test*** 2
 ***tree*** 4
@@ -974,4 +1059,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 193
+總題數: 208
