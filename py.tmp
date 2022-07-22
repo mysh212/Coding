@@ -1,14 +1,45 @@
-AP325-d076.py	      Zerojudge-a007-T.py  Zerojudge-b759.py
-APCSP-a096.py	      Zerojudge-a021.py    Zerojudge-b898-2.py
-choj-a055.py	      Zerojudge-a034.py    Zerojudge-b898.py
-countcode.py	      Zerojudge-a038-2.py  Zerojudge-c382.py
-cp.py		      Zerojudge-a038.py    Zerojudge-c717.py
-export.py	      Zerojudge-a095.py    Zerojudge-d058.py
-Pascal's-Triangle.py  Zerojudge-a104.py    Zerojudge-d614.py
-plus-2.py	      Zerojudge-a148.py    Zerojudge-d784.py
-plus.py		      Zerojudge-a165.py    Zerojudge-d786.py
-Seismic.py	      Zerojudge-a518.py    Zerojudge-f006.py
-sort.py		      Zerojudge-a528.py    Zerojudge-i071.py
-Trailing-Zeros-2.py   Zerojudge-a799.py    Zerojudge-i510.py
-Trailing-Zeros.py     Zerojudge-b532.py
-Typo.py		      Zerojudge-b558.py
+Zerojudge-c717.py
+Zerojudge-a528.py
+Zerojudge-a104.py
+sort.py
+Zerojudge-a034.py
+Zerojudge-d614.py
+Zerojudge-a021.py
+plus.py
+Zerojudge-c382.py
+plus-2.py
+Zerojudge-d786.py
+Zerojudge-b558.py
+AP325-d076.py
+choj-a055.py
+Zerojudge-a165.py
+APCSP-a096.py
+Trailing-Zeros.py
+Pascal's-Triangle.py
+Trailing-Zeros-2.py
+Seismic.py
+Typo.py
+Zerojudge-d784.py
+Zerojudge-b759.py
+Zerojudge-b898.py
+Zerojudge-b898-2.py
+countcode.py
+Zerojudge-a007-T.py
+Zerojudge-a148.py
+Zerojudge-d058.py
+Zerojudge-i071.py
+Zerojudge-a799.py
+Zerojudge-a518.py
+Zerojudge-a038.py
+Zerojudge-a038-2.py
+Zerojudge-f006.py
+Zerojudge-a095.py
+cp.py
+export.py
+Zerojudge-i510.py
+Zerojudge-b532.py
+factorial.py
+AP325-d013.py
+t.py
+tcirc-d027.py
+AP325-d052-T.py
