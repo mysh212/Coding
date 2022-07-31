@@ -223,3 +223,8 @@ AP325-d091.cpp	graph
 AP325-d065.cpp	DC
 AP325-d053.cpp	greedy
 AP325-d053.cpp	priority_queue
+AP325-d059.cpp	binary_search
+AP325-d059.cpp	lower_bound
+AP325-d054-2.cpp	binary_search
+Coin-Combinations-II.cpp	DP
+String-Matching.cpp	KMP
