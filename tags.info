@@ -228,3 +228,7 @@ AP325-d059.cpp	lower_bound
 AP325-d054-2.cpp	binary_search
 Coin-Combinations-II.cpp	DP
 String-Matching.cpp	KMP
+Counting-Rooms.cpp	DFS
+Subarray-Sums-I.cpp	DP
+Subarray-Sums-I.cpp	map
+ouo.cpp	KMP
