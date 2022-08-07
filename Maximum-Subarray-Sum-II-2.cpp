@@ -4,6 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
+#define INT_MIN LONG_LONG_MIN
 vector<int>f(100000);
 int t = 0;
 struct tree{
@@ -59,9 +60,9 @@ int check(int l,int r,tree* a) {
         // printf("return %d\n",a->max);
         return a->max;
     }
-    if(mid > r) return check(l,r,a->l);
+    if(mid >= r) return check(l,r,a->l);
     if(mid < l) return check(l,r,a->r);
-    return min(check(l,(a->left + a->right) / 2,a->l),check((a->left + a->right) / 2+1,r,a->r));
+    return min(check(l,(a->left + a->right) / 2,a->l),check(((a->left + a->right) / 2)+1,r,a->r));
 }
 
 signed main() {
@@ -70,17 +71,19 @@ signed main() {
 
     int a,b,d;cin>>a>>b>>d;
     // vector<int>f(a);
-    f.resize(a);
+    f.resize(a + 1);
     int last = 0;
-    for(int &i : f) {
-        cin>>i;
-        i = last += i;
+    for(int i = 1;i<=a;i++) {
+        cin>>f[i];
+        f[i] = last += f[i];
     }
-    for(int i : f) cout<<i<<" ";
-    cout<<"\n";
-    mt(0,a - 1,&c[t++]);
+    // for(int i : f) cout<<i<<" ";
+    // cout<<"\n";
+    mt(0,a,&c[t++]);
+    // cout<<check(4,4,&c[0]);
     int mmax = INT_MIN;
-    for(int i = 0;i<a;i++) {
+    for(int i = 1;i<=a;i++) {
+        if(i - b < 0) continue;
         mmax = max(mmax,f[i] - check((i - d < 0 ? 0 : i - d),(i - b < 0 ? 0 : i - b),&c[0]));
     }
     cout<<mmax;
