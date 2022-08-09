@@ -234,3 +234,5 @@ Subarray-Sums-I.cpp	map
 ouo.cpp	KMP
 AP325-d055.cpp	sweep-line
 AP325-d055.cpp	greedy
+Labyrinth.cpp	BFS
+Labyrinth.cpp	re-search
