@@ -2,7 +2,7 @@
 // 07/18/2022 Mon  9:39:51.29
 #include<bits/stdc++.h>
 using namespace std;
-const int MAX = (int) 1e6;
+const int MAX = (int) 2e6 + 5;
 struct tree{
     tree* l;
     tree* r;
@@ -65,6 +65,7 @@ int main() {
     int ans = 0;
     for(int i = 0;i<n;i++) {
         int tmp;cin>>tmp;
+        tmp = tmp + ((int) 1e6);
         ans = ans + check(&f[0],0,MAX,tmp + 1,MAX);
         add(&f[0],tmp,1,0,MAX);
     }
