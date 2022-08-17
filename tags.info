@@ -240,3 +240,16 @@ Building-Roads.cpp	graph
 Message-Route.cpp	BFS
 Message-Route.cpp	re-search
 Round-Trip.cpp	DFS
+Monsters.cpp	BFS
+Zerojudge-e367.py	pref
+Salary-Queries.cpp	pd_ds
+Salary-Queries.cpp	tree
+Salary-Queries-3.cpp	BIT
+Salary-Queries-3.cpp	tree
+Salary-Queries-3.cpp	template
+AP325-d064-3.cpp	pb_ds
+AP325-d064-3.cpp	tree
+AP325-d064-4.cpp	BIT
+AP325-d064-4.cpp	tree
+AP325-d064-5.cpp	tree
+AP325-d064-5.cpp	BIT
