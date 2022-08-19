@@ -242,7 +242,7 @@ Message-Route.cpp	re-search
 Round-Trip.cpp	DFS
 Monsters.cpp	BFS
 Zerojudge-e367.py	pref
-Salary-Queries.cpp	pd_ds
+Salary-Queries.cpp	pb_ds
 Salary-Queries.cpp	tree
 Salary-Queries-3.cpp	BIT
 Salary-Queries-3.cpp	tree
@@ -268,3 +268,4 @@ Zerojudge-d799.cpp	tree
 Zerojudge-d799.cpp	lazy_tag
 Zerojudge-d799.cpp	own-template
 Prefix-Sum-Queries-2.cpp	seg_tree
+Prefix-Sum-Queries-3.cpp	seg_tree

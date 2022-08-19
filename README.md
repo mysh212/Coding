@@ -216,12 +216,35 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d053.cpp)
 
+***[AP325-d054-2.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d054
+)***
+###### tags:  `binary_search`
+>[time=07,30,2022 Sat 14:19:18,52]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d054-2.cpp)
+
+***[AP325-d055.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d055
+)***
+###### tags:  `sweep-line` `greedy`
+>[time=08,03,2022 Wed 10:06:43,14]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d055.cpp)
+
 ***[AP325-d057.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d057)***
 ###### tags:  `greedy`
 >[time=07,24,2022 Sun 15:30:58,68]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d057.cpp)
+
+***[AP325-d059.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d059)***
+###### tags:  `binary_search` `lower_bound`
+>[time=07,29,2022 Fri 22:34:36,50]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d059.cpp)
 
 ***[AP325-d060.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d060)***
 ###### tags:  `priority_queue`
@@ -236,6 +259,27 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d061.cpp)
+
+***[AP325-d064-3.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d064)***
+###### tags:  `pb_ds` `tree`
+>[time=08,17,2022 Wed 21:36:49,09]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d064-3.cpp)
+
+***[AP325-d064-4.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d064)***
+###### tags:  `BIT` `tree`
+>[time=08,17,2022 Wed 21:46:43,85]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d064-4.cpp)
+
+***[AP325-d064-5.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d064)***
+###### tags:  `tree` `BIT`
+>[time=08,17,2022 Wed 22:00:02,29]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d064-5.cpp)
 
 ***[AP325-d065.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d065
 )***
@@ -495,6 +539,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Avoid-Local-Maximums.cpp)
 
+***[Building-Roads.cpp](https://cses.fi/problemset/task/1666
+)***
+###### tags:  `graph`
+>[time=08,13,2022 Sat  7:44:15,40]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Building-Roads.cpp)
+
+***[Coin-Combinations-II.cpp](https://cses.fi/problemset/task/1636
+)***
+###### tags:  `DP`
+>[time=07,30,2022 Sat 18:58:36,53]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Coin-Combinations-II.cpp)
+
 ***[Colten's-math-problem.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/G
 )***
 ###### tags:  `contest`
@@ -510,6 +570,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Colten-work-in-THSR.cpp)
+
+***[Counting-Rooms.cpp](https://cses.fi/problemset/task/1192
+)***
+###### tags:  `DFS`
+>[time=07,31,2022 Sun 16:42:02,67]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Counting-Rooms.cpp)
 
 ***[Cut.cpp](https://192.168.193.20/contest/2/problem/038
 )***
@@ -541,6 +609,30 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Knapsack1.cpp)
+
+***[Labyrinth.cpp](https://cses.fi/problemset/task/1193
+)***
+###### tags:  `BFS` `re-search`
+>[time=08,09,2022 Tue 15:34:23,14]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Labyrinth.cpp)
+
+***[Message-Route.cpp](https://cses.fi/problemset/task/1667
+)***
+###### tags:  `BFS` `re-search`
+>[time=08,13,2022 Sat 10:08:29,02]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Message-Route.cpp)
+
+***[Monsters.cpp](https://cses.fi/problemset/task/1194
+)***
+###### tags:  `BFS`
+>[time=08,16,2022 Tue  8:08:02,33]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Monsters.cpp)
 
 ***[Nearest-Smaller-Values.cpp](https://cses.fi/problemset/task/1645/
 )***
@@ -574,6 +666,38 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Power-of-art.cpp)
 
+***[Prefix-Sum-Queries-2.cpp](https://cses.fi/problemset/task/2166
+)***
+###### tags:  `seg_tree`
+>[time=08,19,2022 Fri 21:39:25,22]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Prefix-Sum-Queries-2.cpp)
+
+***[Prefix-Sum-Queries-3.cpp](https://cses.fi/problemset/task/2166/
+)***
+###### tags:  `seg_tree`
+>[time=08,19,2022 Fri 22:29:12,06]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Prefix-Sum-Queries-3.cpp)
+
+***[Range-Update-Queries-2.cpp](https://cses.fi/problemset/hack/1651/list/
+)***
+###### tags:  `BIT` `tree`
+>[time=08,18,2022 Thu 20:50:48,09]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Range-Update-Queries-2.cpp)
+
+***[Range-Update-Queries.cpp](https://cses.fi/problemset/hack/1651/list/
+)***
+###### tags:  `seg_tree` `lazy_tag` `tree`
+>[time=08,18,2022 Thu 20:49:48,17]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Range-Update-Queries.cpp)
+
 ***[Reverse-and-Concatenate.cpp](https://codeforces.com/contest/1634/problem/A
 )***
 ###### tags:  `abba` `contest`
@@ -581,6 +705,45 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Reverse-and-Concatenate.cpp)
+
+***[Round-Trip.cpp](https://cses.fi/problemset/task/1669
+)***
+###### tags:  `DFS`
+>[time=08,15,2022 Mon 12:59:35,46]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Round-Trip.cpp)
+
+***[Salary-Queries-3.cpp](https://cses.fi/problemset/task/1144
+)***
+###### tags:  `BIT` `tree` `template`
+>[time=]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Salary-Queries-3.cpp)
+
+***Salary-Queries.cpp***
+###### tags:  `pb_ds` `tree`
+>[time=08,17,2022 Wed  8:06:09,42]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Salary-Queries.cpp)
+
+***[String-Matching.cpp](https://cses.fi/problemset/task/1753
+)***
+###### tags:  `KMP`
+>[time=07,31,2022 Sun  9:25:04,48]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/String-Matching.cpp)
+
+***[Subarray-Sums-I.cpp](https://cses.fi/problemset/task/1660
+)***
+###### tags:  `DP` `map`
+>[time=07,31,2022 Sun 17:01:02,72]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Subarray-Sums-I.cpp)
 
 ***[Trips.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/A
 )***
@@ -648,6 +811,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-b051.cpp)
 
+***[Zerojudge-b123-2.cpp](https://zerojudge.tw/ShowProblem?problemid=b123)***
+###### tags:  `DP` `re`
+>[time=08,19,2022 Fri 19:39:27,38]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-b123-2.cpp)
+
 ***[Zerojudge-b184.cpp](https://zerojudge.tw/ShowProblem?problemid=b184)***
 ###### tags:  `DP`
 >[time=04,06,2022 Wed  8:11:20,58]
@@ -690,6 +860,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d052.cpp)
 
+***[Zerojudge-d539-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d539)***
+###### tags:  `seg_tree`
+>[time=08,18,2022 Thu 16:01:07,31]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-2.cpp)
+
 ***[Zerojudge-d539.cpp](https://zerojudge.tw/ShowProblem?problemid=d539)***
 ###### tags:  `seg_tree`
 >[time=04,03,2022 Sun 18:11:13,50]
@@ -710,6 +887,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-2.cpp)
+
+***[Zerojudge-d652-3.cpp](https://zerojudge.tw/ShowProblem?problemid=d652)***
+###### tags:  `DP` `re`
+>[time=08,19,2022 Fri 19:15:54,69]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-3.cpp)
 
 ***[Zerojudge-d784-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d784)***
 ###### tags:  `DP`
@@ -739,6 +923,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d788.cpp)
 
+***[Zerojudge-d799.cpp](https://zerojudge.tw/ShowProblem?problemid=d799)***
+###### tags:  `seg_tree` `tree` `lazy_tag` `own-template`
+>[time=08,19,2022 Fri 20:31:50,68]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d799.cpp)
+
 ***[Zerojudge-d828.cpp](https://192.168.193.20/contest/1/problem/004
 )***
 ###### tags:  `fast-power` `fib`
@@ -746,6 +937,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d828.cpp)
+
+***[Zerojudge-e367.py](https://zerojudge.tw/ShowProblem?problemid=e367)***
+###### tags:  `pref`
+>[time=08,16,2022 Tue 16:53:37,42]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-e367.py)
 
 ***[Zerojudge-f314-2.cpp](https://zerojudge.tw/ShowProblem?problemid=f314)***
 ###### tags:  `DP`
@@ -1021,6 +1219,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/mining-water-chestnut.cpp)
 
+***ouo.cpp***
+###### tags:  `KMP`
+>[time=08,02,2022 Tue 22:27:26,95]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/ouo.cpp)
+
 ***[palace-emissary.cpp](http://choj.me/problem/00121
 )***
 ###### tags:  `DFS` `BFS`
@@ -1047,7 +1252,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=07,23,2022 Sat  8:57:56,83]
+>[time=08,17,2022 Wed 16:59:33,50]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1070,16 +1275,17 @@
 
 :::spoiler ***algorithm***
 ***APCS*** 1
-***BFS*** 2
+***BFS*** 5
+***BIT*** 4
 ***DC*** 3
-***DFS*** 3
-***DP*** 48
+***DFS*** 5
+***DP*** 52
 ***DSU*** 1
-***KMP*** 2
+***KMP*** 4
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
-***binary_search*** 4
+***binary_search*** 6
 ***bit*** 5
 ***bitset*** 4
 ***brute*** 2
@@ -1096,33 +1302,38 @@
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 1
-***graph*** 3
-***greedy*** 10
+***graph*** 4
+***greedy*** 11
 ***half-brute*** 1
 ***hash*** 1
+***lazy_tag*** 2
 ***list*** 2
-***lower_bound*** 1
-***map*** 6
+***lower_bound*** 2
+***map*** 7
 ***multiset*** 1
 ***operator*** 2
+***own-template*** 1
+***pb_ds*** 2
 ***pointer*** 1
-***pref*** 3
+***pref*** 4
 ***prime*** 3
 ***priority_queue*** 8
 ***queue*** 3
-***re*** 3
+***re*** 5
+***re-search*** 2
 ***search*** 2
-***seg_tree*** 5
+***seg_tree*** 10
 ***set*** 6
 ***stack*** 1
 ***string*** 2
 ***struct*** 4
-***sweep-line*** 6
+***sweep-line*** 7
 ***table*** 1
+***template*** 1
 ***test*** 2
-***tree*** 4
+***tree*** 12
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-¿‚î}”µ: 225
+¿‚î}”µ: 271
