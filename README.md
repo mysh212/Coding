@@ -867,6 +867,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-2.cpp)
 
+***[Zerojudge-d539-3.cpp](https://zerojudge.tw/ShowProblem?problemid=d539)***
+###### tags:  `sparse_table`
+>[time=08,18,2022 Thu 16:31:39,45]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-3.cpp)
+
 ***[Zerojudge-d539.cpp](https://zerojudge.tw/ShowProblem?problemid=d539)***
 ###### tags:  `seg_tree`
 >[time=04,03,2022 Sun 18:11:13,50]
@@ -1324,6 +1331,7 @@
 ***search*** 2
 ***seg_tree*** 10
 ***set*** 6
+***sparse_table*** 1
 ***stack*** 1
 ***string*** 2
 ***struct*** 4
@@ -1336,4 +1344,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-¿‚î}”µ: 271
+¿‚î}”µ: 272
