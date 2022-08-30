@@ -272,3 +272,11 @@ Prefix-Sum-Queries-3.cpp	seg_tree
 Zerojudge-d539-3.cpp	sparse_table
 Zerojudge-d539-4.cpp	sparse_table
 Zerojudge-d539-4.cpp	re
+Buy-a-Ticket.cpp	graph
+tunnel.cpp	graph
+country-and-road.cpp	graph
+country-and-road-2.cpp	graph
+Grid-Paths.cpp	DP
+Zerojudge-a194.cpp	DP
+Middle-Letter.py	contest
+Modulo-Number.py	contest

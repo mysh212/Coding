@@ -547,6 +547,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Building-Roads.cpp)
 
+***[Buy-a-Ticket.cpp](https://codeforces.com/problemset/problem/938/D
+)***
+###### tags:  `graph`
+>[time=08,24,2022 Wed 17:39:53,03]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Buy-a-Ticket.cpp)
+
 ***[Coin-Combinations-II.cpp](https://cses.fi/problemset/task/1636
 )***
 ###### tags:  `DP`
@@ -601,6 +609,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Fortune-Telling.cpp)
+
+***[Grid-Paths.cpp](https://cses.fi/problemset/task/1638
+)***
+###### tags:  `DP`
+>[time=08,25,2022 Thu 17:23:21,41]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Grid-Paths.cpp)
 
 ***[Knapsack1.cpp](https://atcoder.jp/contests/dp/tasks/dp_d
 )***
@@ -1107,6 +1123,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/coin-game.cpp)
 
+***[country-and-road-2.cpp](https://tioj.ck.tp.edu.tw/problems/2224
+)***
+###### tags:  `graph`
+>[time=08,25,2022 Thu  9:03:10,09]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/country-and-road-2.cpp)
+
+***[country-and-road.cpp](https://tioj.ck.tp.edu.tw/problems/2224
+)***
+###### tags:  `graph`
+>[time=08,25,2022 Thu  7:13:29,95]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/country-and-road.cpp)
+
 ***[crusading-monkey.cpp](https://choj.me/problem/c004
 )***
 ###### tags:  `BFS` `choj` `chsh-exam`
@@ -1266,7 +1298,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=08,17,2022 Wed 16:59:33,50]
+>[time=08,25,2022 Thu  8:41:36,72]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1287,13 +1319,21 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-b035.cpp)
 
+***[tunnel.cpp](https://tioj.ck.tp.edu.tw/problems/1509
+)***
+###### tags:  `graph`
+>[time=08,25,2022 Thu  6:52:52,49]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tunnel.cpp)
+
 :::spoiler ***algorithm***
 ***APCS*** 1
 ***BFS*** 5
 ***BIT*** 4
 ***DC*** 3
 ***DFS*** 5
-***DP*** 52
+***DP*** 53
 ***DSU*** 1
 ***KMP*** 4
 ***TOI*** 1
@@ -1316,7 +1356,7 @@
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 1
-***graph*** 4
+***graph*** 8
 ***greedy*** 11
 ***half-brute*** 1
 ***hash*** 1
@@ -1351,4 +1391,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-¿‚î}”µ: 274
+Á`ÃD¼Æ: 279
