@@ -603,6 +603,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/EIKO's-concert.cpp)
 
+***[Flight-Discount.cpp](https://cses.fi/problemset/task/1195
+)***
+###### tags:  `graph` `dijkstra`
+>[time=08,30,2022 Tue 13:34:45,07]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Flight-Discount.cpp)
+
 ***Fortune-Telling.cpp***
 ###### tags:  `contest`
 >[time=02,07,2022 Mon 10:16:46,86]
@@ -641,6 +649,20 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Message-Route.cpp)
+
+***Middle-Letter.py***
+###### tags:  `contest`
+>[time=08,27,2022 Sat 20:48:38,10]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Middle-Letter.py)
+
+***Modulo-Number.py***
+###### tags:  `contest`
+>[time=08,27,2022 Sat 20:51:43,18]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Modulo-Number.py)
 
 ***[Monsters.cpp](https://cses.fi/problemset/task/1194
 )***
@@ -819,6 +841,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-a133.cpp)
+
+***[Zerojudge-a194.cpp](https://zerojudge.tw/ShowProblem?problemid=a194)***
+###### tags:  `DP`
+>[time=08,25,2022 Thu 21:45:19,09]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-a194.cpp)
 
 ***[Zerojudge-b051.cpp](https://zerojudge.tw/ShowProblem?problemid=b051)***
 ###### tags:  `compare`
@@ -1333,7 +1362,7 @@
 ***BIT*** 4
 ***DC*** 3
 ***DFS*** 5
-***DP*** 53
+***DP*** 54
 ***DSU*** 1
 ***KMP*** 4
 ***TOI*** 1
@@ -1348,15 +1377,16 @@
 ***citrc*** 1
 ***class*** 1
 ***compare*** 3
-***contest*** 14
+***contest*** 16
 ***deque*** 4
+***dijkstra*** 1
 ***eg.*** 1
 ***emissary".cpp*** 1
 ***fast-power*** 7
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 1
-***graph*** 8
+***graph*** 9
 ***greedy*** 11
 ***half-brute*** 1
 ***hash*** 1
@@ -1391,4 +1421,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 279
+總題數: 284

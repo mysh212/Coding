@@ -280,3 +280,5 @@ Grid-Paths.cpp	DP
 Zerojudge-a194.cpp	DP
 Middle-Letter.py	contest
 Modulo-Number.py	contest
+Flight-Discount.cpp	graph
+Flight-Discount.cpp	dijkstra
