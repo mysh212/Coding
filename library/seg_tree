@@ -1,0 +1,139 @@
+using namespace std;
+template<typename T>
+struct seg_tree{
+    vector<T>f,lt;
+    T n;
+
+    seg_tree(T n) {
+        this->n = n;
+        f.resize(n << 2);
+        lt.resize(n << 2);
+        // mt(0,n - 1);
+    }
+
+    seg_tree(vector<T>&v):
+    seg_tree(v.size()) {
+        // this->n = v.size();
+        // f.resize(n << 2);
+        mt(0,n - 1,v);
+    }
+
+    inline T left(T n) {
+        return (n << 1) + 1;
+    }
+    inline T right(T n) {
+        return (n << 1) + 2;
+    }
+
+    void mt(T l,T r,T t = 0) {
+        // cout<<l<<" "<<r<<"\n";
+        // if(l == 2 && r == 1) return;
+        // system("sleep 10");
+        if(l == r) {
+            return;
+        }
+        T mid = (l + r) >> 1;
+        mt(l,mid,left(t));
+        mt(mid + 1,r,right(t));
+    }
+
+    void check() {
+        for(T i : f) {
+            cout<<i<<" ";
+        }
+        cout<<"\n";
+    }
+
+    void lcheck() {
+        for(T i : lt) {
+            cout<<i<<" ";
+        }
+        cout<<"\n";
+    }
+
+    T mt(T l,T r,vector<T>&v,T t = 0) {
+        if(l == r) {
+            return f[t] = v[l];
+        }
+        T mid = (l + r) >> 1;
+        return f[t] = mt(l,mid,v,left(t)) + mt(mid + 1,r,v,right(t));
+    }
+
+    T sum(T l,T r,T t = 0,T nl = 0,T nr = -1) {
+        // debug(nl,nr);
+        if(nl == nr) return f[t];
+        if(nr == -1) nr = n - 1;
+        T mid = (nl + nr) >> 1;
+        if(mid >= r) return sum(l,r,left(t),nl,mid);
+        if(mid < l) return sum(l,r,right(t),mid + 1,nr);
+        if(nl >= l && nr <= r) {
+            return f[t];
+        }
+        return sum(l,r,left(t),nl,mid) + sum(l,r,right(t),mid + 1,nr);
+    }
+
+    void push(T nl,T nr,T t) {
+            f[t] += lt[t] * (nr - nl + 1);
+            lt[right(t)] = lt[right(t)] + lt[t];
+            lt[left(t)] = lt[left(t)] + lt[t];
+            // radd(nl,mid,lt[t]);
+            // radd(mid + 1,nr,lt[t]);
+            lt[t] = 0;
+    }
+    
+    T rsum(T l,T r,T t = 0,T nl = 0,T nr = -1) {
+        // cout<<nl<<" "<<nr<<"\n";
+        if(nr == -1) nr = n - 1;
+        if(nl == nr) return f[t] + lt[t];
+        if(lt[t] != 0) push(nl,nr,t);
+        // lcheck();
+        // check();
+        T mid = (nl + nr) >> 1;
+        if(mid >= r) return rsum(l,r,left(t),nl,mid);
+        if(mid < l) return rsum(l,r,right(t),mid + 1,nr);
+        if(nl >= l && nr <= r) {
+            return f[t];
+        }
+        return rsum(l,r,left(t),nl,mid) + rsum(l,r,right(t),mid + 1,nr);
+    }
+
+    void add(T l,T v,T t = 0,T nl = 0,T nr = -1) {
+        if(nl == nr) {
+            f[t] += v;
+            return;
+        }
+        if(nr == -1) nr = n - 1;
+        f[t] += v;
+        T mid = (nl + nr) >> 1;
+        if(mid >= l) add(l,v,left(t),nl,mid);
+        if(mid < l) add(l,v,right(t),mid + 1,nr);
+        return;
+    }
+
+    T radd(T l,T r,T v,T t = 0,T nl = 0,T nr = -1) {
+        if(nl == nr) {
+            f[t] += v;
+            return v;
+        }
+        if(nr == -1) nr = n - 1;
+        T mid = (nl + nr) >> 1;
+        if(mid < l) {
+            T tmp = radd(l,r,v,right(t),mid + 1,nr);
+            f[t] += tmp;
+            return tmp;
+        }
+        if(mid >= r) {
+            T tmp = radd(l,r,v,left(t),nl,mid);
+            f[t] += tmp;
+            return tmp;
+        }
+        if(nl >= l && nr <= r) {
+            lt[t] += v;
+            return (nr - nl + 1) * v;
+        }
+        T rr = radd(l,r,v,right(t),mid + 1,nr);
+        T ll = radd(l,r,v,left(t),nl,mid);
+        f[t] += rr + ll;
+        return rr + ll;
+    }
+};

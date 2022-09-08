@@ -1,0 +1,35 @@
+template<typename T>
+struct tree{
+    std::vector<T>f;
+    T n;
+
+    tree(T n) {
+        this->n = n;
+        f.resize(n);
+    }
+
+    tree(std::vector<T>&v):
+    tree(v.size()) {
+        T t = 0;
+        for(T i : v) add(t++,i);
+    }
+
+    void add(T a,T b) {
+        for(;a < n;a = a | (a + 1)) {
+            f[a] += b;
+        }
+    }
+
+    T sum(T a) {
+        T ans = 0;
+        for(;a >= 0;a = (a & (a + 1)) - 1) {
+            ans = ans + f[a];
+        }
+        return ans;
+    }
+
+    T sum(T a,T b) {
+        if(a > b) std::swap(a,b);
+        return sum((std::min(n - 1,b)) - sum(a - 1));
+    }
+};
