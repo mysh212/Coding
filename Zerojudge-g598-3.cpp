@@ -2,6 +2,13 @@
 // 09/08/2022 Thu  9:07:26.81
 #include<bits/stdc++.h>
 using namespace std;
+#ifdef LOCAL
+#include<debug.h>
+#else
+#define debug(...) '*'
+#define printf(...) '*'
+#endif
+
 vector<int>f;
 int a,b;
 inline int pr(int a) {
@@ -14,14 +21,15 @@ inline int pr(int a) {
 }
 vector<bool>mark;
 inline int ff(int x,bool t = 0) {
-    if(!t) mark = vector<bool>(a);
+    if(!t) mark = vector<bool>(a + 1);
     if(mark.at(x)) return f.at(x) = x;
     mark.at(x) = 1;
     if(f.at(x) == x || f.at(x) == -1) return x;
     return f.at(x) = ff(f.at(x),true);
 }
 inline void mg(int a,int b) {
-    f.at(ff(a)) = pr(b);
+    f.at(ff(a)) = ff(pr(b));
+    debug(a,b,f);
     return;
 }
 int main() {
@@ -44,12 +52,14 @@ int main() {
             if(o) continue;
             int aa = ff(a);
             int bb = ff(b);
-            if(aa == bb) {
+            if(aa == bb || ff(pr(a)) == ff(pr(b))) {
                 cout<<i<<"\n";
                 f = bkp;
                 o = 1;
+                continue;
             }
             mg(aa,bb);
+            mg(ff(pr(a)),ff(pr(b)));
         }
     }
     return 0;
