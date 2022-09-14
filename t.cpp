@@ -1,21 +1,22 @@
 // Author : ysh
-// 09/06/2022 Tue 19:12:20.02
+// 09/14/2022 Wed  9:22:50.20
 #include<bits/stdc++.h>
-#include<tree>
 using namespace std;
-// #include<strint.h>
+#include<seg_tree>
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int n;
-    while(cin>>n) {
-        tree<int> t = tree<int>(n + 1);
-        for(int i = 0;i<n;i++) {
-            int tmp;cin>>tmp;
-            tmp = tmp - 1;
-            t.add(tmp,1);
-            cout<<t.sum(tmp + 1,n) + 1<<"\n";
+    int a,b,c;
+    seg_tree<int>t(100,[] (int a,int b) {
+        return max(a,b);
+    });
+    while(cin>>a>>b>>c) {
+        if(a == 1) {
+            cerr<<t.sum(b - 1,c - 1);
+        }
+        if(a == 2) {
+            t.add(b - 1,c);
         }
     }
     return 0;

@@ -1,18 +1,25 @@
 using namespace std;
 template<typename T>
+T sum(int a,int b) {
+    return a + b;
+};
+
+template<typename T>
 struct seg_tree{
     vector<T>f,lt;
     T n;
+    function<T(T,T)> cp;
 
-    seg_tree(T n) {
+    seg_tree(T n,function<T(T,T)> cp = ::sum<T>) {
         this->n = n;
+        this->cp = cp;
         f.resize(n << 2);
         lt.resize(n << 2);
         // mt(0,n - 1);
     }
 
-    seg_tree(vector<T>&v):
-    seg_tree(v.size()) {
+    seg_tree(vector<T>&v,function<T(T,T)> cp = ::sum<T>):
+    seg_tree(v.size(),cp) {
         // this->n = v.size();
         // f.resize(n << 2);
         mt(0,n - 1,v);
@@ -56,7 +63,7 @@ struct seg_tree{
             return f[t] = v[l];
         }
         T mid = (l + r) >> 1;
-        return f[t] = mt(l,mid,v,left(t)) + mt(mid + 1,r,v,right(t));
+        return f[t] = cp(mt(l,mid,v,left(t)),mt(mid + 1,r,v,right(t)));
     }
 
     T sum(T l,T r,T t = 0,T nl = 0,T nr = -1) {
@@ -69,7 +76,7 @@ struct seg_tree{
         if(nl >= l && nr <= r) {
             return f[t];
         }
-        return sum(l,r,left(t),nl,mid) + sum(l,r,right(t),mid + 1,nr);
+        return cp(sum(l,r,left(t),nl,mid),sum(l,r,right(t),mid + 1,nr));
     }
 
     void push(T nl,T nr,T t) {
@@ -94,7 +101,7 @@ struct seg_tree{
         if(nl >= l && nr <= r) {
             return f[t];
         }
-        return rsum(l,r,left(t),nl,mid) + rsum(l,r,right(t),mid + 1,nr);
+        return cp(rsum(l,r,left(t),nl,mid),rsum(l,r,right(t),mid + 1,nr));
     }
 
     void add(T l,T v,T t = 0,T nl = 0,T nr = -1) {
@@ -103,37 +110,41 @@ struct seg_tree{
             return;
         }
         if(nr == -1) nr = n - 1;
-        f[t] += v;
         T mid = (nl + nr) >> 1;
         if(mid >= l) add(l,v,left(t),nl,mid);
         if(mid < l) add(l,v,right(t),mid + 1,nr);
+        f[t] = cp(f[left(t)],f[right(t)]);
         return;
     }
 
-    T radd(T l,T r,T v,T t = 0,T nl = 0,T nr = -1) {
+    void radd(T l,T r,T v,T t = 0,T nl = 0,T nr = -1) {
         if(nl == nr) {
             f[t] += v;
-            return v;
+            return;
         }
         if(nr == -1) nr = n - 1;
         T mid = (nl + nr) >> 1;
         if(mid < l) {
-            T tmp = radd(l,r,v,right(t),mid + 1,nr);
-            f[t] += tmp;
-            return tmp;
+            radd(l,r,v,right(t),mid + 1,nr);
+            f[t] = cp(f[left(t)],f[right(t)]);
+            return;
         }
         if(mid >= r) {
-            T tmp = radd(l,r,v,left(t),nl,mid);
-            f[t] += tmp;
-            return tmp;
+            radd(l,r,v,left(t),nl,mid);
+            f[t] = cp(f[left(t)],f[right(t)]);
+            return;
         }
         if(nl >= l && nr <= r) {
             lt[t] += v;
-            return (nr - nl + 1) * v;
+            return;
         }
-        T rr = radd(l,r,v,right(t),mid + 1,nr);
-        T ll = radd(l,r,v,left(t),nl,mid);
-        f[t] += rr + ll;
-        return rr + ll;
+        radd(l,r,v,right(t),mid + 1,nr);
+        radd(l,r,v,left(t),nl,mid);
+        f[t] = cp(f[left(t)],f[right(t)]);
+        return;
+    }
+
+    T at(int n) {
+        return sum(n,n);
     }
 };

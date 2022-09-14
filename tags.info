@@ -293,3 +293,16 @@ Zerojudge-d788-3.cpp	re
 Zerojudge-f315-4.cpp	pb_ds
 Zerojudge-g598-2.cpp	DSU
 Zerojudge-g598-2.cpp	undo
+AP325-d036-3.cpp	sweep-line
+AP325-d036-2.cpp	DC
+Zerojudge-e810-4.cpp	dijkstra
+Zerojudge-e810-4.cpp	graph
+AP325-d055-2.cpp	re
+AP325-d055-2.cpp	sweep-line
+Flowers.cpp	DP
+Flowers-2.cpp	DP
+Flowers-2.cpp	BIT
+Zerojudge-d539-5.cpp	re
+Zerojudge-d539-5.cpp	seg_tree
+Zerojudge-d539-6.cpp	sparse_table
+Zerojudge-g640.cpp	binary_search
