@@ -1,6 +1,7 @@
 // Author : ysh
 // 09/15/2022 Thu 21:13:55.25
 // https://atcoder.jp/contests/dp/tasks/dp_r
+#include<bits/stdc++.h>
 using namespace std;
 #define int long long
 constexpr int R = 1e9 + 7;

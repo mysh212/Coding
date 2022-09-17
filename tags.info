@@ -306,3 +306,11 @@ Zerojudge-d539-5.cpp	re
 Zerojudge-d539-5.cpp	seg_tree
 Zerojudge-d539-6.cpp	sparse_table
 Zerojudge-g640.cpp	binary_search
+Walk.cpp	fast-power
+Walk-2.cpp	fast-power
+AP325-d102.cpp	graph
+AP325-d102.cpp	DFS
+AP325-d102.cpp	DSU
+AP325-d102.cpp	struct
+AP325-d102.cpp	operator
+tcirc-c085.cpp	DSU

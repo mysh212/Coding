@@ -17,7 +17,7 @@ signed main() {
     function<int(int,int)> check = [&] (int l,int r) {
         if(l + 1 == r) return f.at(l) + f.at(r);
         int mmin = LONG_LONG_MAX;
-        for(int i = l + 1;i<r;i++) {
+        for(int i = l + 1;i + 1<r;i++) {
             mmin = min(check(l,i) + check(i + 1,r),mmin);
         }
         return mmin + (f.at(l) + f.at(r));
