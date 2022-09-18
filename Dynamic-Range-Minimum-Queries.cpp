@@ -1,9 +1,13 @@
 // Author : ysh
-// 09/18/2022 Sun  9:09:34.45
-// https://cses.fi/problemset/task/1648
+// 09/18/2022 Sun  8:56:55.59
+// https://cses.fi/problemset/task/1649
+#include<bits/stdc++.h>
 using namespace std;
 #include<seg_tree>
 #define int long long
+inline int cp(int a,int b) {
+    return min(a,b);
+}
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -13,7 +17,7 @@ signed main() {
     for(int &i : f) {
         cin>>i;
     }
-    seg_tree<int> t(f);
+    seg_tree<int> t(f,cp);
     for(int i = 0;i<b;i++) {
         int tmp;cin>>tmp;
         if(tmp == 1) {

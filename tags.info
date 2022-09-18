@@ -314,3 +314,7 @@ AP325-d102.cpp	DSU
 AP325-d102.cpp	struct
 AP325-d102.cpp	operator
 tcirc-c085.cpp	DSU
+Range-Xor-Queries.cpp	BIT
+Range-Xor-Queries-2.cpp	pref
+Salary-Queries-4.cpp	pb_ds
+Salary-Queries-4.cpp	re

@@ -1,5 +1,6 @@
 // Author : ysh
-// 09/18/2022 Sun  8:49:27.53
+// 09/18/2022 Sun  9:09:34.45
+// https://cses.fi/problemset/task/1648
 #include<bits/stdc++.h>
 using namespace std;
 #include<seg_tree>
@@ -16,13 +17,16 @@ signed main() {
     seg_tree<int> t(f);
     for(int i = 0;i<b;i++) {
         int tmp;cin>>tmp;
-        if(tmp == 2) {
-            int r;cin>>r;
-            cout<<t.rsum(r - 1,r - 1)<<"\n";
-        }
         if(tmp == 1) {
-            int a,b,c;cin>>a>>b>>c;
-            t.radd(a - 1,b - 1,c);
+            int a,b;cin>>a>>b;
+            // t.check();
+            t.add(a - 1,b - f.at(a - 1));
+            f.at(a - 1) = b;
+            // t.check();
+        }
+        if(tmp == 2) {
+            int a,b;cin>>a>>b;
+            cout<<t.sum(a - 1,b - 1)<<"\n";
         }
     }
     return 0;
