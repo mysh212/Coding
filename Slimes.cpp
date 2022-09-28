@@ -21,8 +21,8 @@ signed main() {
         if(l + 1 == r) return 0LL;
         if(mark[l][r] != 0) return mark[l][r];
         int mmin = LONG_LONG_MAX;
-        for(int i = l + 1;i<r;i++) {
-            mmin = min(check(l,i) + check(i,r),mmin);
+        for(int i = l + 1;i + 1<r;i++) {
+            mmin = min(check(l,i) + check(i + 1,r),mmin);
         }
         return mark[l][r] = mmin + (f.at(r) - f.at(l));
     };

@@ -73,6 +73,7 @@
         "valarray": "cpp",
         "rope": "cpp",
         "slist": "cpp",
-        "seg_tree": "cpp"
+        "seg_tree": "cpp",
+        "square": "cpp"
     }
 }

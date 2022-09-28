@@ -1,23 +1,22 @@
 // Author : ysh
-// 09/14/2022 Wed  9:22:50.20
+// 09/28/2022 Wed 11:08:56.35
 #include<bits/stdc++.h>
 using namespace std;
-#include<seg_tree>
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int a,b,c;
-    seg_tree<int>t(100,[] (int a,int b) {
-        return max(a,b);
-    });
-    while(cin>>a>>b>>c) {
-        if(a == 1) {
-            cerr<<t.sum(b - 1,c - 1);
-        }
-        if(a == 2) {
-            t.add(b - 1,c);
-        }
+    multiset<int>s;
+    int n;cin>>n;
+    while(n--) {
+        int tmp;cin>>tmp;
+        s.insert(tmp);
+    }
+    cin>>n;
+    while(n--) {
+        int tmp;cin>>tmp;
+        s.erase(s.lower_bound(tmp));
+        for(int i : s) cout<<i;
     }
     return 0;
 }

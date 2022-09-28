@@ -1,25 +1,19 @@
 // Author : ysh
-// 09/14/2022 Wed  9:55:45.45
+// 09/21/2022 Wed 10:39:43.99
 using namespace std;
-#include<seg_tree>
-int main() {
+#include<square>
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int n;cin>>n;
-    vector<int>f(n);
-    for(int &i : f) {
-        cin>>i;
-    }
-    seg_tree<int>t(f,[] (int a,int b) {
-        return max(a,b);
-    });
-    int m;cin>>m;
-    int a,b;
-    while(m--) {
-        cin>>a>>b;
-        if(a > b) swap(a,b);
-        cout<<t.sum(a - 1,b - 1)<<"\n";
+    t<int> tt(2);
+    int n;
+    while(cin>>n) {
+        vector<vector<int>>l({{0,1},{0,1}});
+        vector<vector<int>>r({{0,1},{1,1}});
+        if(n == 0) cout<<"0\n";
+        else if(n == 1) cout<<1<<"\n";
+        else cout<<(((t<int>(r)) ^ (n - 1)) * t<int>(l)).f.at(0).at(1)<<"\n";
     }
     return 0;
 }
