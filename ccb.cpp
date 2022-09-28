@@ -1,32 +1,19 @@
 // Author : ysh
-// 09/18/2022 Sun  9:09:34.45
-// https://cses.fi/problemset/task/1648
+// 09/21/2022 Wed 10:39:43.99
 using namespace std;
-#include<seg_tree>
-#define int long long
+#include<square>
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int a,b;cin>>a>>b;
-    vector<int>f(a);
-    for(int &i : f) {
-        cin>>i;
-    }
-    seg_tree<int> t(f);
-    for(int i = 0;i<b;i++) {
-        int tmp;cin>>tmp;
-        if(tmp == 1) {
-            int a,b;cin>>a>>b;
-            // t.check();
-            t.add(a - 1,b - f.at(a - 1));
-            f.at(a - 1) = b;
-            // t.check();
-        }
-        if(tmp == 2) {
-            int a,b;cin>>a>>b;
-            cout<<t.sum(a - 1,b - 1)<<"\n";
-        }
+    t<int> tt(2);
+    int n;
+    while(cin>>n) {
+        vector<vector<int>>l({{0,1},{0,1}});
+        vector<vector<int>>r({{0,1},{1,1}});
+        if(n == 0) cout<<"0\n";
+        else if(n == 1) cout<<1<<"\n";
+        else cout<<(((t<int>(r)) ^ (n - 1)) * t<int>(l)).f.at(0).at(1)<<"\n";
     }
     return 0;
 }

@@ -455,6 +455,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d095.cpp)
 
+***[AP325-d102.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d102
+)***
+###### tags:  `graph` `DFS` `DSU` `struct` `operator`
+>[time=09,16,2022 Fri 20:49:09,28]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d102.cpp)
+
 ***APCS-10503-3.cpp***
 ###### tags:  `struct`
 >[time=04,29,2022 Fri 21:21:49,72]
@@ -774,6 +782,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Range-Update-Queries.cpp)
 
+***[Range-Xor-Queries-2.cpp](https://cses.fi/problemset/result/4647467/
+)***
+###### tags:  `pref`
+>[time=09,18,2022 Sun  9:20:33,41]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Range-Xor-Queries-2.cpp)
+
+***[Range-Xor-Queries.cpp](https://cses.fi/problemset/task/1650
+)***
+###### tags:  `BIT`
+>[time=09,18,2022 Sun  9:12:35,91]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Range-Xor-Queries.cpp)
+
 ***[Reverse-and-Concatenate.cpp](https://codeforces.com/contest/1634/problem/A
 )***
 ###### tags:  `abba` `contest`
@@ -797,6 +821,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Salary-Queries-3.cpp)
+
+***[Salary-Queries-4.cpp](https://cses.fi/problemset/task/1144
+)***
+###### tags:  `pb_ds` `re`
+>[time=09,18,2022 Sun  9:47:00,79]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Salary-Queries-4.cpp)
 
 ***[Salary-Queries.cpp](https://cses.fi/problemset/task/1144/
 )***
@@ -822,6 +854,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Subarray-Sums-I.cpp)
 
+***[Subordinates.cpp](https://cses.fi/problemset/task/1674
+)***
+###### tags:  `DFS`
+>[time=09,21,2022 Wed 15:41:09,21]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Subordinates.cpp)
+
+***[Tree-Diameter.cpp](https://cses.fi/problemset/task/1131
+)***
+###### tags:  `DFS` `DP` `tree`
+>[time=09,23,2022 Fri 20:14:07,73]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Tree-Diameter.cpp)
+
 ***[Trips.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/A
 )***
 ###### tags:  `contest`
@@ -829,6 +877,22 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Trips.cpp)
+
+***[Walk-2.cpp](https://atcoder.jp/contests/dp/tasks/dp_r
+)***
+###### tags:  `fast-power`
+>[time=09,15,2022 Thu 21:13:55,26]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Walk-2.cpp)
+
+***[Walk.cpp](https://atcoder.jp/contests/dp/tasks/dp_r
+)***
+###### tags:  `fast-power`
+>[time=09,15,2022 Thu 20:13:04,30]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Walk.cpp)
 
 ***[Water-problem.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/E
 )***
@@ -1156,6 +1220,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-g598-2.cpp)
 
+***[Zerojudge-g640.cpp](https://zerojudge.tw/ShowProblem?problemid=g640)***
+###### tags:  `binary_search`
+>[time=09,14,2022 Wed 10:46:41,52]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-g640.cpp)
+
 ***[Zerojudge-g774-2.cpp](https://zerojudge.tw/ShowProblem?problemid=g774)***
 ###### tags:  `DP` `TOI`
 >[time=03,19,2022 Sat 18:23:18,20]
@@ -1422,7 +1493,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=09,14,2022 Wed  9:22:50,20]
+>[time=09,25,2022 Sun  8:29:25,08]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1443,6 +1514,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-b035.cpp)
 
+***[tcirc-c085.cpp](https://judge.tcirc.tw/ShowProblem?problemid=c085
+)***
+###### tags:  `DSU`
+>[time=09,16,2022 Fri 22:31:59,28]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-c085.cpp)
+
 ***[tunnel.cpp](https://tioj.ck.tp.edu.tw/problems/1509
 )***
 ###### tags:  `graph`
@@ -1454,16 +1533,16 @@
 :::spoiler ***algorithm***
 ***APCS*** 1
 ***BFS*** 5
-***BIT*** 6
+***BIT*** 7
 ***DC*** 4
-***DFS*** 5
-***DP*** 57
-***DSU*** 2
+***DFS*** 8
+***DP*** 58
+***DSU*** 4
 ***KMP*** 4
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
-***binary_search*** 6
+***binary_search*** 7
 ***bit*** 5
 ***bitset*** 4
 ***brute*** 2
@@ -1477,11 +1556,11 @@
 ***dijkstra*** 2
 ***eg.*** 1
 ***emissary".cpp*** 1
-***fast-power*** 7
+***fast-power*** 9
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 1
-***graph*** 10
+***graph*** 11
 ***greedy*** 11
 ***half-brute*** 1
 ***hash*** 1
@@ -1490,15 +1569,15 @@
 ***lower_bound*** 2
 ***map*** 7
 ***multiset*** 1
-***operator*** 2
+***operator*** 3
 ***own-template*** 1
-***pb_ds*** 4
+***pb_ds*** 5
 ***pointer*** 1
-***pref*** 4
+***pref*** 5
 ***prime*** 3
 ***priority_queue*** 8
 ***queue*** 3
-***re*** 11
+***re*** 12
 ***re-search*** 2
 ***search*** 2
 ***seg_tree*** 11
@@ -1506,15 +1585,15 @@
 ***sparse_table*** 3
 ***stack*** 1
 ***string*** 2
-***struct*** 4
+***struct*** 5
 ***sweep-line*** 9
 ***table*** 1
 ***template*** 1
 ***test*** 2
-***tree*** 14
+***tree*** 15
 ***undo*** 1
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 307
+總題數: 324

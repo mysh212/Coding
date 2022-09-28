@@ -318,3 +318,7 @@ Range-Xor-Queries.cpp	BIT
 Range-Xor-Queries-2.cpp	pref
 Salary-Queries-4.cpp	pb_ds
 Salary-Queries-4.cpp	re
+Subordinates.cpp	DFS
+Tree-Diameter.cpp	DFS
+Tree-Diameter.cpp	DP
+Tree-Diameter.cpp	tree
