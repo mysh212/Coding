@@ -9,19 +9,23 @@ signed main() {
     cin.tie(0);
 
     int n;cin>>n;
-    vector<int>f(n);
+    deque<int>f(n);
+    int last = 0;
     for(int &i : f) {
         cin>>i;
+        i = last += i;
     }
-    vector<vector<int>>mark(n,vector<int>(n));
+    f.push_front(0);
+    vector<vector<int>>mark(n + 1,vector<int>(n + 1));
     function<int(int,int)> check = [&] (int l,int r) {
-        if(l + 1 == r) return f.at(l) + f.at(r);
+        if(l + 1 == r) return 0LL;
+        if(mark[l][r] != 0) return mark[l][r];
         int mmin = LONG_LONG_MAX;
         for(int i = l + 1;i + 1<r;i++) {
             mmin = min(check(l,i) + check(i + 1,r),mmin);
         }
-        return mmin + (f.at(l) + f.at(r));
+        return mark[l][r] = mmin + (f.at(r) - f.at(l));
     };
-    cout<<check(0,n - 1);
+    cout<<check(0,n);
     return 0;
 }
