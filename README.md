@@ -1493,7 +1493,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=09,25,2022 Sun  8:29:25,08]
+>[time=09,28,2022 Wed 11:08:56,36]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1521,6 +1521,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-c085.cpp)
+
+***[tioj-2266.cpp](https://tioj.ck.tp.edu.tw/problems/2266
+)***
+###### tags:  `greedy` `set`
+>[time=10,01,2022 Sat 12:22:19,50]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tioj-2266.cpp)
 
 ***[tunnel.cpp](https://tioj.ck.tp.edu.tw/problems/1509
 )***
@@ -1561,7 +1569,7 @@
 ***gp*** 1
 ***gp_hash_table*** 1
 ***graph*** 11
-***greedy*** 11
+***greedy*** 12
 ***half-brute*** 1
 ***hash*** 1
 ***lazy_tag*** 2
@@ -1581,7 +1589,7 @@
 ***re-search*** 2
 ***search*** 2
 ***seg_tree*** 11
-***set*** 6
+***set*** 7
 ***sparse_table*** 3
 ***stack*** 1
 ***string*** 2
@@ -1596,4 +1604,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 324
+總題數: 326
