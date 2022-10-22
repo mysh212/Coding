@@ -1,0 +1,11 @@
+using namespace std;
+int readint() {
+    char now = getchar();
+    while(!isdigit(now)) now = getchar();
+    int ans = 0;
+    while(isdigit(now)) {
+        ans = ans * 10 + now - '0';
+        now = getchar();
+    }
+    return ans;
+}

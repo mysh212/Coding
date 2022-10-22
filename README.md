@@ -1,3 +1,4 @@
+[***hang on***](https://github.com/mysh212/Coding/blob/master/Hoof-Paper-Scissors.cpp)
 ***"palace***
 ###### tags:  `emissary".cpp`
 >[time=]
@@ -455,6 +456,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d095.cpp)
 
+***[AP325-d100.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d100
+)***
+###### tags:  `graph` `DSU`
+>[time=10,05,2022 Wed 11:41:47,20]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d100.cpp)
+
 ***[AP325-d102.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d102
 )***
 ###### tags:  `graph` `DFS` `DSU` `struct` `operator`
@@ -617,6 +626,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Counting-Rooms.cpp)
 
+***[Course-Schedule.cpp](https://cses.fi/problemset/task/1679
+)***
+###### tags:  `tapo` `graph`
+>[time=10,11,2022 Tue 11:29:32,42]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Course-Schedule.cpp)
+
 ***[Cut.cpp](https://192.168.193.20/contest/2/problem/038
 )***
 ###### tags:  `DP`
@@ -664,6 +681,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Fortune-Telling.cpp)
 
+***[Graph-Without-Long-Directed-Paths.cpp](https://codeforces.com/contest/1144/problem/F
+)***
+###### tags:  `DSU` `graph` `DFS`
+>[time=10,12,2022 Wed 14:01:07,26]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Graph-Without-Long-Directed-Paths.cpp)
+
 ***[Grid-Paths.cpp](https://cses.fi/problemset/task/1638
 )***
 ###### tags:  `DP`
@@ -671,6 +696,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Grid-Paths.cpp)
+
+***[High-Score-5.cpp](https://cses.fi/problemset/task/1673
+)***
+###### tags:  `graph` `DFS`
+>[time=10,10,2022 Mon  8:29:12,95]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/High-Score-5.cpp)
 
 ***[Knapsack1.cpp](https://atcoder.jp/contests/dp/tasks/dp_d
 )***
@@ -687,6 +720,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Labyrinth.cpp)
+
+***[Longest-Flight-Route-2.cpp](https://cses.fi/problemset/task/1680/
+)***
+###### tags:  `graph` `re-search` `tapo` `DAG`
+>[time=10,12,2022 Wed 11:21:18,29]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Longest-Flight-Route-2.cpp)
 
 ***[Message-Route.cpp](https://cses.fi/problemset/task/1667
 )***
@@ -805,6 +846,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Reverse-and-Concatenate.cpp)
+
+***[Round-Trip-II.cpp](https://cses.fi/problemset/task/1678
+)***
+###### tags:  `graph` `DFS`
+>[time=10,11,2022 Tue  9:20:43,99]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Round-Trip-II.cpp)
 
 ***[Round-Trip.cpp](https://cses.fi/problemset/task/1669
 )***
@@ -1078,6 +1127,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-4.cpp)
 
+***[Zerojudge-d767.cpp](https://zerojudge.tw/ShowProblem?problemid=d767)***
+###### tags:  `LCA` `graph` `DFS` `sparse_table`
+>[time=10,14,2022 Fri  8:17:54,89]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d767.cpp)
+
 ***[Zerojudge-d784-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d784)***
 ###### tags:  `DP`
 >[time=06,10,2022 Fri 13:52:41,37]
@@ -1148,6 +1204,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-e810-4.cpp)
+
+***[Zerojudge-e810-6.cpp](https://zerojudge.tw/ShowProblem?problemid=e810)***
+###### tags:  `re` `graph` `dijkstra`
+>[time=10,10,2022 Mon  8:02:09,84]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-e810-6.cpp)
 
 ***[Zerojudge-f314-2.cpp](https://zerojudge.tw/ShowProblem?problemid=f314)***
 ###### tags:  `DP`
@@ -1226,6 +1289,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-g640.cpp)
+
+***[Zerojudge-g733.cpp](https://zerojudge.tw/ShowProblem?problemid=g733)***
+###### tags:  `dijkstra` `DP` `graph`
+>[time=10,03,2022 Mon 15:00:39,40]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-g733.cpp)
 
 ***[Zerojudge-g774-2.cpp](https://zerojudge.tw/ShowProblem?problemid=g774)***
 ###### tags:  `DP` `TOI`
@@ -1493,7 +1563,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=09,28,2022 Wed 11:08:56,36]
+>[time=10,14,2022 Fri 12:28:11,30]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1542,11 +1612,13 @@
 ***APCS*** 1
 ***BFS*** 5
 ***BIT*** 7
+***DAG*** 1
 ***DC*** 4
-***DFS*** 8
-***DP*** 58
-***DSU*** 4
+***DFS*** 12
+***DP*** 59
+***DSU*** 6
 ***KMP*** 4
+***LCA*** 1
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
@@ -1561,14 +1633,14 @@
 ***compare*** 3
 ***contest*** 16
 ***deque*** 4
-***dijkstra*** 2
+***dijkstra*** 4
 ***eg.*** 1
 ***emissary".cpp*** 1
 ***fast-power*** 9
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 1
-***graph*** 11
+***graph*** 20
 ***greedy*** 12
 ***half-brute*** 1
 ***hash*** 1
@@ -1585,17 +1657,18 @@
 ***prime*** 3
 ***priority_queue*** 8
 ***queue*** 3
-***re*** 12
-***re-search*** 2
+***re*** 13
+***re-search*** 3
 ***search*** 2
 ***seg_tree*** 11
 ***set*** 7
-***sparse_table*** 3
+***sparse_table*** 4
 ***stack*** 1
 ***string*** 2
 ***struct*** 5
 ***sweep-line*** 9
 ***table*** 1
+***tapo*** 2
 ***template*** 1
 ***test*** 2
 ***tree*** 15
@@ -1604,4 +1677,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-Á`ÃD¼Æ: 326
+ï¿½`ï¿½Dï¿½ï¿½: 351
