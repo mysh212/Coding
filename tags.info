@@ -364,3 +364,6 @@ prime-task.cpp	DP
 annoying-money.cpp	greedy
 square-game.cpp	graph
 square-game.cpp	bigraph
+Hoof-Paper-Scissors.cpp	DP
+magical-task-2.cpp	graph
+magical-task-2.cpp	bigraph

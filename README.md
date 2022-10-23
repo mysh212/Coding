@@ -1,4 +1,3 @@
-[***hang on***](https://github.com/mysh212/Coding/blob/master/Hoof-Paper-Scissors.cpp)
 ***"palace***
 ###### tags:  `emissary".cpp`
 >[time=]
@@ -705,6 +704,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/High-Score-5.cpp)
 
+***[Hoof-Paper-Scissors.cpp](http://www.usaco.org/index.php?page=viewproblem2
+)***
+###### tags:  `DP`
+>[time=10,22,2022 Sat 17:14:51,38]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Hoof-Paper-Scissors.cpp)
+
+***[K's-farm.cpp](https://www.luogu.com.cn/problem/P1993
+)***
+###### tags:  `graph` `difference`
+>[time=10,18,2022 Tue 16:24:07,31]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/K's-farm.cpp)
+
 ***[Knapsack1.cpp](https://atcoder.jp/contests/dp/tasks/dp_d
 )***
 ###### tags:  `DP`
@@ -712,6 +727,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Knapsack1.cpp)
+
+***[LCA.cpp](https://www.luogu.com.cn/problem/P3379
+)***
+###### tags:  `gp_hash_table` `tree` `LCA` `sparse_table` `BFS` `DFS`
+>[time=10,15,2022 Sat  8:08:49,90]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/LCA.cpp)
 
 ***[Labyrinth.cpp](https://cses.fi/problemset/task/1193
 )***
@@ -1240,6 +1263,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-f416-3.cpp)
 
+***[Zerojudge-f505.cpp](https://zerojudge.tw/ShowProblem?problemid=f505)***
+###### tags:  `BFS`
+>[time=10,20,2022 Thu  9:44:27,83]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-f505.cpp)
+
 ***[Zerojudge-f640.cpp](https://zerojudge.tw/ShowProblem?problemid=f640)***
 ###### tags:  `vector`
 >[time=04,05,2022 Tue  7:45:16,01]
@@ -1347,6 +1377,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/annia's-gift.cpp)
+
+***[annoying-money.cpp](https://tioj.ck.tp.edu.tw/problems/1066
+)***
+###### tags:  `greedy`
+>[time=10,21,2022 Fri  9:09:09,77]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/annoying-money.cpp)
 
 ***[award.cpp](http://choj.me/problem/b032
 )***
@@ -1522,6 +1560,30 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/lonelier.cpp)
 
+***[magical-task-2.cpp](https://tioj.ck.tp.edu.tw/problems/1069
+)***
+###### tags:  `graph` `bigraph`
+>[time=10,21,2022 Fri 16:06:37,83]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/magical-task-2.cpp)
+
+***[master.cpp](https://www.luogu.com.cn/problem/P4933
+)***
+###### tags:  `DP`
+>[time=10,16,2022 Sun  9:01:26,79]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/master.cpp)
+
+***[middle.cpp](https://www.luogu.com.cn/problem/P1168
+)***
+###### tags:  `pb_ds`
+>[time=10,15,2022 Sat  8:41:59,93]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/middle.cpp)
+
 ***[mining-water-chestnut.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/J
 )***
 ###### tags:  `contest` `contest` `gp`
@@ -1545,6 +1607,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/palace-emissary.cpp)
 
+***[prime-task.cpp](https://tioj.ck.tp.edu.tw/problems/1067
+)***
+###### tags:  `DP`
+>[time=10,21,2022 Fri  8:27:03,38]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/prime-task.cpp)
+
 ***[seat.cpp](https://192.168.193.20/contest/1/problem/004
 )***
 ###### tags:  `fast-power` `fib`
@@ -1552,6 +1622,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/seat.cpp)
+
+***[square-game.cpp](https://www.luogu.com.cn/problem/P1129
+)***
+###### tags:  `graph` `bigraph`
+>[time=10,22,2022 Sat 13:13:51,77]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/square-game.cpp)
 
 ***[sum-of-score.cpp](https://203.64.159.117/ShowProblem?problemid=a268
 )***
@@ -1563,7 +1641,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=10,14,2022 Fri 12:28:11,30]
+>[time=10,22,2022 Sat 17:48:23,20]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1610,18 +1688,19 @@
 
 :::spoiler ***algorithm***
 ***APCS*** 1
-***BFS*** 5
+***BFS*** 7
 ***BIT*** 7
 ***DAG*** 1
 ***DC*** 4
-***DFS*** 12
-***DP*** 59
+***DFS*** 13
+***DP*** 62
 ***DSU*** 6
 ***KMP*** 4
-***LCA*** 1
+***LCA*** 2
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
+***bigraph*** 2
 ***binary_search*** 7
 ***bit*** 5
 ***bitset*** 4
@@ -1633,15 +1712,16 @@
 ***compare*** 3
 ***contest*** 16
 ***deque*** 4
+***difference*** 1
 ***dijkstra*** 4
 ***eg.*** 1
 ***emissary".cpp*** 1
 ***fast-power*** 9
 ***fib*** 4
 ***gp*** 1
-***gp_hash_table*** 1
-***graph*** 20
-***greedy*** 12
+***gp_hash_table*** 2
+***graph*** 23
+***greedy*** 13
 ***half-brute*** 1
 ***hash*** 1
 ***lazy_tag*** 2
@@ -1651,7 +1731,7 @@
 ***multiset*** 1
 ***operator*** 3
 ***own-template*** 1
-***pb_ds*** 5
+***pb_ds*** 6
 ***pointer*** 1
 ***pref*** 5
 ***prime*** 3
@@ -1662,7 +1742,7 @@
 ***search*** 2
 ***seg_tree*** 11
 ***set*** 7
-***sparse_table*** 4
+***sparse_table*** 5
 ***stack*** 1
 ***string*** 2
 ***struct*** 5
@@ -1671,10 +1751,10 @@
 ***tapo*** 2
 ***template*** 1
 ***test*** 2
-***tree*** 15
+***tree*** 16
 ***undo*** 1
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-ï¿½`ï¿½Dï¿½ï¿½: 351
+Á`ÃD¼Æ: 369
