@@ -367,3 +367,10 @@ square-game.cpp	bigraph
 Hoof-Paper-Scissors.cpp	DP
 magical-task-2.cpp	graph
 magical-task-2.cpp	bigraph
+Zerojudge-i401.cpp	binary_search
+Zerojudge-i401.cpp	map
+APCS-11110-4-2.cpp	BFS
+APCS-11110-4-2.cpp	DP
+APCS-11110-4-3.cpp	BFS
+APCS-11110-4-3.cpp	binary_search
+APCS-11110-4-3.cpp	DSU

@@ -1,11 +1,11 @@
 // Author : ysh
 // 10/23/2022 Sun 19:07:44.74
+#include<bits/stdc++.h>
 using namespace std;
-#include<fast>
 #define int long long
 int ans = 0;
 int check() {
-    int r = readint();
+    int r;cin>>r;
     if(r == 0) return 0;
     if(r & 1) {
         for(int i = 0;i<=2;i++) {
