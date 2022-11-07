@@ -569,6 +569,28 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/APCS-11106-4.cpp)
 
+***APCS-11110-4-2.cpp***
+###### tags:  `BFS` `DP`
+>[time=10,24,2022 Mon 10:21:27,02]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/APCS-11110-4-2.cpp)
+
+***APCS-11110-4-3.cpp***
+###### tags:  `BFS` `binary_search` `DSU`
+>[time=10,24,2022 Mon 10:21:43,37]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/APCS-11110-4-3.cpp)
+
+***[Advertisement-2.cpp](https://cses.fi/problemset/task/1142/
+)***
+###### tags:  `DC`
+>[time=10,27,2022 Thu 18:25:06,75]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Advertisement-2.cpp)
+
 ***[Avoid-Local-Maximums.cpp](https://codeforces.com/contest/1635/problem/B
 )***
 ###### tags:  `contest`
@@ -617,6 +639,30 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Colten-work-in-THSR.cpp)
 
+***[Company-Queries-I.cpp](https://cses.fi/problemset/task/1687
+)***
+###### tags:  `tree`
+>[time=11,04,2022 Fri 14:03:57,46]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Company-Queries-I.cpp)
+
+***[Company-Queries-II.cpp](https://cses.fi/problemset/task/1688
+)***
+###### tags:  `LCA` `tree`
+>[time=11,04,2022 Fri 14:19:29,34]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Company-Queries-II.cpp)
+
+***[Counting-Paths.cpp](https://cses.fi/problemset/task/1136
+)***
+###### tags:  `tree` `LCA` `difference`
+>[time=11,04,2022 Fri 14:46:42,16]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Counting-Paths.cpp)
+
 ***[Counting-Rooms.cpp](https://cses.fi/problemset/task/1192
 )***
 ###### tags:  `DFS`
@@ -640,6 +686,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Cut.cpp)
+
+***[Distance-Queries-2.cpp](https://cses.fi/problemset/task/1135
+)***
+###### tags:  `tree` `LCA`
+>[time=11,04,2022 Fri 14:31:53,59]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Distance-Queries-2.cpp)
 
 ***[EIKO's-concert.cpp](https://choj.me/problem/c001
 )***
@@ -934,6 +988,30 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Subordinates.cpp)
 
+***[Subtree-Queries-2.cpp](https://cses.fi/problemset/task/1137
+)***
+###### tags:  `BIT` `tree` `DFS`
+>[time=11,04,2022 Fri 15:48:09,91]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Subtree-Queries-2.cpp)
+
+***[TIOJ-1209.cpp](https://tioj.ck.tp.edu.tw/problems/1209
+)***
+###### tags:  `bigraph` `graph` `DFS`
+>[time=10,27,2022 Thu  7:53:48,38]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-1209.cpp)
+
+***[TIOJ-2276.cpp](https://tioj.ck.tp.edu.tw/problems/2276
+)***
+###### tags:  `permutation`
+>[time=11,05,2022 Sat 19:12:15,41]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2276.cpp)
+
 ***[Tree-Diameter.cpp](https://cses.fi/problemset/task/1131
 )***
 ###### tags:  `DFS` `DP` `tree`
@@ -941,6 +1019,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Tree-Diameter.cpp)
+
+***[Tree-Distances-II-2.cpp](https://cses.fi/problemset/task/1133
+)***
+###### tags:  `tree` `DFS`
+>[time=11,02,2022 Wed  9:20:11,51]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Tree-Distances-II-2.cpp)
 
 ***[Trips.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/A
 )***
@@ -1150,6 +1236,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-4.cpp)
 
+***[Zerojudge-d767-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d767)***
+###### tags:  `graph` `LCA`
+>[time=11,04,2022 Fri  8:28:42,40]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d767-2.cpp)
+
 ***[Zerojudge-d767.cpp](https://zerojudge.tw/ShowProblem?problemid=d767)***
 ###### tags:  `LCA` `graph` `DFS` `sparse_table`
 >[time=10,14,2022 Fri  8:17:54,89]
@@ -1198,6 +1291,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d788.cpp)
+
+***[Zerojudge-d793.cpp](https://zerojudge.tw/ShowProblem?problemid=d793)***
+###### tags:  `dijkstra` `graph`
+>[time=11,01,2022 Tue 11:19:59,04]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d793.cpp)
 
 ***[Zerojudge-d799.cpp](https://zerojudge.tw/ShowProblem?problemid=d799)***
 ###### tags:  `seg_tree` `tree` `lazy_tag` `own-template`
@@ -1348,6 +1448,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-h029.cpp)
 
+***[Zerojudge-i401.cpp](https://zerojudge.tw/ShowProblem?problemid=i401)***
+###### tags:  `binary_search` `map`
+>[time=10,23,2022 Sun 10:34:15,51]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-i401.cpp)
+
 ***[Zerojudge-i426.cpp](https://zerojudge.tw/ShowProblem?problemid=i426)***
 ###### tags:  `list`
 >[time=06,18,2022 Sat  9:07:18,04]
@@ -1361,6 +1468,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-i510-2.cpp)
+
+***[Zerojudge-j125-3.cpp](https://zerojudge.tw/ShowProblem?problemid=j125)***
+###### tags:  `graph` `BFS`
+>[time=10,30,2022 Sun 12:00:03,17]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-j125-3.cpp)
 
 ***[a-city-without-myself.cpp](http://choj.me/problem/00072
 )***
@@ -1474,6 +1588,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/fast-power.cpp)
 
+***[filling-box.cpp](https://www.luogu.com.cn/problem/P1049
+)***
+###### tags:  `DP`
+>[time=11,05,2022 Sat 14:10:09,04]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/filling-box.cpp)
+
 ***[flower-picking-II.cpp](http://choj.me/problem/00008
 )***
 ###### tags:  `choj` `DFS`
@@ -1568,6 +1690,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/magical-task-2.cpp)
 
+***magical-task-3.cpp***
+###### tags:  `re` `bigraph` `graph`
+>[time=10,29,2022 Sat 13:25:25,65]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/magical-task-3.cpp)
+
 ***[master.cpp](https://www.luogu.com.cn/problem/P4933
 )***
 ###### tags:  `DP`
@@ -1641,7 +1770,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=10,22,2022 Sat 17:48:23,20]
+>[time=11,05,2022 Sat 15:21:52,82]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1688,20 +1817,20 @@
 
 :::spoiler ***algorithm***
 ***APCS*** 1
-***BFS*** 7
-***BIT*** 7
+***BFS*** 10
+***BIT*** 8
 ***DAG*** 1
-***DC*** 4
-***DFS*** 13
-***DP*** 62
-***DSU*** 6
+***DC*** 5
+***DFS*** 16
+***DP*** 64
+***DSU*** 7
 ***KMP*** 4
-***LCA*** 2
+***LCA*** 6
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
-***bigraph*** 2
-***binary_search*** 7
+***bigraph*** 4
+***binary_search*** 9
 ***bit*** 5
 ***bitset*** 4
 ***brute*** 2
@@ -1712,32 +1841,33 @@
 ***compare*** 3
 ***contest*** 16
 ***deque*** 4
-***difference*** 1
-***dijkstra*** 4
+***difference*** 2
+***dijkstra*** 5
 ***eg.*** 1
 ***emissary".cpp*** 1
 ***fast-power*** 9
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 2
-***graph*** 23
+***graph*** 28
 ***greedy*** 13
 ***half-brute*** 1
 ***hash*** 1
 ***lazy_tag*** 2
 ***list*** 2
 ***lower_bound*** 2
-***map*** 7
+***map*** 8
 ***multiset*** 1
 ***operator*** 3
 ***own-template*** 1
 ***pb_ds*** 6
+***permutation*** 1
 ***pointer*** 1
 ***pref*** 5
 ***prime*** 3
 ***priority_queue*** 8
 ***queue*** 3
-***re*** 13
+***re*** 14
 ***re-search*** 3
 ***search*** 2
 ***seg_tree*** 11
@@ -1751,10 +1881,10 @@
 ***tapo*** 2
 ***template*** 1
 ***test*** 2
-***tree*** 16
+***tree*** 22
 ***undo*** 1
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 369
+總題數: 404
