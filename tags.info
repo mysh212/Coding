@@ -402,3 +402,7 @@ Subtree-Queries-2.cpp	tree
 Subtree-Queries-2.cpp	DFS
 filling-box.cpp	DP
 TIOJ-2276.cpp	permutation
+move-in-playground.cpp	Dijkstra
+TIOJ-2283.cpp	Dijkstra
+TIOJ-2283.cpp	graph
+TIOJ-2283.cpp	difference

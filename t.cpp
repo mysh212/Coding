@@ -1,24 +1,24 @@
 // Author : ysh
-// 11/05/2022 Sat 15:21:52.78
+// 11/15/2022 Tue  6:38:45.93
 #include<bits/stdc++.h>
 using namespace std;
-void cp(int l,int r) {
-    if(l == r) {
-        cout<<l<<endl;
-        exit(0);
-    }
-    int mid = (l + r) >> 1;
-    cout<<mid<<endl;
-    string a;cin>>a;
-    if(a == "lower") cp(l,mid);
-    if(a == "higher") cp(mid + 1,r);
-    if(a == "correct") exit(0);
-    return;
+inline bool yes(int x) {
+    if(x % 400 == 0) return 1;
+    if(x % 100 == 0) return 0;
+    if(x % 4 == 0) return 1;
+    return 0;
 }
 int main() {
-    // ios::sync_with_stdio(false);
-    // cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
-    cp(1,1000);
+    int a,b;cin>>a>>b;
+    while(a--) {
+        b = b + 1;
+        while(!yes(b)) {
+            b = b + 1;
+        }
+    }
+    cout<<b;
     return 0;
 }
