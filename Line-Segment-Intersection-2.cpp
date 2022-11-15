@@ -21,6 +21,11 @@ struct box{
         return (x * a.y - y * a.x);
     }
 };
+inline int pos(int x) {
+    if(x > 0) return 1;
+    if(x < 0) return -1;
+    return 0;
+}
 inline bool on(box a,box b,box c) {
     box aa = b - a;
     box bb = c - a;
@@ -40,7 +45,7 @@ signed main() {
         }
         if(on(f.at(0),f.at(2),f.at(1))) cout<<"YES\n";
         else if(on(f.at(0),f.at(3),f.at(1))) cout<<"YES\n";
-        else if(((f.at(2) - f.at(0)) / (f.at(1) - f.at(0))) * ((f.at(1) - f.at(0)) / (f.at(3) - f.at(0))) >= 0 && ((f.at(0) - f.at(2)) / (f.at(3) - f.at(2))) * ((f.at(3) - f.at(2)) / (f.at(1) - f.at(2))) >= 0) cout<<"YES\n";
+        else if(pos((f.at(2) - f.at(0)) / (f.at(1) - f.at(0))) * pos((f.at(1) - f.at(0)) / (f.at(3) - f.at(0))) >= 0 && pos((f.at(0) - f.at(2)) / (f.at(3) - f.at(2))) * pos((f.at(3) - f.at(2)) / (f.at(1) - f.at(2))) >= 0) cout<<"YES\n";
         else cout<<"NO\n";
     }
     return 0;
