@@ -21,6 +21,6 @@ int main() {
     int x,y,n;cin>>x>>y>>n;
     vector<box>f(n);
     while(n--) {
-        
+
     }
 }
