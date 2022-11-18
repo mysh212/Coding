@@ -1,5 +1,6 @@
 // Author : ysh
-// 11/18/2022 Fri  9:35:01.21
+// 11/18/2022 Fri 10:11:54.30
+// https://cses.fi/problemset/task/1688/
 #include<bits/stdc++.h>
 using namespace std;
 struct ntree{
