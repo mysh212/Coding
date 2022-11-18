@@ -36,17 +36,23 @@ inline bool on(box a,box b,box c) {
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+ 
     int n;cin>>n;
     while(n--) {
         vector<box>f(4);
         for(auto &i : f) {
             i.input();
         }
-        if(on(f.at(0),f.at(2),f.at(1))) cout<<"YES\n";
-        else if(on(f.at(0),f.at(3),f.at(1))) cout<<"YES\n";
-        else if(pos((f.at(2) - f.at(0)) / (f.at(1) - f.at(0))) * pos((f.at(1) - f.at(0)) / (f.at(3) - f.at(0))) >= 0 && pos((f.at(0) - f.at(2)) / (f.at(3) - f.at(2))) * pos((f.at(3) - f.at(2)) / (f.at(1) - f.at(2))) >= 0) cout<<"YES\n";
+        box aa = f.at(1) - f.at(0);
+        box bb = f.at(2) - f.at(0);
+        box cc = f.at(3) - f.at(0);
+        box dd = f.at(3) - f.at(2);
+        box ee = f.at(1) - f.at(2);
+        box ff = f.at(0) - f.at(2);
+        if(on(f.at(0),f.at(2),f.at(1)) || on(f.at(0),f.at(3),f.at(1)) || on(f.at(2),f.at(0),f.at(3)) || on(f.at(2),f.at(1),f.at(3))) cout<<"YES\n";
+        else if(pos(bb / aa) != 0 && pos(dd / ee) != 0 && (pos(bb / aa) == pos(aa / cc) && pos(dd / ee) == pos(ff / dd))) cout<<"YES\n";
         else cout<<"NO\n";
+
     }
     return 0;
 }
