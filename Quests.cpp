@@ -1,12 +1,13 @@
 // Author : ysh
 // 11/22/2022 Tue 10:12:46.19
 // https://codeforces.com/contest/1760/problem/F
+#include<bits/stdc++.h>
 using namespace std;
 #ifdef LOCAL
 #include<debug.h>
 #else
-#define debug(...) 
-#define printf(...) 
+#define debug(...) '*'
+#define printf(...) '*'
 #endif
 #define int long long
 int check(vector<int> &f,int n,int d,int k) {

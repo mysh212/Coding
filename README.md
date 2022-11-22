@@ -1,3 +1,5 @@
+[*[hang on]* ***Count-GCD.cpp***](https://github.com/mysh212/Coding/blob/master/Count-GCD.cpp) 
+ 
 ***"palace***
 ###### tags:  `emissary".cpp`
 >[time=]
@@ -884,6 +886,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Prefix-Sum-Queries-3.cpp)
 
+***[Quests.cpp](https://codeforces.com/contest/1760/problem/F
+)***
+###### tags:  `binary-search`
+>[time=11,22,2022 Tue 10:12:46,19]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Quests.cpp)
+
 ***[Range-Update-Queries-2.cpp](https://cses.fi/problemset/hack/1651/list/
 )***
 ###### tags:  `BIT` `tree`
@@ -964,6 +974,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Salary-Queries.cpp)
 
+***[Save-the-Magazines.cpp](https://codeforces.com/contest/1743/problem/C
+)***
+###### tags:  `DP`
+>[time=11,20,2022 Sun  7:23:30,61]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Save-the-Magazines.cpp)
+
 ***[String-Matching.cpp](https://cses.fi/problemset/task/1753
 )***
 ###### tags:  `KMP`
@@ -1011,6 +1029,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2276.cpp)
+
+***[TIOJ-2283.cpp](https://tioj.ck.tp.edu.tw/problems/2283
+)***
+###### tags:  `Dijkstra` `graph` `difference`
+>[time=11,09,2022 Wed 11:23:22,05]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2283.cpp)
 
 ***[Tree-Diameter.cpp](https://cses.fi/problemset/task/1131
 )***
@@ -1721,6 +1747,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/mining-water-chestnut.cpp)
 
+***[move-in-playground.cpp](http://choj.me/problem/d015
+)***
+###### tags:  `Dijkstra`
+>[time=11,07,2022 Mon 20:01:04,59]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/move-in-playground.cpp)
+
 ***ouo.cpp***
 ###### tags:  `KMP`
 >[time=08,02,2022 Tue 22:27:26,95]
@@ -1770,7 +1804,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=11,05,2022 Sat 15:21:52,82]
+>[time=11,22,2022 Tue  9:22:03,61]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1822,14 +1856,16 @@
 ***DAG*** 1
 ***DC*** 5
 ***DFS*** 16
-***DP*** 64
+***DP*** 65
 ***DSU*** 7
+***Dijkstra*** 2
 ***KMP*** 4
 ***LCA*** 6
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
 ***bigraph*** 4
+***binary-search*** 1
 ***binary_search*** 9
 ***bit*** 5
 ***bitset*** 4
@@ -1841,7 +1877,7 @@
 ***compare*** 3
 ***contest*** 16
 ***deque*** 4
-***difference*** 2
+***difference*** 3
 ***dijkstra*** 5
 ***eg.*** 1
 ***emissary".cpp*** 1
@@ -1849,7 +1885,7 @@
 ***fib*** 4
 ***gp*** 1
 ***gp_hash_table*** 2
-***graph*** 28
+***graph*** 29
 ***greedy*** 13
 ***half-brute*** 1
 ***hash*** 1
@@ -1887,4 +1923,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 404
+總題數: 410
