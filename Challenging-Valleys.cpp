@@ -1,6 +1,7 @@
 // Author : ysh
 // 11/22/2022 Tue  9:23:57.92
 // https://codeforces.com/contest/1760/problem/D
+#include<bits/stdc++.h>
 using namespace std;
 #ifdef LOCAL
 #include<debug.h>
