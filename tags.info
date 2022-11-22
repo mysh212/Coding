@@ -410,3 +410,5 @@ Save-the-Magazines.cpp	DP
 Quests.cpp	binary-search
 Zerojudge-d799-2.cpp	lazy-tag
 Zerojudge-d799-2.cpp	seg_tree
+Distinct-Values-Queries.cpp	seg_tree
+Distinct-Values-Queries.cpp	offline

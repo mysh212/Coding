@@ -1,6 +1,7 @@
 // Author : ysh
 // 11/22/2022 Tue 23:34:15.03
 // https://cses.fi/problemset/task/1734
+#include<bits/stdc++.h>
 using namespace std;
 #include<seg_tree>
 #define int long long
