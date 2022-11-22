@@ -1,19 +1,16 @@
 // Author : ysh
-// 11/22/2022 Tue  9:22:03.60
+// 11/22/2022 Tue 16:38:20.98
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int n;cin>>n;
-    vector<int>f(n);
-    for(int &i : f) {
-        cin>>i;
+    long long n;cin>>n;
+    long long ans = 0;
+    for(long long i = 1;i<=n;i++) {
+        if(i % 2 == 0 || i % 3 == 0 || i % 5 == 0) ans++;
     }
-    f.resize(unique(f.begin(),f.end()) - f.begin());
-    for(int &i : f) {
-        cout<<i<<" ";
-    }
+    cout<<n - ans;
     return 0;
 }

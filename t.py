@@ -1,6 +1,8 @@
 # Author : ysh
-# 11/15/2022 Tue  6:32:41.51
-n = input()
-for i in sorted([int(i) for i in input().split()]):
-    print(i,end = ' ')
+# 11/22/2022 Tue 16:35:31.25
+ans = 0
+for i in range(1,int(input()) + 1):
+    if i % 2 == 0 or i % 3 == 0 or i % 5 == 0:
+        ans = ans + 1
+print(int(input()) - ans)
 quit()
