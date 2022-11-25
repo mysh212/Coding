@@ -3,14 +3,15 @@
 // https://tioj.ck.tp.edu.tw/problems/2252
 #include<bits/stdc++.h>
 using namespace std;
+// #define int double
 struct dot{
-    int x,y;
-    dot(int x = 0,int y = 0):
+    double x,y;
+    dot(double x = 0,double y = 0):
         x(x), y(y) {};
     inline dot operator-(dot a) {
         return dot(x - a.x,y - a.y);
     }
-    inline int operator*(dot a) {
+    inline double operator*(dot a) {
         return (x * a.x + y * a.y);
     }
     inline void input() {
@@ -19,18 +20,29 @@ struct dot{
     inline void print() {
         cerr<<x<<" "<<y<<"\n";
     }
-    inline int dt(dot a,dot b) {
+    inline double dt(dot a,dot b) {
         return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
     }
     inline double nearest(dot a,dot b,dot c) {
         dot v = b - c;
         // v.print();
         // x + n * v.x , y + n * v.y
-        int aa = v.y * (c.x - a.x) + v.x * (c.y - a.y);
-        int bb = (v.x * v.x + v.y * v.y);
-        dot cc = (c.x + v.x * 1.0 * aa / bb,c.y + v.y * 1.0 * aa / bb);
-        dot aaa = a - cc;
-        dot bbb = b - cc;
+        double aa = v.y * (a.x - c.x) - v.x * (a.y - c.y);
+        double bb = (v.x * v.x + v.y * v.y);
+        dot cc = dot(a.x * 1.0 - (v.y * 1.0 * aa / bb),a.y * 1.0 + (v.x * 1.0 * aa / bb));
+        /*
+        cerr<<"a: ";a.print();
+        cerr<<"b: ";b.print();
+        cerr<<"c: ";c.print();
+        cerr<<aa<<" "<<bb<<"\ncc: ";
+        */
+        // cerr<<"cc: ";cc.print();
+        dot aaa = b - cc;
+        dot bbb = c - cc;
+        /*
+        cerr<<"cc to a :";aaa.print();
+        cerr<<"cc to b :";bbb.print();
+        */
         if(aaa * bbb > 0) return -1;
         // cerr<<aa<<" "<<bb<<"\n";
         return abs(aa * aa * 1.0 / bb);
@@ -43,7 +55,7 @@ struct dot{
         return min(bb,cc);
     }
 };
-int main() {
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
@@ -54,9 +66,10 @@ int main() {
     dot last;last.input();
     for(int i = 0;i<n;i++) {
         dot tmp;tmp.input();
+        // cerr<<p.realdt(last,tmp)<<"\n";
         mmin = min(mmin,p.realdt(last,tmp));
         last = tmp;
     }
-    cout<<fixed<<setprecision(6)<<sqrt(mmin);
+    cout<<fixed<<setprecision(20)<<sqrt(mmin);
     return 0;
 }

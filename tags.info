@@ -413,3 +413,5 @@ Zerojudge-d799-2.cpp	seg_tree
 Distinct-Values-Queries.cpp	seg_tree
 Distinct-Values-Queries.cpp	offline
 Zerojudge-d847.cpp	BIT
+TIOJ-2252-2.cpp	geometry
+Count-GCD.cpp	math
