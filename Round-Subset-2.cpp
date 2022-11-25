@@ -35,14 +35,14 @@ int main() {
     for(int i = 0;i<a;i++) {
         for(int j = 0;j<b;j++) {
             for(int k = 0;k<mmax;k++) {
-                if(k + f.at(i).second >= f.at(i).first) c[i + 1][j + 1][k + f.at(i).second] = max(c[i + 1][j + 1][k + f.at(i).second],c[i][j][k] + f.at(i).first);
+                c[i + 1][j + 1][k + f.at(i).second] = max(c[i + 1][j + 1][k + f.at(i).second],c[i][j][k] + f.at(i).first);
                 c[i + 1][j][k] = max(c[i + 1][j][k],c[i][j][k]);
             }
         }
     }
     for(int i = 0;i<=a;i++) {
         for(int j = 0;j<=b;j++) {
-            for(int k = 0;j<=mmax;k++) {
+            for(int k = 0;k<=mmax;k++) {
                 cerr<<c[i][j][k]<<" ";
             }
             cerr<<"\n";
