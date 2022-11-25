@@ -1,3 +1,5 @@
+[*[hang on]* ***TIOJ-2254.cpp***](https://github.com/mysh212/Coding/blob/master/TIOJ-2254.cpp) 
+ 
 [*[hang on]* ***TIOJ-2252-2.cpp***](https://github.com/mysh212/Coding/blob/master/TIOJ-2252-2.cpp) 
  
 [*[hang on]* ***Count-GCD.cpp***](https://github.com/mysh212/Coding/blob/master/Count-GCD.cpp) 
