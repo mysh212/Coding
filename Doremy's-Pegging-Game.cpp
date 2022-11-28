@@ -1,5 +1,6 @@
 // Author : ysh
-// 11/27/2022 Sun 13:04:10.95
+// 11/28/2022 Mon 21:12:09.56
+// https://codeforces.com/contest/1764/problem/D
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
