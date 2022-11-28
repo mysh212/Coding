@@ -97,27 +97,35 @@ void walk(vector<box>&f,int n) {
     vector<vector<box>>v(a);
     vector<int>to(a);
     for(int i = 0;i<b;i++) {
+        if(f.at(i).z <= n) {
+            v.at(f.at(i).y).push_back(box(f.at(i).x,i,1));
+            v.at(f.at(i).x).push_back(box(f.at(i).y,i,0));
+            continue;
+        }
         v.at(f.at(i).x).push_back(box(f.at(i).y,-1,0));
         to.at(f.at(i).y)++;
-        if(f.at(i).z <= n) v.at(f.at(i).y).push_back(box(f.at(i).x,i,1));
     }
+    debug(to);
     vector<bool>mark(a);
     vector<int>re;
     set<pair<int,int>>s;
     function<void(int,int)> check = [&] (int x,int t) {
-        queue<pair<int,int>>q;
+        queue<box>q;
         q.emplace(x,-1);
         while(!q.empty()) {
             auto now = q.front();q.pop();
-            int d = now.first;
-            if(mark.at(d)) continue;
+            int d = now.x;
+            if(mark.at(d)) {
+                if(now.y != -1 && now.z == 0) re.push_back(now.y);
+                continue;
+            }
             mark.at(d) = 1;
-            if(now.second != -1) {
-                re.push_back(now.second);
-                s.insert({f.at(now.second).x,f.at(now.second).y});
+            if(now.y != -1 && now.z == 1) {
+                re.push_back(now.y);
+                s.insert({f.at(now.y).x,f.at(now.y).y});
             }
             for(box &i : v.at(d)) {
-                q.emplace(i.x,i.y);
+                q.push(box(i.x,i.y,i.z));
             }
         }
     };
