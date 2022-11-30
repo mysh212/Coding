@@ -416,3 +416,6 @@ Zerojudge-d847.cpp	BIT
 TIOJ-2252-2.cpp	geometry
 Count-GCD.cpp	math
 Doremy's-Pegging-Game.cpp	math
+Forest-Queries.cpp	DP
+Hotel-Queries.cpp	seg_tree
+Hotel-Queries.cpp	binary_search
