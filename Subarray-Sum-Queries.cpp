@@ -5,16 +5,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 struct box{
-    int mmin,mmax;
+    int mmin,mmax,v;
     box(int x = 0):
-        mmin(x), mmax(0) {};
-    box(int x,int y):
-        mmin(x), mmax(y) {};
+        mmin(x), mmax(x), v(max(0,x)) {};
+    box(int x,int y,int v):
+        mmin(x), mmax(y), v(v) {};
     inline box operator+(box a) {
-        return box(mmin + a.mmin,max(mmax,mmin + a.mmin));
+        return box(min(mmin,a.mmin),max(mmax,a.mmax),max(a.v,a.mmax - mmin));
     }
     inline box operator+=(box a) {
-        return *this = box(mmin + a.mmin,0);
+        return *this = box(mmin + a.mmin);
     }
     inline box operator*(int a) {
         return *this;
@@ -27,18 +27,20 @@ int main() {
 
     int a,b;cin>>a>>b;
     vector<box>f(a);
+    int last = 0;
     for(box &i : f) {
         int tmp;cin>>tmp;
-        i = box(tmp);
+        i = box(last += tmp);
     }
     seg_tree<box>t(f);
+        cout<<t.sum(0,b - 1).mmax<<"\n";
     while(b--) {
         int aa,bb;cin>>aa>>bb;
         aa--;
         int tmp = bb - f.at(aa).mmin;
         f.at(aa) = box(bb);
-        t.add(aa,aa,box(tmp));
-        cout<<t.sum(0,b).mmax<<"\n";
+        t.add(aa,b - 1,box(tmp));
+        cout<<t.sum(0,b - 1).mmax<<"\n";
     }
     return 0;
 }
