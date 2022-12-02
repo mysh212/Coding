@@ -1,3 +1,5 @@
+[*[hang on]* ***Subarray-Sum-Queries.cpp***](https://github.com/mysh212/Coding/blob/master/Subarray-Sum-Queries.cpp) 
+ 
 [*[hang on]* ***TIOJ-2254.cpp***](https://github.com/mysh212/Coding/blob/master/TIOJ-2254.cpp) 
  
 [*[hang on]* ***TIOJ-2252-2.cpp***](https://github.com/mysh212/Coding/blob/master/TIOJ-2252-2.cpp) 

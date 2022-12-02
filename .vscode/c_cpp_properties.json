@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "G:/我的雲端硬碟/Coding/library"
+                "G:/我的雲端硬碟/Coding/library",
+                "${workspaceFolder}/library"
             ],
             "defines": [
                 "_DEBUG",
