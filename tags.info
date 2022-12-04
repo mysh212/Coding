@@ -422,3 +422,5 @@ Hotel-Queries.cpp	binary_search
 TIOJ-2254.cpp	graph
 TIOJ-2254.cpp	tapoo
 TIOJ-2254.cpp	binary_search
+Multi-Colored-Segments.cpp	seg_tree
+Multi-Colored-Segments.cpp	offline
