@@ -430,3 +430,5 @@ Mouse-Hunt.cpp	DFS
 Zerojudge-d799-3.cpp	BIT
 Restore-the-Permutation.cpp	greedy
 Maximum-Subsequence-2.cpp	half-brute
+APCSP-a137-2.cpp	DSU
+APCSP-a137-2.cpp	MST
