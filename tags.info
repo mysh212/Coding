@@ -422,3 +422,5 @@ Hotel-Queries.cpp	binary_search
 TIOJ-2254.cpp	graph
 TIOJ-2254.cpp	tapoo
 TIOJ-2254.cpp	binary_search
+APCSP-a137-2.cpp	DSU
+APCSP-a137-2.cpp	MST
