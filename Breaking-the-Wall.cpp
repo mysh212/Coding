@@ -1,6 +1,7 @@
 // Author : ysh
 // 12/07/2022 Wed 11:40:15.38
 // https://codeforces.com/contest/1674/problem/E
+// NF
 #include<bits/stdc++.h>
 using namespace std;
 inline int ck(int l,int r,vector<int>&f) {
