@@ -433,3 +433,4 @@ Maximum-Subsequence-2.cpp	half-brute
 APCSP-a137-2.cpp	DSU
 APCSP-a137-2.cpp	MST
 Permutation-Graph-2.cpp	greedy
+Queries-for-Number-of-Palindromes.cpp	DP
