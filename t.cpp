@@ -1,59 +1,31 @@
 // Author : ysh
-// 11/30/2022 Wed 21:10:47.58
+// 12/10/2022 Sat 22:16:52.05
 #include<bits/stdc++.h>
 using namespace std;
-#ifdef LOCAL
-#include<debug.h>
-#else
-#define debug(...) '*'
-#define printf(...) '*'
-#endif
-
+int a,b,c;
+// void check(int a,int b,int c,int d) {
+//     if(b == -1) {
+//         for(int i = a;i<=13;i++) {
+//             check()
+//         }
+//     }
+// }
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int a,b;cin>>a>>b;
-    vector<vector<int>>f(a),re(a);
-    vector<int>to(a);
-    for(int i = 0;i<b;i++) {
-        int a,b;cin>>a>>b;
-        f.at(a).push_back(b);
-        re.at(b).push_back(a);
-        to.at(a)++;
-    }
-    queue<int>q;
-    for(int i = 0;i<a;i++) {
-        if(to.at(i) == 0) q.push(i);
-    }
-    while(!q.empty()) {
-        int now = q.front();q.pop();
-        for(int &i : re.at(now)) if(--to.at(i) == 0) {
-            q.push(i);
+    for(int i = 1;i<=52;i++) {
+        for(int j = i + 1;j<=52;j++) {
+            for(int k = 1;k<=52;k++) {
+                for(int l = k + 1;l<=52;l++) {
+                    if(l == i || l == j || k == i || k == j) continue;
+                    if(l <= 13 && k <= 13) a++;
+                    if((i > 13 && j > 13) && (k <= 13 && l <= 13)) b++;
+                    c++;
+                }
+            }
         }
     }
-    debug(to);
-    vector<bool>mark(a);
-    function<void(int)> check = [&] (int x) {
-        if(mark.at(x)) return;
-        mark.at(x) = 1;
-        for(int &i : re.at(x)) {
-            check(i);
-        }
-        return;
-    };
-    bool c = 0;
-    for(int i = 0;i<a;i++) {
-        if(to.at(i) != 0) {
-            //check(i);
-            cout<<i<<" ";
-            c = 1;
-        }
-    }
-    if(!c) cout<<-1;
-    return 0;
-    for(int i = 0;i<a;i++) {
-        if(mark.at(i)) cout<<i<<" ";
-    }
+    cout<<a<<" "<<b<<" "<<c;
     return 0;
 }
