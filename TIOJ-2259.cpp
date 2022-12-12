@@ -9,18 +9,18 @@ int main() {
     cin.tie(0);
 
     int n;cin>>n;
-    vector<vector<int>>from({{1,3}, {6}, {1,3}, {2,4,5,7}, {2,4,5,7}, {0,1,3,8}, {2,4,5,7}, {6}, {2,4}});
-    vector<vector<int>>f(2,vector<int>(9));
+    vector<vector<int>>from({{1,3}, {6}, {1,3}, {2,4,5,7,9}, {2,4,7,9}, {0,8}, {2,4,7}, {6}, {2,4,9}, {5}});
+    vector<vector<int>>f(2,vector<int>(10));
     f.at(1).at(0) = f.at(1).at(2) = 1;
     for(int i = 0;i<n - 1;i++) {
         int p = i & 1;
-        for(int j = 0;j<=8;j++) {
+        for(int j = 0;j<=9;j++) {
             f.at(p).at(j) = 0;
             for(int &i : from.at(j)) {
                 f.at(p).at(j) += f.at(!p).at(i);
             }
         }
-    for(auto i : f) {for(int &j : i) cerr<<j<<" "; cerr<<"\n";}
+    for(auto i : f.at(p)) cerr<<i<<" "; cerr<<"\n";
     }
     cout<<(f.at((n & 1)).at(1) + f.at((n & 1)).at(3)) % R;
     return 0;
