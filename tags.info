@@ -434,3 +434,11 @@ APCSP-a137-2.cpp	DSU
 APCSP-a137-2.cpp	MST
 Permutation-Graph-2.cpp	greedy
 Queries-for-Number-of-Palindromes.cpp	DP
+TIOJ-2259.cpp	fast-power
+TIOJ-2259.cpp	DP
+TIOJ-2257.cpp	BIT
+TIOJ-2257.cpp	graph
+TIOJ-2257.cpp	DFS
+TIOJ-2257.cpp	tree
+TIOJ-2223.cpp	greedy
+TIOJ-1069.cpp	bigraph

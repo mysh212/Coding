@@ -1140,6 +1140,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2254.cpp)
 
+***[TIOJ-2257.cpp](https://tioj.ck.tp.edu.tw/problems/2257
+)***
+###### tags:  `BIT` `graph` `DFS` `tree`
+>[time=12,12,2022 Mon  9:58:21,91]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2257.cpp)
+
+***[TIOJ-2259.cpp](https://tioj.ck.tp.edu.tw/problems/2259
+)***
+###### tags:  `fast-power` `DP`
+>[time=12,09,2022 Fri 16:29:56,33]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2259.cpp)
+
 ***[TIOJ-2276.cpp](https://tioj.ck.tp.edu.tw/problems/2276
 )***
 ###### tags:  `permutation`
@@ -1950,7 +1966,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=11,30,2022 Wed 21:10:47,58]
+>[time=12,10,2022 Sat 22:16:52,06]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -1998,11 +2014,11 @@
 :::spoiler ***algorithm***
 ***APCS*** 1
 ***BFS*** 10
-***BIT*** 10
+***BIT*** 11
 ***DAG*** 1
 ***DC*** 5
-***DFS*** 17
-***DP*** 68
+***DFS*** 18
+***DP*** 69
 ***DSU*** 8
 ***Dijkstra*** 2
 ***KMP*** 4
@@ -2028,12 +2044,12 @@
 ***dijkstra*** 5
 ***eg.*** 1
 ***emissary".cpp*** 1
-***fast-power*** 9
+***fast-power*** 10
 ***fib*** 4
 ***geometry*** 1
 ***gp*** 1
 ***gp_hash_table*** 2
-***graph*** 30
+***graph*** 31
 ***greedy*** 15
 ***half-brute*** 2
 ***hash*** 1
@@ -2070,10 +2086,10 @@
 ***tapoo*** 1
 ***template*** 1
 ***test*** 2
-***tree*** 22
+***tree*** 23
 ***undo*** 1
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 436
+總題數: 442

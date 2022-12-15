@@ -1,6 +1,7 @@
 // Author : ysh
 // 12/12/2022 Mon  9:58:21.90
 // https://tioj.ck.tp.edu.tw/problems/2257
+#include<bits/stdc++.h>
 using namespace std;
 #include<tree>
 #define int long long
