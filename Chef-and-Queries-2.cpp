@@ -1,21 +1,23 @@
 // Author : ysh
-// 12/15/2022 Thu 19:30:10.17
+// 12/15/2022 Thu 20:00:10.18
 // https://www.codechef.com/problems/CHEFQUE
 #include<bits/stdc++.h>
+#include<bits/extc++.h>
 using namespace std;
-bitset<4294967296>f;
+using namespace __gnu_pbds;
+gp_hash_table<long long,null_type>f;
 long long ans = 0;
 void check(long long r) {
     if(!(r & 1)) {
         r = r >> 1;
-        if(!f.test(r)) return;
-        f.reset(r);
+        if(!(f.find(r) != f.end())) return;
+        f.erase(r);
         ans = ans - r;
         return;
     }
     r = r >> 1;
-    if(f.test(r)) return;
-    f.set(r);
+    if((f.find(r) != f.end())) return;
+    f.insert(r);
     ans = ans + r;
     return;
 }

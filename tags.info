@@ -442,3 +442,5 @@ TIOJ-2257.cpp	DFS
 TIOJ-2257.cpp	tree
 TIOJ-2223.cpp	greedy
 TIOJ-1069.cpp	bigraph
+Chef-and-Queries.cpp	bit
+Chef-and-Queries-2.cpp	gp_hash_table

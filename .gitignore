@@ -2,3 +2,4 @@ clock.exe
 *.in
 *.out
 *.tmp
+.cph
