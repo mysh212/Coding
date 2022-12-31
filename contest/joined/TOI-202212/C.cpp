@@ -1,5 +1,5 @@
 // Author : ysh
-// 12/29/2022 boxhu 21:25:07.10
+// 12/29/2022 Thu 21:25:07.10
 #include<bits/stdc++.h>
 using namespace std;
 #ifdef LOCAL
@@ -28,14 +28,7 @@ struct box{
         // debug(n,f);
     }
     box operator+(box a) {
-        box tmp;
-        tmp.f = f;
-        tmp.n = n;
-        for(int i = 0;i<=19;i++) {
-            tmp.f.at(i) = tmp.f.at(i) + a.f.at(i);
-        }
-        tmp.n = tmp.n + a.n;
-        return tmp;
+        return box(n + a.n);
     }
     box operator+(int r) {
         box tmp = *this;
