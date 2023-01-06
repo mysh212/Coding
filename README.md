@@ -58,6 +58,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d015.cpp)
 
+***[AP325-d018-2.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d018
+)***
+###### tags:  `half-brute`
+>[time=01,06,2023 Fri 11:43:14,41]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d018-2.cpp)
+
 ***[AP325-d019.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d019)***
 ###### tags:  `half-brute`
 >[time=07,15,2022 Fri 19:13:53,14]
@@ -623,6 +631,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Buy-a-Ticket.cpp)
 
+***[Chef-and-Queries-2.cpp](https://www.codechef.com/problems/CHEFQUE
+)***
+###### tags:  `gp_hash_table`
+>[time=12,15,2022 Thu 20:00:10,18]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Chef-and-Queries-2.cpp)
+
+***[Chef-and-Queries.cpp](https://www.codechef.com/problems/CHEFQUE
+)***
+###### tags:  `bit`
+>[time=12,15,2022 Thu 19:30:10,19]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Chef-and-Queries.cpp)
+
 ***[Coin-Combinations-II.cpp](https://cses.fi/problemset/task/1636
 )***
 ###### tags:  `DP`
@@ -814,6 +838,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Hotel-Queries.cpp)
 
+***[Increasing-Subsequence-2.cpp](https://open.kattis.com/problems/increasingsubsequence
+)***
+###### tags:  `DP` `re-search`
+>[time=01,06,2023 Fri  9:53:54,38]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Increasing-Subsequence-2.cpp)
+
 ***[K's-farm.cpp](https://www.luogu.com.cn/problem/P1993
 )***
 ###### tags:  `graph` `difference`
@@ -915,6 +947,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Nearest-Smaller-Values.cpp)
+
+***[Nine-Packs.cpp](https://open.kattis.com/problems/ninepacks
+)***
+###### tags:  `DP`
+>[time=01,06,2023 Fri 10:13:10,53]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Nine-Packs.cpp)
 
 ***[Number-compare.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/B
 )***
@@ -1108,6 +1148,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Subtree-Queries-2.cpp)
 
+***[TIOJ-1069.cpp](https://tioj.ck.tp.edu.tw/problems/1069
+)***
+###### tags:  `bigraph`
+>[time=12,13,2022 Tue 10:54:40,86]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-1069.cpp)
+
 ***[TIOJ-1175.cpp](https://tioj.ck.tp.edu.tw/problems/1175
 )***
 ###### tags:  `DP`
@@ -1123,6 +1171,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-1209.cpp)
+
+***[TIOJ-2223.cpp](https://tioj.ck.tp.edu.tw/problems/2223
+)***
+###### tags:  `greedy`
+>[time=12,13,2022 Tue  7:58:35,23]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2223.cpp)
 
 ***[TIOJ-2252-2.cpp](https://tioj.ck.tp.edu.tw/problems/2252
 )***
@@ -1664,6 +1720,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-j125-3.cpp)
 
+***[Zerojudge-j242.cpp](https://zerojudge.tw/ShowProblem?problemid=j242)***
+###### tags:  `prime`
+>[time=12,31,2022 Sat 22:17:08,53]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-j242.cpp)
+
 ***[a-city-without-myself.cpp](http://choj.me/problem/00072
 )***
 ###### tags:  `choj` `bit`
@@ -1966,7 +2029,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=12,10,2022 Sat 22:16:52,06]
+>[time=12,19,2022 Mon 19:38:49,56]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -2018,7 +2081,7 @@
 ***DAG*** 1
 ***DC*** 5
 ***DFS*** 18
-***DP*** 69
+***DP*** 71
 ***DSU*** 8
 ***Dijkstra*** 2
 ***KMP*** 4
@@ -2027,10 +2090,10 @@
 ***TOI*** 1
 ***abba*** 1
 ***apcs*** 1
-***bigraph*** 4
+***bigraph*** 5
 ***binary-search*** 1
 ***binary_search*** 11
-***bit*** 5
+***bit*** 6
 ***bitset*** 4
 ***brute*** 2
 ***choj*** 17
@@ -2048,10 +2111,10 @@
 ***fib*** 4
 ***geometry*** 1
 ***gp*** 1
-***gp_hash_table*** 2
+***gp_hash_table*** 3
 ***graph*** 31
-***greedy*** 15
-***half-brute*** 2
+***greedy*** 16
+***half-brute*** 3
 ***hash*** 1
 ***lazy-tag*** 1
 ***lazy_tag*** 2
@@ -2067,11 +2130,11 @@
 ***permutation*** 1
 ***pointer*** 1
 ***pref*** 5
-***prime*** 3
+***prime*** 4
 ***priority_queue*** 8
 ***queue*** 3
 ***re*** 14
-***re-search*** 3
+***re-search*** 4
 ***search*** 2
 ***seg_tree*** 15
 ***set*** 7
@@ -2092,4 +2155,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 442
+總題數: 451
