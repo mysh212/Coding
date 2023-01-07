@@ -1,6 +1,7 @@
 // Author : ysh
 // 01/07/2023 Sat 19:07:20.97
 // https://judge.tcirc.tw/ShowProblem?problemid=d118
+#include<bits/stdc++.h>
 using namespace std;
 struct box{
     int l,r,w,n;
@@ -14,18 +15,13 @@ struct box{
         if(l > r) swap(l,r);
     }
 };
-inline bool cpr(box a,box b) {
-    return a.r < b.r;
-}
 vector<int>mark;
 int check(vector<box>&f,int n) {
-    // cerr<<n<<"\n";
     if(n == -1) return 0;
     if(mark.at(n) != 0) return mark.at(n);
     auto &now = f.at(n);
     auto found = upper_bound(f.rbegin(),f.rend(),box(0,now.l,0,0));
-    if(found == f.rend()) return mark.at(n) = max(now.w,check(f,n - 1));
-    return mark.at(n) = max(check(f,f.rend() - found - 1) + now.w,check(f,n - 1));
+    return mark.at(n) = max((found == f.rend() ? 0 : check(f,f.rend() - found - 1)) + now.w,check(f,n - 1));
 }
 int main() {
     ios::sync_with_stdio(false);
@@ -37,9 +33,7 @@ int main() {
     for(auto &i : f) {
         i.input();
     }
-    // vector<box>g = f;
-    sort(f.begin(),f.end(),cpr);
+    sort(f.rbegin(),f.rend());
     cout<<check(f,n - 1);
-    // for(int &i : mark) cerr<<i<<" ";
     return 0;
 }
