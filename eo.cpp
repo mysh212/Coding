@@ -8,6 +8,9 @@ int main() {
 
     string a;
     while(getline(cin,a)) {
+        while(a.back() == ' ') {
+            a.pop_back();
+        }
         cout<<a<<"\n";
     }
     return 0;

@@ -1,8 +1,8 @@
-
 // Author : ysh
-// 01/09/2023 Mon 14:42:55.83
+// 01/09/2023 Mon 16:12:20.93
+// https://cses.fi/problemset/task/1632
+#include<bits/stdc++.h>
 using namespace std;
-#include<fast>
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -10,10 +10,7 @@ int main() {
     int a,b;cin>>a>>b;
     vector<pair<int,int>>f(a);
     for(auto &i : f) {
-        cin>>i.first;
-    }
-    for(auto &i : f) {
-        cin>>i.second;
+        cin>>i.first>>i.second;
     }
     multiset<int,greater<int>>s;
     while(b--) s.insert(-1);
@@ -22,7 +19,7 @@ int main() {
     });
     int ans = 0;
     for(auto &i : f) {
-        auto found = s.upper_bound(i.first);
+        auto found = s.lower_bound(i.first);
         if(found != s.end()) {
             s.insert(i.second);
             s.erase(found);

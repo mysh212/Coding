@@ -1,11 +1,30 @@
-using namespace std;
-int readint() {
-    char now = getchar();
-    while(!isdigit(now)) now = getchar();
-    int ans = 0;
-    while(isdigit(now)) {
-        ans = ans * 10 + now - '0';
-        now = getchar();
-    }
-    return ans;
+
+inline char readchar() {
+	const int S = 1<<20; // buffer size
+	static char buf[S], *p = buf, *q = buf;
+	if(p == q && (q = (p=buf)+fread(buf,1,S,stdin)) == buf) return EOF;
+	return *p++;
 }
+bool __flag = 0;
+inline int readint() {
+	int x = 0, c = readchar(), neg = false;
+	__flag = 1;
+	while(('0' > c || c > '9') && c!='-' && c!=EOF) c = readchar();
+	if(c == '-') neg = true, c = readchar();
+	while('0' <= c && c <= '9') x = x*10 + (c^'0'), __flag = 0,c = readchar();
+	if(neg) x = -x;
+	return x; // returns 0 if EOF
+}
+struct t{
+	void tie(int x) {
+	}
+}in;
+inline t& operator>>(t& in,int &x) {
+    x = readint();
+    return in;
+}
+inline t& operator>>(t& in,char &x) {
+    x = readchar();
+    return in;
+}
+#define cin in
