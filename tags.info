@@ -455,3 +455,6 @@ AP325-d108.cpp	DP
 APCS-11201-4-2.cpp	greedy
 Movie-Festival-II.cpp	greedy
 Zerojudge-h560-2.cpp	math
+Zerojudge-h558.cpp	DP
+Zerojudge-h559.cpp	DFS
+TIOJ-2248.cpp	DFS

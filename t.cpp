@@ -1,96 +1,66 @@
 // Author : ysh
-// 01/17/2023 Tue 21:23:38.16
+// 01/20/2023 Fri 15:06:44.79
 #include<bits/stdc++.h>
 using namespace std;
-#define endno {return "-1";}
-#define add(j) for(char i : j) s.push_back(i);
-string solve(int a,int b) {
-    if(a == 0 || b == 0 || (b & 1 && b < 11) || (a == 1 && b == 4)) endno;
-    string s;
-    if(b & 1) {
-        if(a < 10) endno;
-        if(b == 11) {
-            if(a < 11) endno;
-            if(a == 11) {
-                for(int i = 1;i<=b - 11;i++)  add("2");
-                for(int i = 1;i<=11;i++)  add("02");
-                 add(" ");
-                for(int i = 1;i<=11;i++)  add("20");
-                for(int i = 1;i<=b - 11;i++)  add("2");
-                return s;
-            } else {
-                // vector<int>tmp;
-                for(int i = 0;i<b - 11;i++)  add("2");
-                for(int i = 1;i<=10;i++)  add("20");
-                 add("002");
-                for(int i = 1;i <= a - 12;i++)  add("0");
-                 add(" ");
-                for(int i = 1;i <= a - 11;i++)  add("0");
-                for(int i = 1;i<=11;i++)  add("20");
-                for(int i = 1;i<=b - 11;i++)  add("2");
-                //  add(" ");
-                return s;
-            }
-        } else {
-            if(a == 10) {
-                for(int i = 0;i<b - 12;i++)  add("2");
-                 add("0222");
-                for(int i = 1;i<=9;i++)  add("02");
-                 add(" ");
-                for(int i = 1;i <= a - 10;i++)  add("0");
-                for(int i = 1;i<=9;i++)  add("20");
-                 add("2220");
-                for(int i = 1;i<=b - 12;i++)  add("2");
-                //  add(" ");
-                return s;
-            }
-            for(int i = 0;i<b - 11;i++)  add("2");
-            for(int i = 1;i<=10;i++)  add("20");
-             add("002");
-            for(int i = 1;i <= a - 12;i++)  add("0");
-             add(" ");
-            for(int i = 1;i <= a - 10;i++)  add("0");
-            for(int i = 1;i<=9;i++)  add("20");
-             add("2220");
-            for(int i = 1;i<=b - 12;i++)  add("2");
-            //  add(" ");
-            return s;
+template<typename T>
+struct tree{
+    std::vector<T>f;
+    T n;
+
+    tree(T n) {
+        this->n = n;
+        f.resize(n);
+    }
+
+    tree(std::vector<T>&v):
+    tree(v.size()) {
+        T t = 0;
+        for(T i : v) add(t++,i);
+    }
+
+    void add(T a,T b) {
+        for(;a < n;a = a | (a + 1)) {
+            f[a] = max(f[a],b);
         }
     }
-    if(a == 1) {
-        for(int i = 0;i<b - 2;i++) {
-             add("2");
+
+    T sum(T a) {
+        T ans = 0;
+        for(;a >= 0;a = (a & (a + 1)) - 1) {
+            ans = max(ans,f[a]);
         }
-         add("022 220");
-        for(int i = 0;i<b - 2;i++) {
-             add("2");
-        }
-        //  add(" ");
-    } else {
-        for(int i = 0;i < b - 1;i++) {
-             add("2");
-        }
-         add("002");
-        for(int i = 0;i<a - 2;i++) {
-             add("0");
-        }
-         add(" ");
-        for(int i = 0;i<a - 1;i++) {
-             add("0");
-        }
-         add("220");
-        for(int i = 0;i < b - 2;i++) {
-             add("2");
-        }
-        //  add(" ");
+        return ans;
     }
-    return s;
-}
-int main() {
+
+    T sum(T a,T b) {
+        if(a > b) std::swap(a,b);
+        return sum((std::min(n - 1,b))) - sum(a - 1);
+    }
+};
+#define int long long
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int a,b;cin>>a>>b;
-    cout<<solve(a,b);
+    int n;cin>>n;
+    vector<int>f(n),g(n);
+    int mmax = 0;
+    for(int &i : f) {
+        cin>>i;
+        mmax = max(mmax,i);
+    }
+    for(int &j : g) {
+        cin>>j;
+    }
+    vector<int>v(mmax + 1);
+    tree<int>t(mmax + 1);
+    for(int i = 0;i<n;i++) {
+        int tmp = t.sum(f.at(i) - 1) + g.at(i);
+        if(tmp > v.at(f.at(i))) {
+            t.add(f.at(i),tmp);
+            v.at(f.at(i)) = tmp;
+        }
+    }
+    cout<<t.sum(mmax);
     return 0;
 }

@@ -1,6 +1,7 @@
 // Author : ysh
 // 01/20/2023 Fri 10:14:31.94
 // https://tioj.ck.tp.edu.tw/problems/2248
+#include<bits/stdc++.h>
 using namespace std;
 #ifdef LOCAL
 #include<debug.h>
