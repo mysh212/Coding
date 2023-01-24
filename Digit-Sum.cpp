@@ -64,6 +64,6 @@ signed main() {
     for(int i = 0;i<=f.at(n - 1);i++) {
         if(pos((i - last) % b) == 0) ans++;
     }
-    cout<<(ans - 1) % R;
+    cout<<(ans - 1 + R) % R;
     return 0;
 }

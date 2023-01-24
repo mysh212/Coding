@@ -1,8 +1,8 @@
 // Author : ysh
 // 01/24/2023 Tue  9:27:53.66
 // https://tioj.ck.tp.edu.tw/problems/2193
+#include<bits/stdc++.h>
 using namespace std;
-#include<fast>
 // inline bool cp(int a,int b) {
 //     int aa = __builtin_popcount(a);
 //     int bb = __builtin_popcount(b);
