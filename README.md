@@ -1,3 +1,5 @@
+[*[hang on]* ***TIOJ-2194.cpp***](https://github.com/mysh212/Coding/blob/master/TIOJ-2194.cpp) 
+ 
 ***"palace***
 ###### tags:  `emissary".cpp`
 >[time=]

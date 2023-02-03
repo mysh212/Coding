@@ -57,6 +57,11 @@ struct seg_tree{
         return;
     }
 
+    void add(int l,int v) {
+        add(l,l,v);
+        return;
+    }
+
     T sum(int nl,int nr,int t = 1,int l = 0,int r = -1) {
         if(r == -1) r = n - 1;
         if(nr < l || nl > r) return 0;

@@ -459,3 +459,12 @@ Zerojudge-h558.cpp	DP
 Zerojudge-h559.cpp	DFS
 TIOJ-2248.cpp	DFS
 Zerojudge-d794.cpp	pb_ds
+UVa-821.cpp	graph
+Addition-on-Segments.cpp	bitset
+Addition-on-Segments.cpp	seg_tree
+Addition-on-Segments.cpp	DC
+Fixed-Prefix-Permutations.cpp	hash
+Zerojudge-h663.cpp	DP
+Sliding-Median.cpp	pb_ds
+Array-Division.cpp	binary_search
+Tufurama.cpp	BIT
