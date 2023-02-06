@@ -1,6 +1,8 @@
 clock.exe 
 eo.exe
+*.exe
 *.in
 *.out
 *.tmp
 .cph
+ccb.cpp

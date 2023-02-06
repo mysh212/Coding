@@ -1,43 +1,25 @@
 // Author : ysh
-// 02/03/2023 Fri 13:18:37.53
+// 02/06/2023 Mon 11:32:44.42
 #include<bits/stdc++.h>
 using namespace std;
-#ifdef LOCAL
-#include<debug.h>
-#else
-#define debug(...);
-#endif
-
-deque<int> check(string a) {
-    deque<int>f(a.size());
-    int l = 0,r = 0;
-    for(int i = 1,len = a.size();i<len;i++) {
-        f[i] = max(0,min(r - i + 1,f[i - l]));
-        while(i + f[i] < len && a[i + f[i]] == a[f[i]]) f[i]++;
-        if(i + f[i] - 1 > r) l = i,r = i + f[i] - 1;
-    }
-    return f;
-}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    string a,b;cin>>a>>b;
-    int aa = a.size(),bb = b.size();
-    auto f = check(b + " " + a);
-    reverse(a.begin(),a.end());
-    reverse(b.begin(),b.end());
-    auto g = check(b + " " + a);
-    int ans = 0;
-    vector<int>aans;
-    for(int i = 0;i<=bb;i++) f.pop_front(),g.pop_front();
-    swap(f,g);
-    for(int i = 0,len = aa - bb;i<=len;i++) {
-        if(g.at(i) + f.at((aa - 1) - (i + bb - 1)) >= bb - 1) ans++,aans.push_back(i + 1);
+    int n;cin>>n;
+    vector<int>f(n);
+    for(int &i : f) cin>>i;
+    vector<int>g(f);
+    int m;cin>>m;
+    while(m--) {
+        int a,b;cin>>a>>b;
+        a--;b--;
+        swap(f.at(a),f.at(b));
     }
-    cout<<ans<<"\n";
-    for(int &i : aans) {
-        cout<<i<<" ";
-    }
+    cerr<<n<<"\n";
+    for(int &i : g) cerr<<i<<" ";
+    cerr<<"\n";
+    for(int &i : f) cerr<<i<<" ";
+    cout<<boolalpha<<is_sorted(f.begin(),f.end());
     return 0;
 }

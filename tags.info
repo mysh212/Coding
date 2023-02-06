@@ -472,3 +472,8 @@ luogu-P3919.cpp	DFS
 luogu-P3919.cpp	offline
 Genetic-Sequence-Searching.cpp	Z
 Genetic-Sequence-Searching.cpp	string
+Buying-Mascots.cpp	DP
+Exterior.cpp	graph
+Exterior.cpp	Dijkstra
+Zerojudge-d799-4.cpp	seg_tree
+Zerojudge-d799-4.cpp	lazy_tag
