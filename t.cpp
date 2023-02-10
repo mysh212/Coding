@@ -6,10 +6,18 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int n;cin>>n;cout<<n<<"\n";
+    freopen("0.in","w",stderr);
+    int n;cin>>n;cout<<n<<"\n";cerr<<n<<"\n";
     vector<int>f(n);
-    iota(f.begin(),f.end(),1);
     srand(time(NULL));
+    set<int>s;
+    for(int &i : f) {
+        i = rand();
+        while(s.count(i)) {
+            i = rand();
+        }
+        s.insert(i);
+    }
     random_shuffle(f.begin(),f.end());
     for(int i : f) cout<<i<<" ";
     cout<<"\n";

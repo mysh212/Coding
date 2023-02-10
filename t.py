@@ -1,12 +1,6 @@
 # Author : ysh
-# 02/06/2023 Mon 11:37:30.54
-import random
-
+# 02/10/2023 Fri 12:29:32.33
 n = int(input())
-print(1)
-print(n)
-a = [i + 1 for i in range(n)]
-random.shuffle(a)
-for i in a:
-    print(i,end = ' ')
-quit()
+a = sorted([int(i) for i in input().split()])[::-1]
+for i in range(n):
+    print(a[i],end = ' ')

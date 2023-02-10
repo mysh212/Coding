@@ -6,13 +6,21 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    string a;
-    set<string>m;
-    while(getline(cin,a)) {
-        m.insert(a);
+    int n;cin>>n;
+    map<int,int>l,r;
+    for(int i = 0;i<n;i++) {
+        int tmp;cin>>tmp;
+        l[tmp] = i;
     }
-    for(string i : m) {
-        cout<<i<<"\n";
+    for(int i = 0;i<n;i++) {
+        int tmp;cin>>tmp;
+        r[tmp] = i;
+    }
+    int tmp;
+    int ll,rr;ll = rr = 0;
+    while(cin>>tmp) {
+        if(ll > l[tmp] || rr > r[tmp]) return -1;
+        else ll = l[tmp],rr = r[tmp];
     }
     return 0;
 }
