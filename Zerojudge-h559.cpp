@@ -8,6 +8,8 @@ int main() {
 
     int a,b;cin>>a>>b;
     vector<int>f(a);
+
+    
     for(int &i : f) {
         cin>>i;
     }
