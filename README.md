@@ -1,5 +1,3 @@
-[*[hang on]* ***TIOJ-2194.cpp***](https://github.com/mysh212/Coding/blob/master/TIOJ-2194.cpp) 
- 
 ***"palace***
 ###### tags:  `emissary".cpp`
 >[time=]
@@ -624,6 +622,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/APCSP-a137-2.cpp)
 
+***[Addition-on-Segments.cpp](https://codeforces.com/contest/981/problem/E
+)***
+###### tags:  `bitset` `seg_tree` `DC`
+>[time=01,25,2023 Wed  9:12:44,00]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Addition-on-Segments.cpp)
+
 ***[Advertisement-2.cpp](https://cses.fi/problemset/task/1142/
 )***
 ###### tags:  `DC`
@@ -631,6 +637,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Advertisement-2.cpp)
+
+***[Array-Division.cpp](https://cses.fi/problemset/task/1085
+)***
+###### tags:  `binary_search`
+>[time=01,28,2023 Sat 12:42:22,56]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Array-Division.cpp)
 
 ***[Avoid-Local-Maximums.cpp](https://codeforces.com/contest/1635/problem/B
 )***
@@ -655,6 +669,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Buy-a-Ticket.cpp)
+
+***[Buying-Mascots.cpp](https://codeforces.com/gym/425267
+)***
+###### tags:  `DP`
+>[time=02,06,2023 Mon 10:28:34,22]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Buying-Mascots.cpp)
 
 ***[Chef-and-Queries-2.cpp](https://www.codechef.com/problems/CHEFQUE
 )***
@@ -784,6 +806,22 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/EIKO's-concert.cpp)
 
+***[Exterior.cpp](https://codeforces.com/gym/425267
+)***
+###### tags:  `graph` `Dijkstra`
+>[time=02,06,2023 Mon 15:12:51,97]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Exterior.cpp)
+
+***[Fixed-Prefix-Permutations.cpp](https://codeforces.com/contest/1792/problem/D
+)***
+###### tags:  `hash`
+>[time=01,25,2023 Wed 20:29:20,83]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Fixed-Prefix-Permutations.cpp)
+
 ***[Flight-Discount.cpp](https://cses.fi/problemset/task/1195
 )***
 ###### tags:  `graph` `dijkstra`
@@ -822,6 +860,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Fortune-Telling.cpp)
+
+***[Genetic-Sequence-Searching.cpp](https://codeforces.com/gym/425267
+)***
+###### tags:  `Z` `string`
+>[time=02,03,2023 Fri 22:13:57,53]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Genetic-Sequence-Searching.cpp)
 
 ***[Graph-Without-Long-Directed-Paths.cpp](https://codeforces.com/contest/1144/problem/F
 )***
@@ -903,6 +949,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Labyrinth.cpp)
 
+***[Legacy.cpp](https://codeforces.com/contest/786/problem/B
+)***
+###### tags:  `seg_tree` `graph`
+>[time=02,10,2023 Fri  8:32:33,54]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Legacy.cpp)
+
 ***[Longest-Flight-Route-2.cpp](https://cses.fi/problemset/task/1680/
 )***
 ###### tags:  `graph` `re-search` `tapo` `DAG`
@@ -956,6 +1010,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Mouse-Hunt.cpp)
+
+***[Movie-Festival-II.cpp](https://cses.fi/problemset/task/1632
+)***
+###### tags:  `greedy`
+>[time=01,09,2023 Mon 16:12:20,94]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Movie-Festival-II.cpp)
 
 ***[Multi-Colored-Segments.cpp](https://codeforces.com/contest/1741/problem/F
 )***
@@ -1141,6 +1203,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Save-the-Magazines.cpp)
 
+***[Sliding-Median.cpp](https://cses.fi/problemset/task/1076
+)***
+###### tags:  `pb_ds`
+>[time=01,28,2023 Sat 13:19:54,71]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Sliding-Median.cpp)
+
 ***[String-Matching.cpp](https://cses.fi/problemset/task/1753
 )***
 ###### tags:  `KMP`
@@ -1148,6 +1218,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/String-Matching.cpp)
+
+***Study-Plan.py***
+###### tags:  `DP`
+>[time=02,07,2023 Tue 15:54:02,52]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Study-Plan.py)
 
 ***[Subarray-Sums-I.cpp](https://cses.fi/problemset/task/1660
 )***
@@ -1204,6 +1281,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2223.cpp)
+
+***[TIOJ-2248.cpp](https://tioj.ck.tp.edu.tw/problems/2248
+)***
+###### tags:  `DFS`
+>[time=01,20,2023 Fri 10:14:31,95]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2248.cpp)
 
 ***[TIOJ-2252-2.cpp](https://tioj.ck.tp.edu.tw/problems/2252
 )***
@@ -1276,6 +1361,22 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Trips.cpp)
+
+***[Tufurama.cpp](https://codeforces.com/problemset/problem/961/E
+)***
+###### tags:  `BIT`
+>[time=02,02,2023 Thu 18:23:24,38]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Tufurama.cpp)
+
+***[UVa-821.cpp](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=854&page=show_problem&problem=762
+)***
+###### tags:  `graph`
+>[time=01,24,2023 Tue 19:40:36,20]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/UVa-821.cpp)
 
 ***[Walk-2.cpp](https://atcoder.jp/contests/dp/tasks/dp_r
 )***
@@ -1547,6 +1648,13 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d793.cpp)
 
+***[Zerojudge-d794.cpp](https://zerojudge.tw/ShowProblem?problemid=d794)***
+###### tags:  `pb_ds`
+>[time=01,23,2023 Mon  7:40:36,33]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d794.cpp)
+
 ***[Zerojudge-d799-2.cpp](https://zerojudge.tw/ShowProblem?problemid=d799)***
 ###### tags:  `lazy-tag` `seg_tree`
 >[time=11,22,2022 Tue 22:15:44,21]
@@ -1560,6 +1668,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d799-3.cpp)
+
+***[Zerojudge-d799-4.cpp](https://zerojudge.tw/ShowProblem?problemid=d799)***
+###### tags:  `seg_tree` `lazy_tag`
+>[time=02,06,2023 Mon 16:50:56,62]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-d799-4.cpp)
 
 ***[Zerojudge-d799.cpp](https://zerojudge.tw/ShowProblem?problemid=d799)***
 ###### tags:  `seg_tree` `tree` `lazy_tag` `own-template`
@@ -1716,6 +1831,34 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-h029.cpp)
+
+***[Zerojudge-h558.cpp](https://zerojudge.tw/ShowProblem?problemid=h558)***
+###### tags:  `DP`
+>[time=01,18,2023 Wed  8:55:19,37]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-h558.cpp)
+
+***[Zerojudge-h559.cpp](https://zerojudge.tw/ShowProblem?problemid=h559)***
+###### tags:  `DFS`
+>[time=01,19,2023 Thu 15:21:11,32]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-h559.cpp)
+
+***[Zerojudge-h560-2.cpp](https://zerojudge.tw/ShowProblem?problemid=h560)***
+###### tags:  `math`
+>[time=01,17,2023 Tue 21:23:38,17]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-h560-2.cpp)
+
+***[Zerojudge-h663.cpp](https://zerojudge.tw/ShowProblem?problemid=h663)***
+###### tags:  `DP`
+>[time=01,26,2023 Thu 13:34:15,03]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-h663.cpp)
 
 ***[Zerojudge-i401.cpp](https://zerojudge.tw/ShowProblem?problemid=i401)***
 ###### tags:  `binary_search` `map`
@@ -1958,6 +2101,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/lonelier.cpp)
 
+***[luogu-P3919.cpp](https://www.luogu.com.cn/problem/P3919
+)***
+###### tags:  `DFS` `offline`
+>[time=02,03,2023 Fri 11:27:54,40]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/luogu-P3919.cpp)
+
 ***[magical-task-2.cpp](https://tioj.ck.tp.edu.tw/problems/1069
 )***
 ###### tags:  `graph` `bigraph`
@@ -2054,7 +2205,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=12,19,2022 Mon 19:38:49,56]
+>[time=02,06,2023 Mon 22:14:08,61]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -2102,24 +2253,25 @@
 :::spoiler ***algorithm***
 ***APCS*** 1
 ***BFS*** 10
-***BIT*** 11
+***BIT*** 12
 ***DAG*** 1
-***DC*** 5
-***DFS*** 18
-***DP*** 73
+***DC*** 6
+***DFS*** 21
+***DP*** 77
 ***DSU*** 8
-***Dijkstra*** 2
+***Dijkstra*** 3
 ***KMP*** 4
 ***LCA*** 6
 ***MST*** 1
 ***TOI*** 1
+***Z*** 1
 ***abba*** 1
 ***apcs*** 1
 ***bigraph*** 5
 ***binary-search*** 1
-***binary_search*** 11
+***binary_search*** 12
 ***bit*** 6
-***bitset*** 4
+***bitset*** 5
 ***brute*** 2
 ***choj*** 17
 ***chsh-exam*** 6
@@ -2137,21 +2289,21 @@
 ***geometry*** 1
 ***gp*** 1
 ***gp_hash_table*** 3
-***graph*** 31
-***greedy*** 17
+***graph*** 34
+***greedy*** 18
 ***half-brute*** 3
-***hash*** 1
+***hash*** 2
 ***lazy-tag*** 1
-***lazy_tag*** 2
+***lazy_tag*** 3
 ***list*** 2
 ***lower_bound*** 2
 ***map*** 8
-***math*** 2
+***math*** 3
 ***multiset*** 1
-***offline*** 2
+***offline*** 3
 ***operator*** 3
 ***own-template*** 1
-***pb_ds*** 6
+***pb_ds*** 8
 ***permutation*** 1
 ***pointer*** 1
 ***pref*** 5
@@ -2161,12 +2313,12 @@
 ***re*** 14
 ***re-search*** 4
 ***search*** 2
-***seg_tree*** 15
+***seg_tree*** 18
 ***set*** 7
 ***sparse_table*** 5
 ***sqrt*** 1
 ***stack*** 1
-***string*** 2
+***string*** 3
 ***struct*** 5
 ***sweep-line*** 9
 ***table*** 1
@@ -2180,4 +2332,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 455
+總題數: 482
