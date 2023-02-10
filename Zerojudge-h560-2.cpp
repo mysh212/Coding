@@ -18,7 +18,7 @@ int main() {
     cin.tie(0);
 
     int a,b;cin>>a>>b;
-    if(a == 0 || b == 0 || (b & 1 && b < 11) || (a == 1 && b == 4)) endno;
+    if(a == 0 || b == 0 || (b & 1 && b < 11)) endno;
     if(b & 1) {
         if(a < 10) endno;
         if(b == 11) {
@@ -54,6 +54,17 @@ int main() {
                 cout<<"2220";
                 for(int i = 1;i<=b - 12;i++) cout<<"2";
                 cout<<"\n";
+                return 0;
+            }
+            if(a == 11) {
+                for(int i = 1;i<=b - 11;i++) {
+                    cout<<2;
+                }
+                for(int i = 1;i<=11;i++) cout<<"02";
+                cout<<"\n";
+                for(int i = 1;i<=9;i++) cout<<"02";
+                cout<<"02220";
+                for(int i = 1;i<=b - 12;i++) cout<<2;
                 return 0;
             }
             for(int i = 0;i<b - 11;i++) cout<<2;
