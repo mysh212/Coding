@@ -31,11 +31,10 @@ int main() {
     vector<int>start;
     vector<int>re(a);
     for(int &i : f) {
-    debug(mark);
         auto found = lower_bound(v.begin(),v.end(),i);
         // if(found == prev(v.end())) start.push_back(i);
         if(found == v.end()) {
-            if(found == v.begin()) { 
+            if(found == v.begin()) {
                 re.at(i) = -1;
                 mark.push_back({{down.at(i),i}});
                 start.push_back(i);
@@ -74,6 +73,7 @@ int main() {
             continue;
         }
     }
+
     vector<vector<int>>ans;
     for(int i : start) {
         vector<int>tmp;
