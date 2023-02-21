@@ -30,6 +30,7 @@ struct tree{
 
     T sum(T a,T b) {
         if(a > b) std::swap(a,b);
+        if(b >= n || a < 0) return 0;
         return sum((std::min(n - 1,b))) - sum(a - 1);
     }
 };
