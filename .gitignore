@@ -6,3 +6,4 @@ eo.exe
 *.tmp
 .cph
 ccb.cpp
+.vscode/c_cpp_properties.json
