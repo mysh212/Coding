@@ -13,6 +13,7 @@ signed main() {
     for(int &i : f) cin>>i;
     vector<int>mark(1 << a,-1);
     vector<long long>mk(1 << a,-1);
+    int t = 0;
 
     function<int(int)> check = [&] (int now) {
         if(now == 0) return 0;
@@ -23,6 +24,7 @@ signed main() {
                 mk.at(i) = 0;
                 for(int j = 0;j < a;j++) {
                     if(i & (1 << j)) mk.at(i) = mk.at(i) + f.at(j);
+                    if(mk.at(i) > b) break;
                 }
             }
             if(mk.at(i) > b) continue;
@@ -32,5 +34,6 @@ signed main() {
     };
     
     cout<<check((1 << a) - 1);
+    cerr<<"\n"<<t;
     return 0;
 }
