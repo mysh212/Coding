@@ -18,6 +18,7 @@ signed main() {
     function<int(int)> check = [&] (int now) {
         if(now == 0) return 0;
         if(mark.at(now) != -1) return mark.at(now);
+        t++;
         int ans = INT_MAX;
         for(int i = now;i > 0;i = (i - 1) & now) {
             if(mk.at(i) == -1) {
