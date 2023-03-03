@@ -33,12 +33,27 @@ pair<int,int> getsec(vector<int>&ans,vector<pair<int,int>>&f) {
     }
     sort(l.rbegin(),l.rend());
     sort(r.rbegin(),r.rend());
+    if(l.size() > 1 && r.size() > 1) {
+        ans.push_back(l.at(0) + l.at(1));
+        ans.push_back(l.at(0) + r.at(1));
+        ans.push_back(r.at(0) + l.at(1));
+        if(l.size() > 2 && r.size() > 2) {
+            ans.push_back(l.at(0) + l.at(2));
+            ans.push_back(l.at(0) + r.at(2));
+            ans.push_back(l.at(2) + r.at(0));
+        }
+    }
     l.resize(unique(l.begin(),l.end()) - l.begin());
     r.resize(unique(r.begin(),r.end()) - r.begin());
     if(l.size() > 1) ans.push_back(l.at(0) + l.at(1));
     if(l.size() > 1 && r.size() > 1) {
         ans.push_back(l.at(1) + r.at(0));
         ans.push_back(l.at(0) + r.at(1));
+        if(l.size() > 2 && r.size() > 2) {
+            ans.push_back(l.at(0) + l.at(2));
+            ans.push_back(l.at(0) + r.at(2));
+            ans.push_back(l.at(2) + r.at(0));
+        }
     }
     debug(l,r);
     ans.push_back(l.at(0));
@@ -75,6 +90,7 @@ int main() {
     sort(ans.begin(),ans.end());
     ans.resize(unique(ans.begin(),ans.end()) - ans.begin());
     debug(ans);
+    assert(ans.size() >= 2);
     if(ans.size() < 2) {
         cout<<ans.at(0);
     }
