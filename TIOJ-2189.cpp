@@ -26,38 +26,30 @@ void ft(int &a,int &b,int &d,int c) {
 pair<int,int> getsec(vector<int>&ans,vector<pair<int,int>>&f) {
     debug(f);
     vector<int>l,r;
+    sort(f.rbegin(),f.rend());
     for(auto &i : f) {
         l.push_back(i.first);
         r.push_back(i.second);
         assert(i.first >= i.second);
     }
-    sort(l.rbegin(),l.rend());
-    sort(r.rbegin(),r.rend());
-    if(l.size() > 1 && r.size() > 1) {
-        ans.push_back(l.at(0) + l.at(1));
-        ans.push_back(l.at(0) + r.at(1));
-        ans.push_back(r.at(0) + l.at(1));
-        if(l.size() > 2 && r.size() > 2) {
-            ans.push_back(l.at(0) + l.at(2));
-            ans.push_back(l.at(0) + r.at(2));
-            ans.push_back(l.at(2) + r.at(0));
-        }
-    }
+    // sort(l.rbegin(),l.rend());
+    // sort(r.rbegin(),r.rend());
+    if(l.size() > 1) ans.push_back(l.at(0) + l.at(1));
+    if(r.size() > 1) ans.push_back(l.at(0) + r.at(1));
+    if(l.size() > 1) ans.push_back(r.at(0) + l.at(1));
+    if(l.size() > 2) ans.push_back(l.at(0) + l.at(2));
     l.resize(unique(l.begin(),l.end()) - l.begin());
     r.resize(unique(r.begin(),r.end()) - r.begin());
     if(l.size() > 1) ans.push_back(l.at(0) + l.at(1));
-    if(l.size() > 1 && r.size() > 1) {
-        ans.push_back(l.at(1) + r.at(0));
-        ans.push_back(l.at(0) + r.at(1));
-        if(l.size() > 2 && r.size() > 2) {
-            ans.push_back(l.at(0) + l.at(2));
-            ans.push_back(l.at(0) + r.at(2));
-            ans.push_back(l.at(2) + r.at(0));
-        }
-    }
+    if(l.size() > 1) ans.push_back(l.at(1) + r.at(0));
+    if(r.size() > 1) ans.push_back(l.at(0) + r.at(1));
+    // if(l.size() > 2) ans.push_back(l.at(0) + l.at(2));
+    if(r.size() > 2) ans.push_back(l.at(0) + r.at(2));
+    // if(l.size() > 2) ans.push_back(l.at(2) + r.at(0));
     debug(l,r);
     ans.push_back(l.at(0));
     ans.push_back(r.at(0));
+    if(l.size() > 1) ans.push_back(l.at(1));
     return make_pair(l.at(0),max(r.at(0),(l.size() > 1 ? l.at(1) : INT_MIN)));
 }
 int main() {

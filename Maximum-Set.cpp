@@ -9,7 +9,7 @@ using namespace std;
 #define debug(...) '*'
 #define printf(...) '*'
 #endif
-
+#define int long long
 const int R = 998244353;
 int check(int l,int r,int v,int b) {
     if(l == r) return l;
@@ -18,7 +18,7 @@ int check(int l,int r,int v,int b) {
     if(mid * v <= b) return check(mid,r,v,b);
     else return check(l,mid - 1,v,b);
 }
-int main() {
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
@@ -33,7 +33,7 @@ int main() {
         int r = check(a - 1,b,(1 << (tmp - 1)) * 3,b);
         debug(a,b,l,r);
         if(l != a - 1) ans = ans + (l - a + 1),ans = ans % R;
-        if(r != a - 1) ans = ans + (tmp * (r - a + 1)),ans = ans % R;
+        if(a * (1 << (tmp - 1)) * 3 <= b && r != a - 1) ans = ans + (tmp * 1LL * (r - a + 1)),ans = ans % R;
         cout<<ans % R<<"\n";
     }
 }
