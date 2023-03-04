@@ -2330,6 +2330,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-b035.cpp)
 
+***[tcirc-c030.cpp](https://judge.tcirc.tw/ShowProblem?problemid=c030
+)***
+###### tags:  `fast-power`
+>[time=03,04,2023 Sat 22:45:33,47]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-c030.cpp)
+
 ***[tcirc-c085.cpp](https://judge.tcirc.tw/ShowProblem?problemid=c085
 )***
 ###### tags:  `DSU`
@@ -2389,7 +2397,7 @@
 ***dijkstra*** 5
 ***eg.*** 1
 ***emissary".cpp*** 1
-***fast-power*** 11
+***fast-power*** 12
 ***fib*** 4
 ***geometry*** 1
 ***gp*** 1
@@ -2438,4 +2446,4 @@
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 502
+總題數: 503
