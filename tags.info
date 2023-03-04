@@ -498,3 +498,5 @@ TIOJ-2052-2.cpp	DP
 TIOJ-2052-2.cpp	math
 TIOJ-2052.cpp	DP
 TIOJ-2052.cpp	math
+TIOJ-2053.cpp	fast-power
+TIOJ-2055.cpp	seg_tree

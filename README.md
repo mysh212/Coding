@@ -455,6 +455,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d091.cpp)
 
+***[AP325-d093-2.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d093
+)***
+###### tags:  `Dijkstra` `graph`
+>[time=02,26,2023 Sun 18:26:33,17]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d093-2.cpp)
+
 ***[AP325-d095.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d095
 )***
 ###### tags:  `DP` `graph`
@@ -798,6 +806,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Doremy's-Pegging-Game.cpp)
 
+***[Download-Speed.cpp](https://cses.fi/problemset/task/1694
+)***
+###### tags:  `Flow` `graph`
+>[time=02,28,2023 Tue 15:47:23,72]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Download-Speed.cpp)
+
 ***[EIKO's-concert.cpp](https://choj.me/problem/c001
 )***
 ###### tags:  `choj` `chsh-exam`
@@ -861,6 +877,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Fortune-Telling.cpp)
 
+***[Genetic-Sequence-Searching-2.cpp](https://codeforces.com/gym/425267
+)***
+###### tags:  `Z`
+>[time=02,21,2023 Tue 14:20:26,30]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Genetic-Sequence-Searching-2.cpp)
+
 ***[Genetic-Sequence-Searching.cpp](https://codeforces.com/gym/425267
 )***
 ###### tags:  `Z` `string`
@@ -884,6 +908,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Grid-Paths.cpp)
+
+***[Grouping.cpp](https://atcoder.jp/contests/dp/tasks/dp_u
+)***
+###### tags:  `DP`
+>[time=02,20,2023 Mon 16:20:23,91]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Grouping.cpp)
 
 ***[High-Score-5.cpp](https://cses.fi/problemset/task/1673
 )***
@@ -916,6 +948,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Increasing-Subsequence-2.cpp)
+
+***[Investigation-2.cpp](https://cses.fi/problemset/task/1202
+)***
+###### tags:  `graph` `Dijkstra`
+>[time=02,24,2023 Fri  8:25:57,36]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Investigation-2.cpp)
 
 ***[K's-farm.cpp](https://www.luogu.com.cn/problem/P1993
 )***
@@ -1051,6 +1091,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Number-compare.cpp)
 
+***[Path-Queries.cpp](https://cses.fi/problemset/task/1138
+)***
+###### tags:  `tree`
+>[time=02,23,2023 Thu 20:25:12,25]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Path-Queries.cpp)
+
 ***[Perfect-take.cpp](https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/D
 )***
 ###### tags:  `contest`
@@ -1090,6 +1138,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Prefix-Sum-Queries-3.cpp)
+
+***[Projects.cpp](https://cses.fi/problemset/task/1140
+)***
+###### tags:  `DP`
+>[time=02,23,2023 Thu 14:02:52,86]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Projects.cpp)
 
 ***[Queries-for-Number-of-Palindromes.cpp](https://codeforces.com/contest/245/problem/H
 )***
@@ -1138,6 +1194,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Range-Xor-Queries.cpp)
+
+***[Reachable-Nodes.cpp](https://cses.fi/problemset/task/2138
+)***
+###### tags:  `tapoo` `graph`
+>[time=02,25,2023 Sat  7:08:07,73]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Reachable-Nodes.cpp)
 
 ***[Restore-the-Permutation.cpp](https://codeforces.com/problemset/problem/1759/G
 )***
@@ -1273,6 +1337,38 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-1209.cpp)
+
+***[TIOJ-2052-2.cpp](https://tioj.ck.tp.edu.tw/problems/2052
+)***
+###### tags:  `DP` `math`
+>[time=03,04,2023 Sat 18:00:11,70]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2052-2.cpp)
+
+***[TIOJ-2052.cpp](https://tioj.ck.tp.edu.tw/problems/2052
+)***
+###### tags:  `DP` `math`
+>[time=03,04,2023 Sat 11:56:36,70]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2052.cpp)
+
+***[TIOJ-2053.cpp](https://tioj.ck.tp.edu.tw/problems/2053
+)***
+###### tags:  `fast-power`
+>[time=03,04,2023 Sat 18:56:57,28]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2053.cpp)
+
+***[TIOJ-2055.cpp](https://tioj.ck.tp.edu.tw/problems/2055
+)***
+###### tags:  `seg_tree`
+>[time=03,04,2023 Sat 20:07:14,69]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/TIOJ-2055.cpp)
 
 ***[TIOJ-2223.cpp](https://tioj.ck.tp.edu.tw/problems/2223
 )***
@@ -2101,6 +2197,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/lonelier.cpp)
 
+***[luogu-P3919-3.cpp](https://www.luogu.com.cn/problem/P3919
+)***
+###### tags:  `seg_tree` `time-stamp`
+>[time=02,11,2023 Sat 21:49:02,80]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/luogu-P3919-3.cpp)
+
 ***[luogu-P3919.cpp](https://www.luogu.com.cn/problem/P3919
 )***
 ###### tags:  `DFS` `offline`
@@ -2205,7 +2309,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=02,06,2023 Mon 22:14:08,61]
+>[time=03,04,2023 Sat 20:51:36,91]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -2257,14 +2361,15 @@
 ***DAG*** 1
 ***DC*** 6
 ***DFS*** 21
-***DP*** 77
+***DP*** 81
 ***DSU*** 8
-***Dijkstra*** 3
+***Dijkstra*** 5
+***Flow*** 1
 ***KMP*** 4
 ***LCA*** 6
 ***MST*** 1
 ***TOI*** 1
-***Z*** 1
+***Z*** 2
 ***abba*** 1
 ***apcs*** 1
 ***bigraph*** 5
@@ -2284,12 +2389,12 @@
 ***dijkstra*** 5
 ***eg.*** 1
 ***emissary".cpp*** 1
-***fast-power*** 10
+***fast-power*** 11
 ***fib*** 4
 ***geometry*** 1
 ***gp*** 1
 ***gp_hash_table*** 3
-***graph*** 34
+***graph*** 38
 ***greedy*** 18
 ***half-brute*** 3
 ***hash*** 2
@@ -2298,7 +2403,7 @@
 ***list*** 2
 ***lower_bound*** 2
 ***map*** 8
-***math*** 3
+***math*** 5
 ***multiset*** 1
 ***offline*** 3
 ***operator*** 3
@@ -2313,7 +2418,7 @@
 ***re*** 14
 ***re-search*** 4
 ***search*** 2
-***seg_tree*** 18
+***seg_tree*** 20
 ***set*** 7
 ***sparse_table*** 5
 ***sqrt*** 1
@@ -2323,13 +2428,14 @@
 ***sweep-line*** 9
 ***table*** 1
 ***tapo*** 2
-***tapoo*** 1
+***tapoo*** 2
 ***template*** 1
 ***test*** 2
-***tree*** 24
+***time-stamp*** 1
+***tree*** 25
 ***undo*** 1
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 482
+總題數: 502
