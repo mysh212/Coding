@@ -492,3 +492,15 @@ Reachable-Nodes.cpp	tapoo
 Reachable-Nodes.cpp	graph
 AP325-d093-2.cpp	Dijkstra
 AP325-d093-2.cpp	graph
+Download-Speed.cpp	Flow
+Download-Speed.cpp	graph
+TIOJ-2052-2.cpp	DP
+TIOJ-2052-2.cpp	math
+TIOJ-2052.cpp	DP
+TIOJ-2052.cpp	math
+TIOJ-2053.cpp	fast-power
+TIOJ-2055.cpp	seg_tree
+tcirc-c030.cpp	fast-power
+AP325-d103.cpp	tree
+AP325-d114.cpp	DP
+AP325-d114.cpp	tree

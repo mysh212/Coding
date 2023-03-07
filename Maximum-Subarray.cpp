@@ -10,42 +10,64 @@ using namespace std;
 #define debug(...) '*'
 #define printf(...) '*'
 #endif
-
-int main() {
+#define int long long
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
     int n;cin>>n;
     while(n--) {
         int a,b,c;cin>>a>>b>>c;
-        vector<int>f(a);
-        int last = 0;
+        deque<int>f(a);
+        int last = 0LL;
         for(int &i : f) {
             cin>>i;
             i = i - c;
             i = last += i;
         }
         c = c << 1;
-        if(b == 0) continue;
-
+        // if(b == 0) continue;
+        f.push_front(0LL);
+        a = a + 1;
         vector<pair<int,int>>v({{f.at(0),0}});
-        int mmax = f.at(0);
+
+        int ans = 0LL;
+        // debug(f);
         int mmin = 0;
-        debug(f);
-        for(int i = 1;i<a;i++) {
-            int now = f.at(i);
-            for(int j = v.size() - 1;j>=0;j--) {
-                auto nnow = v.at(j);
-                int r = now + (c * (i - nnow.second));
-                if(i - nnow.second > b) break;
-                mmax = max(mmax,r - nnow.first);
+        if(c > 0) {
+            for(int i = 1;i<a;i++) {
+                if(f.at(i) < v.back().first) v.emplace_back(f.at(i),i);
+                auto found = v.rbegin();
+                while(found != v.rend()) {
+                    if(found->second == i) found = next(found);
+                    // debug(i,*found);
+                    if(i - found->second > b) break;
+                    ans = max(ans,(f.at(i) - found->first) + c * min(b,(i - found->second)));
+                    found = next(found);
+                }
+                if(i - b >= 0) {
+                    mmin = min(f.at(i - b),mmin);
+                    ans = max(ans,f.at(i) - mmin + max(0LL,c * b));
+                }
             }
-            if(i >= b - 1) mmin = min(f.at(i - b + 1),mmin);
-            mmax = max(mmax,i + (c * b) - mmin);
-            if(now < v.back().first) v.emplace_back(now,i);
-            debug(v,mmax,now);
+        } else {
+            for(int i = 1;i<a;i++) {
+                if(f.at(i) < v.back().first) v.emplace_back(f.at(i),i);
+                auto found = v.rbegin();
+                while(found != v.rend()) {
+                    if(found->second == i) found = next(found);
+                    debug(i,*found);
+                    if(i - found->second > b) break;
+                    ans = max(ans,(f.at(i) - found->first) + max(c * max(((i - found->second) - ((a - 1) - b)),0LL),c * min(b,i - found->second)));
+                    found = next(found);
+                }
+                if(i - b >= 0) {
+                    mmin = min(f.at(i - b),mmin);
+                    ans = max(ans,f.at(i) - mmin + c * b);
+                }
+            }
         }
-        cout<<mmax<<"\n";
+        cout<<ans<<"\n";
     }
     return 0;
 }
