@@ -1,33 +1,44 @@
 // Author : ysh
-// 03/16/2023 Thu 19:44:19.98
+// 03/31/2023 Fri  8:30:06.82
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-    // ios::sync_with_stdio(false);
-    // cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
-    long long a,b;cout<<"> Input the number of students and groups in the class,seperate with ' ','<Enter>' or '<Tab>':";cin>>a>>b;
-    vector<pair<string,long long>>f(a);
-    cout<<"> Input the identify of students and their grades, enter them one by one.\ne.g.\nAmber 100\nAlex 99\n\n";
-    for(auto &i : f) {
-        cin>>i.first>>i.second;
-        cout<<"> Data added: "<<i.first<<" "<<i.second<<"\n";
+    int a,b,c;cin>>a>>b>>c;
+    vector<int>v(a);
+    for(int &i : v) {
+        cin>>i;
     }
-    sort(f.begin(),f.end(),[] (pair<string,long long>&a,pair<string,long long>&b) {
-        return a.second > b.second;
-    });
+
+    vector<vector<int>>f(a);
+    for(int i = 1;i<a;i++) {
+        int a,b;cin>>a>>b;
+        a--;b--;
+        f.at(a).push_back(b);
+        f.at(b).push_back(a);
+    }
+
+    vector<int>mark(a);
     int t = 0;
-    vector<vector<string>>v(b);
-    for(pair<string,long long> &i : f) {
-        v.at(t++).push_back(i.first);
-        if(t == b) t = 0;
-    }
-    for(int i = 0;i<b;i++) {
-        cout<<"Group #"<<i<<": ";
-        for(string &i : v.at(i)) {
-            cout<<i<<" ";
+    vector<pair<int,int>>tt(a);
+    function<int(int,int)> check = [&] (int last,int x) {
+        tt.at(x).first = t++;
+        int sig = 0;
+        for(int &i : f.at(x)) {
+            if(i != last) sig = sig + check(x,i);
         }
-        cout<<"\n";
+        tt.at(x).second = t++;
+        return mark.at(x) = sig + v.at(x);
+    };
+    check(-1,c - 1);
+
+    while(b--) {
+        int a,b;cin>>a>>b;
+        a--;b--;
+        if(tt.at(b).first < tt.at(a).first || tt.at(a).second < tt.at(b).second) cout<<"-1\n";
+        else cout<<mark.at(b)<<"\n";
     }
     return 0;
 }
