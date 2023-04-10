@@ -1,26 +1,26 @@
 template<typename T>
 struct tree{
     std::vector<T>f;
-    T n;
+    int n;
 
-    tree(T n) {
+    tree(int n) {
         this->n = n;
         f.resize(n);
     }
 
     tree(std::vector<T>&v):
     tree(v.size()) {
-        T t = 0;
+        int t = 0;
         for(T i : v) add(t++,i);
     }
 
-    void add(T a,T b) {
+    void add(int a,T b) {
         for(;a < n;a = a | (a + 1)) {
             f[a] += b;
         }
     }
 
-    T sum(T a) {
+    T sum(int a) {
         T ans = 0;
         for(;a >= 0;a = (a & (a + 1)) - 1) {
             ans = ans + f[a];
@@ -28,9 +28,9 @@ struct tree{
         return ans;
     }
 
-    T sum(T a,T b) {
+    T sum(int a,int b) {
         if(a > b) std::swap(a,b);
-        if(b >= n || a < 0) return 0;
+        assert(!(b >= n || a < 0));
         return sum((std::min(n - 1,b))) - sum(a - 1);
     }
 };
