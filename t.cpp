@@ -1,33 +1,50 @@
 // Author : ysh
-// 03/16/2023 Thu 19:44:19.98
+// 03/18/2023 Sat 20:13:20.42
 #include<bits/stdc++.h>
 using namespace std;
-int main() {
-    // ios::sync_with_stdio(false);
-    // cin.tie(0);
+#ifdef LOCAL
+#include<debug.h>
+#else
+#define debug(...) '*'
+#define printf(...) '*'
+#endif
 
-    long long a,b;cout<<"> Input the number of students and groups in the class,seperate with ' ','<Enter>' or '<Tab>':";cin>>a>>b;
-    vector<pair<string,long long>>f(a);
-    cout<<"> Input the identify of students and their grades, enter them one by one.\ne.g.\nAmber 100\nAlex 99\n\n";
-    for(auto &i : f) {
-        cin>>i.first>>i.second;
-        cout<<"> Data added: "<<i.first<<" "<<i.second<<"\n";
+int check(vector<int>&f) {
+    int last = f.at(0);
+    vector<int>mark((4e5) + 1);
+    for(int i = 1;i<f.size();i++) {
+        mark.at(f.at(i) + last) = 1;
+        last = f.at(i);
     }
-    sort(f.begin(),f.end(),[] (pair<string,long long>&a,pair<string,long long>&b) {
-        return a.second > b.second;
-    });
-    int t = 0;
-    vector<vector<string>>v(b);
-    for(pair<string,long long> &i : f) {
-        v.at(t++).push_back(i.first);
-        if(t == b) t = 0;
+    for(int i = 0;i<=(4e5);i++) {
+        if(!mark.at(i)) return i;
     }
-    for(int i = 0;i<b;i++) {
-        cout<<"Group #"<<i<<": ";
-        for(string &i : v.at(i)) {
-            cout<<i<<" ";
+    return -1;
+}
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    int n;cin>>n;
+    while(n--) {
+        int n;cin>>n;
+        int m = n;
+        int a,b,c;a = b = c = 0;
+        bool d = 0;
+        while(n--) {
+            int tmp;cin>>tmp;
+            if(tmp == 0) a++;
+            else if(tmp == 1) b++;
+            else c++,d = d | (tmp > 2);
         }
+        // debug(a,b,c);
+        if(m == 1 && b == 1) cout<<1;
+        else if(a - 1 <= b + c) cout<<0;
+        else if(c >= 2 || (b == 0 && c == 0 && a != 0)) cout<<1;
+        else if((b >= 2 && c == 1) || (b == 1)) cout<<2;
+        else cout<<3;
         cout<<"\n";
+        continue;
     }
     return 0;
 }
