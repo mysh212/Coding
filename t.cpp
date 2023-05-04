@@ -1,5 +1,6 @@
 // Author : ysh
 <<<<<<< HEAD
+<<<<<<< HEAD
 // 03/18/2023 Sat 20:13:20.42
 #include<bits/stdc++.h>
 using namespace std;
@@ -47,6 +48,8 @@ int main() {
         cout<<"\n";
         continue;
 =======
+=======
+>>>>>>> 621ce5dcd29f3c018096c1c72754b7eb48ec2b78
 // 04/28/2023 Fri 23:25:36.78
 #include<bits/stdc++.h>
 using namespace std;
@@ -72,6 +75,9 @@ int main() {
             }
             s.insert(now + now);
         }
+<<<<<<< HEAD
+>>>>>>> 621ce5dcd29f3c018096c1c72754b7eb48ec2b78
+=======
 >>>>>>> 621ce5dcd29f3c018096c1c72754b7eb48ec2b78
     }
     return 0;
