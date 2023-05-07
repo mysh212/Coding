@@ -1,10 +1,6 @@
 # Author : ysh
-# 03/18/2023 Sat 22:00:21.95
-from random import randint as ri
-r = int(input())
-print(r)
-for i in range(r):
-    print(5)
-    for j in range(5):
-        print(f'{ri(0,5)}',end = ' ')
-    print('')
+# 05/07/2023 Sun 10:08:33.06
+print(1)
+print('300 399')
+for i in range(int(1e6)):
+    print(1)
