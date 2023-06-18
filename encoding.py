@@ -19,7 +19,9 @@
 #     except:
 #         quit()
 
-from curses.ascii import isalpha
+
+
+# from curses.ascii import isalpha
 
 
 t = {}
@@ -29,7 +31,7 @@ while True:
         n = input()
         k = ''
         for i in n:
-            if isalpha(i) or i == '_':
+            if 'Z' >= i >= 'A' or 'z' >= i >= 'a' or i == '_':
                 k = k + i
             elif k != '':
                 t[k] = 1
