@@ -515,3 +515,8 @@ Copying-Data.cpp	seg_tree
 Zerojudge-e999.cpp	graph
 Zerojudge-e999.cpp	DAG
 Zerojudge-e999.cpp	DP
+Fixed-Prefix-Permutations-2.cpp	trie
+Omsk-Metro-simple-version.cpp	DP
+Tracking-Segments.cpp	binary_search
+Tracking-Segments.cpp	pref
+Apple-Tree.cpp	DFS
