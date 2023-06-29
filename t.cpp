@@ -1,33 +1,29 @@
 // Author : ysh
-// Sun 06/18/2023 15:11:48.38
+// 2023/06/29 Thu 11:35:32
 #include<bits/stdc++.h>
 using namespace std;
-#define int long long
-signed main() {
+#include<square>
+struct fib{
+    unsigned long long ___mod = 0;
+    int operator() (unsigned long long x) {
+        assert(x >= 0);
+        if(x == 0) return 1;
+        vector<vector<unsigned long long>>pre({{1,1},{1,0}});
+        vector<vector<unsigned long long>>f({{0,0},{1,0}});
+        t<unsigned long long>p(pre);
+        t<unsigned long long>v(f);
+        if(___mod != 0) {
+            p.mod(___mod);
+            v.mod(___mod);
+        }
+        return ((p ^ x) * v).f.at(0).at(0);
+    }
+    fib(unsigned long long x = 0):
+        ___mod(x) {};
+};
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int a,b,c;cin>>a>>b>>c;
-    deque<int>f(a);
-    int last = 0;
-    for(int &i : f) {
-        cin>>i;
-        i = last += i;
-    }
-    f.push_front(0);
-    a++;
-
-    vector<vector<int>>v(2,vector<int>(a));
-    for(int i = 1;i<=b;i++) {
-        auto found = f.begin();
-        for(int j = 0;j<a;j++) {
-            while(f.at(j) - *found > c) found = next(found);
-            v.at(i & 1).at(j) = v.at(!(i & 1)).at(found - f.begin()) + (f.at(j) - *found);
-        }
-        for(int j = 1;j<a;j++) {
-            v.at(i & 1).at(j) = max(v.at(i & 1).at(j),v.at(i & 1).at(j - 1));
-        }
-    }
-    cout<<v.at(b & 1).at(a - 1);
-    return 0;
+    for(int i = 0;i<100;i++) cout<<fib(10)(i);
 }

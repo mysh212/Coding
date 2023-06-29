@@ -1,0 +1,21 @@
+
+#include<square>
+using namespace std;
+struct fib{
+    unsigned long long ___mod = 0;
+    unsigned long long operator() (unsigned long long x) {
+        assert(x >= 0);
+        if(x == 0) return 0;
+        vector<vector<unsigned long long>>pre({{1,1},{1,0}});
+        vector<vector<unsigned long long>>f({{1,0},{0,0}});
+        t<unsigned long long>p(pre);
+        t<unsigned long long>v(f);
+        if(___mod != 0) {
+            p.mod(___mod);
+            v.mod(___mod);
+        }
+        return ((p ^ x) * v).f.at(1).at(0);
+    }
+    fib(unsigned long long x = 0):
+        ___mod(x) {};
+};

@@ -520,3 +520,5 @@ Omsk-Metro-simple-version.cpp	DP
 Tracking-Segments.cpp	binary_search
 Tracking-Segments.cpp	pref
 Apple-Tree.cpp	DFS
+Playlist.cpp	priority_queue
+Playlist.cpp	sort

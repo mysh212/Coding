@@ -15,15 +15,15 @@ inline int readint() {
 	if(neg) x = -x;
 	return x; // returns 0 if EOF
 }
-struct t{
+struct __fast_read{
 	void tie(int x) {
 	}
 }in;
-inline t& operator>>(t& in,int &x) {
+inline __fast_read& operator>>(__fast_read& in,int &x) {
     x = readint();
     return in;
 }
-inline t& operator>>(t& in,char &x) {
+inline __fast_read& operator>>(__fast_read& in,char &x) {
     x = readchar();
     return in;
 }

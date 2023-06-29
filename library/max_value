@@ -12,7 +12,7 @@ struct max_value{
         return max_value(n = n - a.n);
     }
     inline max_value operator-(max_value a) {
-        return max_value(0);
+        return max_value(n - a.n);
     }
     inline max_value operator*(int a) {
         return max_value(n);

@@ -1,4 +1,4 @@
-long long __modnumber;
+unsigned long long __modnumber;
 bool __mod = 0;
 
 template<typename T>
@@ -12,7 +12,7 @@ struct t{
         f.resize(n,vector<T>(n));
     }
     
-    inline void mod(long long n) {
+    inline void mod(unsigned long long n) {
         __mod = 1;
         __modnumber = n;
         return;
