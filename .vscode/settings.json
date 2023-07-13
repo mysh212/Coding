@@ -75,6 +75,7 @@
         "slist": "cpp",
         "seg_tree": "cpp",
         "square": "cpp",
-        "fast": "cpp"
+        "fast": "cpp",
+        "max_value": "cpp"
     }
 }

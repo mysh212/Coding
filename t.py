@@ -1,3 +1,12 @@
 # Author : ysh
-# 2023/06/28 Wed 11:35:25
-print(int(input()[::-1]))
+# 2023/07/10 Mon 15:40:21
+
+def zzz():
+    sleep()
+
+def sleep():
+    for i in range(int(1e9)):
+        pass
+    quit()
+
+zzz()
