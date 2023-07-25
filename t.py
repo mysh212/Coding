@@ -1,12 +1,12 @@
 # Author : ysh
-# 2023/07/10 Mon 15:40:21
-
-def zzz():
-    sleep()
-
-def sleep():
-    for i in range(int(1e9)):
-        pass
-    quit()
-
-zzz()
+# 2023/07/25 Tue 17:24:23
+for i in range(int(input())):
+    n = int(input())
+    a = input()
+    while len(a) > 1:
+        if a[0] != a[::-1][0]:
+            a = a[1:len(a) - 1]
+        else:
+            break
+    print(len(a))
+quit()

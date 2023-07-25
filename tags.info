@@ -524,3 +524,6 @@ Playlist.cpp	priority_queue
 Playlist.cpp	sort
 Message-Route-2.cpp	BFS
 Message-Route-2.cpp	re
+Two-Paths.cpp	tree
+Two-Paths.cpp	DP
+Two-Paths.cpp	graph
