@@ -527,3 +527,9 @@ Message-Route-2.cpp	re
 Two-Paths.cpp	tree
 Two-Paths.cpp	DP
 Two-Paths.cpp	graph
+Range-Update-Point-Query.cpp	seg_tree
+Box-in-Box.cpp	seg_tree
+Box-in-Box.cpp	offline
+Add-One-Edge.cpp	graph
+Add-One-Edge.cpp	Dijkstra
+Add-One-Edge.cpp	greedy
