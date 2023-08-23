@@ -15,12 +15,38 @@ inline int readint() {
 	if(neg) x = -x;
 	return x; // returns 0 if EOF
 }
+inline long long readll() {
+	long long x = 0, c = readchar(), neg = false;
+	__flag = 1;
+	while(('0' > c || c > '9') && c!='-' && c!=EOF) c = readchar();
+	if(c == '-') neg = true, c = readchar();
+	while('0' <= c && c <= '9') x = x*10 + (c^'0'), __flag = 0,c = readchar();
+	if(neg) x = -x;
+	return x; // returns 0 if EOF
+}
+inline short readshort() {
+	short x = 0, c = readchar(), neg = false;
+	__flag = 1;
+	while(('0' > c || c > '9') && c!='-' && c!=EOF) c = readchar();
+	if(c == '-') neg = true, c = readchar();
+	while('0' <= c && c <= '9') x = x*10 + (c^'0'), __flag = 0,c = readchar();
+	if(neg) x = -x;
+	return x; // returns 0 if EOF
+}
 struct __fast_read{
 	void tie(int x) {
 	}
 }in;
 inline __fast_read& operator>>(__fast_read& in,int &x) {
     x = readint();
+    return in;
+}
+inline __fast_read& operator>>(__fast_read& in,long long &x) {
+    x = readll();
+    return in;
+}
+inline __fast_read& operator>>(__fast_read& in,short &x) {
+    x = readshort();
     return in;
 }
 inline __fast_read& operator>>(__fast_read& in,char &x) {
