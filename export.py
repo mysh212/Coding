@@ -42,6 +42,8 @@ for i in f:
     a[b[0]] = a.get(b[0],'') + ' `' + b[1] + '`'
     d[b[1]] = d.get(b[1],0) + 1
 for j in sorted(a.keys()):
+    # if a.get(j).find('DSU') == -1:
+    #     continue
     if geturl(j) == '-1':
         if j[:9] == 'Zerojudge':
             id = j[10:14]

@@ -1,0 +1,28 @@
+struct max_value{
+    int n;
+    max_value(int n = 0):
+        n(n) {};
+    inline max_value operator+(max_value a) {
+        return max_value(max(n,a.n));
+    }
+    inline max_value operator+=(max_value a) {
+        return max_value(n = n + a.n);
+    }
+    inline max_value operator-=(max_value a) {
+        return max_value(n = n - a.n);
+    }
+    inline max_value operator-(max_value a) {
+        return max_value(n - a.n);
+    }
+    inline max_value operator*(int a) {
+        return max_value(n);
+    }
+    friend istream& operator>>(istream& in,max_value &a) {
+        in>>a.n;
+        return in;
+    }
+    friend ostream& operator<<(ostream& out,max_value a) {
+        out<<a.n;
+        return out;
+    }
+};

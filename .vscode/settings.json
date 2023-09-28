@@ -74,6 +74,8 @@
         "rope": "cpp",
         "slist": "cpp",
         "seg_tree": "cpp",
-        "square": "cpp"
+        "square": "cpp",
+        "fast": "cpp",
+        "max_value": "cpp"
     }
 }

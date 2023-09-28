@@ -326,6 +326,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d066.cpp)
 
+***[AP325-d067-7.cpp](https://judge.tcirc.tw/ShowProblem?problemid=b036
+)***
+###### tags:  `DC`
+>[time=05,02,2023 Tue 23:48:53,28]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/AP325-d067-7.cpp)
+
 ***[AP325-d067.cpp](https://judge.tcirc.tw/ShowProblem?problemid=d067)***
 ###### tags:  `DP`
 >[time=03,11,2022 Fri 10:19:19,44]
@@ -1498,6 +1506,14 @@
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Walk-2.cpp)
 
+***[Walk-the-Runway.cpp](https://codeforces.com/contest/1826/problem/E
+)***
+###### tags:  `bitset` `DP` `graph` `DAG`
+>[time=05,08,2023 Mon 11:41:37,09]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Walk-the-Runway.cpp)
+
 ***[Walk.cpp](https://atcoder.jp/contests/dp/tasks/dp_r
 )***
 ###### tags:  `fast-power`
@@ -1830,6 +1846,13 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-e810-6.cpp)
+
+***[Zerojudge-e828.cpp](https://zerojudge.tw/ShowProblem?problemid=e828)***
+###### tags:  `DP`
+>[time=05,05,2023 Fri  8:35:29,62]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/Zerojudge-e828.cpp)
 
 ***[Zerojudge-f314-2.cpp](https://zerojudge.tw/ShowProblem?problemid=f314)***
 ###### tags:  `DP`
@@ -2325,7 +2348,7 @@
 
 ***t.cpp***
 ###### tags:  `test`
->[time=03,07,2023 Tue 11:31:43,58]
+>[time=05,07,2023 Sun 10:06:43,38]
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/t.cpp)
@@ -2345,6 +2368,14 @@
 
 
 [***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-b035.cpp)
+
+***[tcirc-b048.cpp](https://judge.tcirc.tw/ShowProblem?problemid=b048
+)***
+###### tags:  `two-pointer`
+>[time=03,14,2023 Tue 11:50:36,69]
+
+
+[***<font color = '#AAAAAA'>code</font>***](https://github.com/mysh212/Coding/blob/master/tcirc-b048.cpp)
 
 ***[tcirc-c030.cpp](https://judge.tcirc.tw/ShowProblem?problemid=c030
 )***
@@ -2382,10 +2413,10 @@
 ***APCS*** 1
 ***BFS*** 10
 ***BIT*** 12
-***DAG*** 1
-***DC*** 6
+***DAG*** 2
+***DC*** 7
 ***DFS*** 21
-***DP*** 82
+***DP*** 84
 ***DSU*** 8
 ***Dijkstra*** 5
 ***Flow*** 1
@@ -2400,7 +2431,7 @@
 ***binary-search*** 1
 ***binary_search*** 12
 ***bit*** 6
-***bitset*** 5
+***bitset*** 6
 ***brute*** 2
 ***choj*** 17
 ***chsh-exam*** 6
@@ -2418,7 +2449,7 @@
 ***geometry*** 1
 ***gp*** 1
 ***gp_hash_table*** 3
-***graph*** 38
+***graph*** 39
 ***greedy*** 18
 ***half-brute*** 3
 ***hash*** 2
@@ -2457,9 +2488,10 @@
 ***test*** 2
 ***time-stamp*** 1
 ***tree*** 27
+***two-pointer*** 1
 ***undo*** 1
 ***unordered_map*** 1
 ***unordered_set*** 1
 ***vector*** 3
 :::
-總題數: 506
+總題數: 513
