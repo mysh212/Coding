@@ -1,40 +1,34 @@
-// Author : ysh
-// 2023/08/03 Thu 13:44:16
-#include<bits/stdc++.h>
-#include<testlib.h>
-using namespace std;
-#define dt(i,j,k,l) ((i - k) * (i - k) + (j - l) * (j - l))
-long double alldt(vector<pair<int,int>>&f,int x,int y) {
-    long double ans = 0;
-    for(auto &i : f) {
-        ans = ans + sqrtl(dt(i.first,i.second,x,y));
+#
+void solve() {
+  LL(N);
+  VEC(string, S, N);
+  ll ans = 0;
+  vv(ll, cnt, 6, 50);
+  FORE(s, S) cnt[len(s)][get(s)]++;
+  FOR(l, 2, 11, 2) {
+    FORE(s, S) if (len(s) > l / 2 && len(s) < l) {
+      ll d = l - len(s);
+      ll t1 = -get(s.substr(l / 2)) + get(s.substr(0, l / 2));
+      ll t2 = -get(s.substr(0, len(s) - l / 2)) + get(s.substr(len(s) - l / 2));
+      // t1 = abs(t1); t2 = abs(t2);
+      if (t1 >= 0) ans += cnt[d][t1];
+      if (t2 >= 0) ans += cnt[d][t2];
+      // print(l, s, d, t1, t2);
     }
-    return ans;
+    vi prefix(50);
+    FORE(s, S) if (len(s) == l / 2) {
+      prefix[get(s)]++;
+      ans += 2 * prefix[get(s)] - 1;
+    }
+    // print(l, ans);
+  }  
+  print(ans);
 }
-int main(int ac,char* as[]) {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
  
-    registerTestlibCmd(ac,as);
- 
-    int n = inf.readInteger();
-    vector<pair<int,int>>input(n);
-    for(auto &i : input) {
-        i.first = inf.readInteger();
-        i.second = inf.readInteger();
-    }
- 
-    int x,y;
-    x = ans.readInt();
-    y = ans.readInt();
- 
-    int xx,yy;
-    xx = ouf.readInt(-int(1000000),int(1000000),"x");
-    yy = ouf.readInt(-int(1000000),int(1000000),"y");
- 
-    #define f input
-    // cerr<<alldt(f,x,y)<<" "<<alldt(f,xx,yy);
-    if(alldt(f,x,y) == alldt(f,xx,yy)) quitf(_ok,"答案正確，%d 個點的最小總長度是 %lld",n,alldt(f,xx,yy));
-    else if (alldt(f,x,y) < alldt(f,xx,yy)) quitf(_wa,"答案並非最小值");
-    else quitf(_fail,"程式輸出了更小的合法答案 %lld",alldt(f,xx,yy));
+int main() {
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  ll T = 1;
+  FOR(T) solve();
+  return 0;
 }
