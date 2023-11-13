@@ -7,6 +7,28 @@ const int m[] = {0,1,3,6,10,15,21};
 #include<slow>
 #define bar(i) out("+");re(sizeof(i) / sizeof(char) - 1) out(" ");out("+"),nl,out(" "),out(i),nl,out("+");re(sizeof(i) / sizeof(char) - 1) out(" ");out("+");nl;
 
+struct __cin__{
+    void tie(auto x) {
+        return;
+    }
+}in;
+bool operator>>(__cin__ &in,int &x) {
+    re:
+    #undef cin
+    string t;
+    if(!(cin>>t)) outl("Unexpected EOF"),exit(-1);
+    repo(&i,t) if(!isdigit(i)) {
+        puts("Invalid input");
+        goto re;
+    }
+    x = stoi(t);
+    return 1;
+}
+bool operator>>(__cin__ &in,char &x) {
+    cin>>x;
+    return 1;
+}
+#define cin in
 
 const char t[] = {'R','G','B','C','M','Y','K','W','2'};
 
@@ -19,9 +41,33 @@ struct box{
     vc<bool>disable;
     int n;
 
-    struct algo{
-        // complete if I was really boring.
-    };
+    // struct algo{
+    //     // complete if I was really boring.
+    // };
+
+    function<void()> algo(int x) {
+        if(x == 0) return [&] () {
+            if(can_draw()) draw_first(x);
+            else pick_one(x,estimate(x));
+        };
+        if(x == 1) return [&] () { // try to get as many whites as possible
+            if(!can_draw()) return pick_one(x,estimate(x));
+            re(i,n) if(can_pick(i)) repo(&j,ans.at(i)) if(j == 7) return pick_one(x,i);
+            return draw_first(x);
+        };
+        if(x == 2) return [&] () { // try to get as many plus two cards as possible
+            if(!can_draw()) return pick_one(x,estimate(x));
+            re(i,n) if(can_pick(i)) repo(&j,ans.at(i)) if(j == 8) return pick_one(x,i);
+            return draw_first(x);
+        };
+        if(x == 3) return [&] () { // just doesn't want to let you win
+            if(!can_draw()) return pick_one(x,estimate(x));
+            if(f.back() == -10) return draw_first(x);
+            if(now.at(n - 1).at(f.back()) == 0) return draw_first(x);
+            else re(i,n) if(can_draw(i) && ans.at(i) != null) repo(&j,ans.at(i)) if(now.at(n - 1).at(j) == 0) return printf("Algo %d drew card %c to row %d",x + 1,t[f.back()],i + 1),check(x,0,i);
+            return draw_first(x);
+        };
+    }
     
     box(int n) {
         srand(time(NULL));
@@ -292,9 +338,10 @@ struct box{
 
 
 
-            if(can_draw()) draw_first(x);
-            else pick_one(x,estimate(x));
+            // if(can_draw()) draw_first(x);
+            // else pick_one(x,estimate(x));
             print(x);
+            algo(x)();
             // if(last && x == n - 2) return scr();
             return walk(x + 1);
         } else {
@@ -332,7 +379,11 @@ int main() {
         puts("Due to the game rule, the number of players should only be in [2,5].");
         goto redo;
     }
-    box(n).walk();
+    {
+    int tmp = rand() % n;
+    printf("You are P%d, and you'll start after %d round.",n,n - (tmp + 1));nl;
+    box(n).walk(tmp);
+    }
     out("Would you like to play again? [y/N]");
     char tmp;cin>>tmp;
     if(tmp == 'Y' || tmp == 'y') goto redo;

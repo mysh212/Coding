@@ -554,3 +554,6 @@ Subarray-Sum-Queries-2.cpp	operator
 Subarray-Sum-Queries-2.cpp	struct
 Zerojudge-f416-4.cpp	KMP
 Zerojudge-f416-4.cpp	Z
+Moving-Both-Hands.cpp	graph
+Moving-Both-Hands.cpp	DP
+Moving-Both-Hands.cpp	Dijkstra

@@ -1,34 +1,51 @@
-#
-void solve() {
-  LL(N);
-  VEC(string, S, N);
-  ll ans = 0;
-  vv(ll, cnt, 6, 50);
-  FORE(s, S) cnt[len(s)][get(s)]++;
-  FOR(l, 2, 11, 2) {
-    FORE(s, S) if (len(s) > l / 2 && len(s) < l) {
-      ll d = l - len(s);
-      ll t1 = -get(s.substr(l / 2)) + get(s.substr(0, l / 2));
-      ll t2 = -get(s.substr(0, len(s) - l / 2)) + get(s.substr(len(s) - l / 2));
-      // t1 = abs(t1); t2 = abs(t2);
-      if (t1 >= 0) ans += cnt[d][t1];
-      if (t2 >= 0) ans += cnt[d][t2];
-      // print(l, s, d, t1, t2);
-    }
-    vi prefix(50);
-    FORE(s, S) if (len(s) == l / 2) {
-      prefix[get(s)]++;
-      ans += 2 * prefix[get(s)] - 1;
-    }
-    // print(l, ans);
-  }  
-  print(ans);
-}
+#include <bits/stdc++.h>
+using namespace std;
+#define int int64_t
+#define pii pair<int, int>
+#define pb push_back
+#define X first
+#define Y second
  
-int main() {
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
-  ll T = 1;
-  FOR(T) solve();
-  return 0;
+constexpr int MAX_N = 1e5+5;
+vector<pii> G1[MAX_N], G2[MAX_N];
+ 
+signed main(){
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	int n, m, a, b, w;
+	cin >> n >> m;
+	for(int x=0; x<m; x++){
+		cin >> a >> b >> w;
+		G1[a].pb({b, w});
+		G2[b].pb({a, w});
+	}
+	//dijkstra
+	vector<int> dis(n+5, -1), dis2(n+5, -1);
+	priority_queue<pii, vector<pii>, greater<pii> > pq;
+	pq.push({0, 1});
+	while(!pq.empty()){
+		auto t = pq.top(); pq.pop();
+		int w = t.X;
+        if(dis[t.Y] == -1) dis[t.Y] = t.X;
+        else continue;
+		for(auto a : G1[t.Y]){
+            if (dis[a.X] != -1) continue;
+			pq.push({w+a.Y, a.X});
+ 		}
+	}
+	for(int x=2; x<=n; x++) {
+		if(dis[x] != -1) G2[1].pb({x, dis[x]});
+	}
+	pq.push({0, 1});
+	while(!pq.empty()){
+		auto t = pq.top(); pq.pop();
+        if(dis2[t.Y] == -1) dis2[t.Y] = t.X;
+        else continue;
+		for(auto a : G2[t.Y]){
+            if(dis2[a.X] != -1) continue;
+			pq.push({t.X+a.Y, a.X});
+ 		}
+	}
+	for(int x=2; x<=n; x++ ) cout << dis2[x] << ' ';
+	return 0;
 }
