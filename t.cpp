@@ -4,7 +4,49 @@
 using namespace std;
 // map<int,int> m({{1,1},{2,3},{3,6},{4,10},{5,15},{6,21}});
 const int m[] = {0,1,3,6,10,15,21};
-#include<slow>
+#define __overload_for__(i,j,k,l,m,...) m
+#define re_(i) rep(_,i)
+#define rep(i,j) for(int i = 0;i<j;i++)
+#define repo(i,j) for(auto i : j)
+#define repof(i,j,k) for(int i = j;i<k;i++)
+#define repofd(i,j,k,l) for(int i = j;i<k;i = i + l)
+#define re(...) __overload_for__(__VA_ARGS__,repofd,repof,rep,re_)(__VA_ARGS__)
+#define pb(i) push_back(i)
+#define bg(i) i.begin()
+#define ed(i) i.end()
+#define all(i) bg(i),ed(i)
+#define rall(i) i.rbegin(),i.rend()
+#define vc vector
+#define nl printf("\n")
+#define out(i) cout<<i
+#define outs(i) cout<<i<<" "
+#define outl(i) cout<<i<<"\n"
+#ifdef LOCAL
+#include<debug.h>
+#else
+#define debug(...) '*'
+#endif
+
+template<class T>
+istream& operator>>(istream& fin,vector<T>&f) {
+    for(auto &&i : f) fin>>i;
+    return fin;
+}
+template<class T,class R>
+istream& operator>>(istream& fin,pair<T,R>&x) {
+    fin>>x.first>>x.second;
+    return fin;
+}
+template<class T>
+ostream& operator<<(ostream& fout,vector<T>&f) {
+    for(auto &i : f) fout<<i<<" ";
+    return fout;
+}
+template<class T,class R>
+ostream& operator<<(ostream& fout,pair<T,R>&x) {
+    fout<<x.first<<" "<<x.second;
+    return fout;
+}
 #define bar(i) out("+");re(sizeof(i) / sizeof(char) - 1) out(" ");out("+"),nl,out(" "),out(i),nl,out("+");re(sizeof(i) / sizeof(char) - 1) out(" ");out("+");nl;
 
 struct __cin__{
@@ -45,22 +87,22 @@ struct box{
     //     // complete if I was really boring.
     // };
 
-    function<void()> algo(int x) {
-        if(x == 0) return [&] () {
+    function<void(int)> algo(int x) {
+        if(x == 0) return [&] (int x) {
             if(can_draw()) draw_first(x);
             else pick_one(x,estimate(x));
         };
-        if(x == 1) return [&] () { // try to get as many whites as possible
+        if(x == 1) return [&] (int x) { // try to get as many whites as possible
             if(!can_draw()) return pick_one(x,estimate(x));
             re(i,n) if(can_pick(i)) repo(&j,ans.at(i)) if(j == 7) return pick_one(x,i);
             return draw_first(x);
         };
-        if(x == 2) return [&] () { // try to get as many plus two cards as possible
+        if(x == 2) return [&] (int x) { // try to get as many plus two cards as possible
             if(!can_draw()) return pick_one(x,estimate(x));
             re(i,n) if(can_pick(i)) repo(&j,ans.at(i)) if(j == 8) return pick_one(x,i);
             return draw_first(x);
         };
-        if(x == 3) return [&] () { // just doesn't want to let you win
+        if(x == 3) return [&] (int x) { // just doesn't want to let you win
             if(!can_draw()) return pick_one(x,estimate(x));
             if(f.back() == -10) return draw_first(x);
             if(now.at(n - 1).at(f.back()) == 0) return draw_first(x);
@@ -341,7 +383,7 @@ struct box{
             // if(can_draw()) draw_first(x);
             // else pick_one(x,estimate(x));
             print(x);
-            algo(x)();
+            algo(x)(x);
             // if(last && x == n - 2) return scr();
             return walk(x + 1);
         } else {
