@@ -31,6 +31,17 @@ inline vector<vector<int>>offline(vector<vector<string>>&f) {
     re = mark;
     return ans;
 }
+vector<int> operator+(vector<int>&a,vector<int>&b) {
+    vc<int>ans(a);
+    repo(&i,b) ans.pb(i);
+    return ans;
+}
+inline bool is_unique(vector<int>f) {
+    int ans = f.size();
+    sort(all(f));
+    f.resize(unique(all(f)) - f.begin());
+    return f.size() == ans;
+}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -52,11 +63,11 @@ int main() {
     while(in>>a>>b) {
         v.push_back(split(b,","));
     }
-    debug(v);
     auto f = offline(v);
     int n = f.size();
     int k = re.size();
-    debug(f);
+    debug(k);
+    // debug(f);
 
     double sp,cd;
     cerr<<"Minimum support: ";cin>>sp;
@@ -102,9 +113,10 @@ int main() {
     check(0);
     sort(all(ans));
     ans.resize(unique(ans.begin(),ans.end()) - ans.begin());
+    debug(ans.size());
 
     outt(frequent patterns);nl;
-    debug(ans);
+    // debug(ans);
 
     function<vector<int>(int)> appear = [&] (int x) {
         vc<int>tmp;
@@ -139,9 +151,15 @@ int main() {
         vc<int>tmp(appear(i));
         re(j,1,m) {
             if(i == j) continue;
+            re(l,k) if(!is_unique(ans.at(i) + ans.at(j))) goto np;
+            {
             int now = prob(tmp,j);
             debug(tmp.size(),now);
             if(now >= tmp.size() * cd) aans.push_back({ans.at(i),ans.at(j)});
+            }
+
+            np:
+            continue;
         }
     }
 
@@ -149,13 +167,15 @@ int main() {
 
     sort(all(aans),[] (pair<vector<int>,vector<int>>&a,pair<vector<int>,vector<int>>&b) {
         if(a.first.size() != b.first.size()) return a.first.size() > b.first.size();
+        if(a.second.size() != b.second.size()) return a.second.size() > b.second.size();
         if(a.first != b.first) return a.first < b.first;
         return a.second < b.second;
     });
 
+    outl(aans.size());
     repo(&i,aans) {
         repo(&j,i.first) outs(re.at(j));
-        outt(=>);
+        outt(=>);out(" ");
         repo(&k,i.second) outs(re.at(k));
         nl;
     }

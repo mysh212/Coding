@@ -5,7 +5,7 @@
 #define repof(i,j,k) for(int i = j;i<k;i++)
 #define repofd(i,j,k,l) for(int i = j;i<k;i = i + l)
 #define re(...) __overload_for__(__VA_ARGS__,repofd,repof,rep,re_)(__VA_ARGS__)
-#define pb(i) push_back(i)
+#define pb(...) push_back(__VA_ARGS__)
 #define bg(i) i.begin()
 #define ed(i) i.end()
 #define all(i) bg(i),ed(i)
