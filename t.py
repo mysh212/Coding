@@ -1,17 +1,5 @@
 # Author : ysh
-# 2023/10/02 Mon 16:16:22
-n = int(input())
-while True:
-    try:
-        n = int(input())
-        if n % 400 == 0:
-            print('a leap year')
-        elif n % 100 == 0:
-            print('a normal year')
-        elif not n & 3:
-            print('a leap year')
-        else:
-            print('a normal year')
-    except:
-        break
-quit()
+# 2023/11/30 Thu 23:34:03
+for i in range(int(input())):
+    a,b = [float(i) for i in input().split()]
+    print([round(a,int(b)),int(a)][b == 0])

@@ -11,10 +11,11 @@
 #define all(i) bg(i),ed(i)
 #define rall(i) i.rbegin(),i.rend()
 #define vc vector
-#define nl printf("\n")
+#define nl cout<<"\n"
 #define out(i) cout<<i
 #define outs(i) cout<<i<<" "
 #define outl(i) cout<<i<<"\n"
+#define outt(i) out(#i)
 #ifdef LOCAL
 #include<debug.h>
 #else
