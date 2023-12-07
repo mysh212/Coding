@@ -114,6 +114,7 @@ int main() {
     sort(all(ans));
     ans.resize(unique(ans.begin(),ans.end()) - ans.begin());
     debug(ans.size());
+    debug(ans);
 
     outt(frequent patterns);nl;
     // debug(ans);
