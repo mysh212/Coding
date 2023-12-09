@@ -4,9 +4,11 @@
 using namespace std;
 #include<slow>
 const int R = 20000;
+const int MAX = 90000;
 vector<bitset<R>>s;
+vector<bitset<MAX>>rez;
 int n,k;
-double c,d;
+long double c,d;
 vector<string> split(string a,string b) {
     vector<string>f;
     while(a.find(b) != string::npos) {
@@ -47,39 +49,30 @@ inline bitset<R> mb(int x) {
     return s;
 }
 inline bool check(bitset<R>r) {
-    int ans = 0;
-    repo(&i,s) if(((i ^ r) & r).count() == 0) ans++;
-    return ans >= n * c;
+    bitset<MAX>tmp;
+    tmp.set();
+    re(i,k) if(r.test(i)) tmp = tmp & rez.at(i);
+    return tmp.count() >= n * c;
 }
 inline bool co(int x) {
     int ans = 0;
     repo(&i,s) if(i.test(x)) ans++;
     return ans >= n * c;
 }
-unordered_map<bitset<R>,vector<int>>mark;
+bitset<MAX>mark;
+bitset<R>mk;
 inline bool ck(bitset<R>l,bitset<R>r) {
-    int left,right;left = right = 0;
-    if(mark.find(l) != mark.end()) {
-        auto now = mark.find(l)->second;
-        int ans = 0;
-        repo(&i,now) {
-            if(((s.at(i) ^ r) & r).count() == 0) ans++;
-        }
-        return ans >= now.size() * d;
-    }
-    vc<int>mk;
-    int t = 0;
-    repo(&i,s) {
-        if(((i ^ l) & l).count() == 0) {
-            mk.pb(t);
-            left = left + 1;
-            if(((i ^ r) & r).count() == 0) right++;
-        }
-        t++;
-    }
-    mark.clear();
-    mark.insert({l,mk});
-    return right >= left * d;
+    bitset<MAX>ans;
+    ans.set();
+    re(i,k) if(r.test(i)) ans = ans & rez.at(i);
+
+    if(mk == l) return (mark & ans).count() * 1.0 >= mark.count() * d;
+
+    mk = l;
+    mark.set();
+    re(i,k) if(l.test(i)) mark = mark & (rez.at(i));
+
+    return (mark & ans).count() >= mark.count() * d;
 }
 vector<bitset<R>> mg(int l,int r) {
     debug(l,r);
@@ -122,11 +115,12 @@ int main() {
     // debug(f);
     n = f.size(); 
     k = re.size();
+    rez.resize(k);
     debug(k);
     assert(k <= R);
 
     s.resize(n);
-    re(i,n) repo(&j,f.at(i)) s[i].set(j);
+    re(i,n) repo(&j,f.at(i)) s[i].set(j),rez[j].set(i);
 
     auto ans = mg(0,k - 1);
     int m = ans.size();
