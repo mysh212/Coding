@@ -94,6 +94,23 @@ ostream& operator<<(ostream& fout,vector<bitset<R>>s) {
     }
     return fout;
 }
+inline bool alldigit(string x) {
+    if(x.size() > 9) return 0;
+    repo(&i,x) if(!isdigit(i)) return 0;
+    return 1;
+}
+bool cp(string l,string r) {
+    if(alldigit(l) && alldigit(r)) return stoi(l) < stoi(r);
+    if(alldigit(l) || alldigit(r)) return alldigit(l);
+    return l < r;
+}
+bool operator<(vector<string> l,vector<string> r) {
+    re(i,min(l.size(),r.size())) {
+        if(l.at(i) == r.at(i)) continue;
+        return cp(l.at(i),r.at(i));
+    }
+    return l < r;
+}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -101,7 +118,7 @@ int main() {
     redo:
     string a;
     cerr<<"Input the name of the file: ";cin>>a;
-    // if(a.find(".txt") == -1) a = a + ".txt";
+    if(a.find(".txt") == -1) a = a + ".txt";
 
     ifstream in(a);
     if(!in) {
@@ -111,6 +128,8 @@ int main() {
     cerr<<"Input the support value: ";cin>>c;
     cerr<<"Input the confidence value: ";cin>>d;
     auto f = offline(input(in));
+
+    ofstream lout(a.substr(0,a.size() - 4) + "_Output" + ".txt");
 
     // debug(f);
     n = f.size(); 
@@ -143,11 +162,11 @@ int main() {
         aaans.pb({ll,rr});
     }
 
-    repo(&i,aaans) sort(all(i[0])),sort(all(i[1]));
+    repo(&i,aaans) sort(all(i[0]),cp),sort(all(i[1]),cp);
     sort(all(aaans),[](array<vector<string>,2>a,array<vector<string>,2>b) {
         if(a[0].size() != b[0].size()) return a[0].size() > b[0].size();
         if(a[1].size() != b[1].size()) return a[1].size() > b[1].size();
-        if(a[0] != b[0]) return a < b;
+        if(a[0] != b[0]) return a[0] < b[0];
         return a[1] < b[1];
     });
 
