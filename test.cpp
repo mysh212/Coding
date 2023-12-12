@@ -2,7 +2,50 @@
 // 2023/12/07 Thu 17:16:53
 #include<bits/stdc++.h>
 using namespace std;
-#include<slow>
+#define __overload_for__(i,j,k,l,m,...) m
+#define re_(i) rep(_,i)
+#define rep(i,j) for(int i = 0;i<j;i++)
+#define repo(i,j) for(auto i : j)
+#define repof(i,j,k) for(int i = j;i<k;i++)
+#define repofd(i,j,k,l) for(int i = j;i<k;i = i + l)
+#define re(...) __overload_for__(__VA_ARGS__,repofd,repof,rep,re_)(__VA_ARGS__)
+#define pb(...) push_back(__VA_ARGS__)
+#define bg(i) i.begin()
+#define ed(i) i.end()
+#define all(i) bg(i),ed(i)
+#define rall(i) i.rbegin(),i.rend()
+#define vc vector
+#define nl lout<<"\n"
+#define out(i) lout<<i
+#define outs(i) lout<<i<<" "
+#define outl(i) lout<<i<<"\n"
+#define outt(i) out(#i)
+#ifdef LOCAL
+#include<debug.h>
+#else
+#define debug(...) '*'
+#endif
+
+template<class T>
+istream& operator>>(istream& fin,vector<T>&f) {
+    for(auto &&i : f) fin>>i;
+    return fin;
+}
+template<class T,class R>
+istream& operator>>(istream& fin,pair<T,R>&x) {
+    fin>>x.first>>x.second;
+    return fin;
+}
+template<class T>
+ostream& operator<<(ostream& fout,vector<T>&f) {
+    for(auto &i : f) fout<<i<<" ";
+    return fout;
+}
+template<class T,class R>
+ostream& operator<<(ostream& fout,pair<T,R>&x) {
+    fout<<x.first<<" "<<x.second;
+    return fout;
+}
 const int R = 20000;
 const int MAX = 90000;
 vector<bitset<R>>s;
@@ -118,7 +161,7 @@ int main() {
     redo:
     string a;
     cerr<<"Input the name of the file: ";cin>>a;
-    if(a.find(".txt") == -1) a = a + ".txt";
+    // if(a.find(".txt") == -1) a = a + ".txt";
 
     ifstream in(a);
     if(!in) {
@@ -142,6 +185,7 @@ int main() {
     re(i,n) repo(&j,f.at(i)) s[i].set(j),rez[j].set(i);
 
     auto ans = mg(0,k - 1);
+    unordered_set<bitset<R>>mks(all(ans));
     int m = ans.size();
 
     vc<pair<bitset<R>,bitset<R>>>aans;
@@ -149,10 +193,11 @@ int main() {
         debug(i,j,m);
         if(i == j) continue;
         if(!((ans.at(i) & ans.at(j)).count() == 0)) continue;
+        if(mks.find((ans.at(i) | ans.at(j))) == mks.end()) continue;
 
         if(ck(ans.at(i),ans.at(j))) aans.push_back({ans.at(i),ans.at(j)});
     }
-
+    
     outl(aans.size());
     vector<array<vector<string>,2>>aaans;
     repo(&i,aans) {

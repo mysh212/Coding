@@ -1,74 +1,57 @@
 // Author : ysh
-// 2023/12/10 Sun 19:53:20
+// 2023/12/12 Tue 16:12:39
 #include<bits/stdc++.h>
 using namespace std;
-#define int long long
-struct box{
-    #define left(i) (i << 1)
-    #define right(i) ((i << 1) | 1)
-    vector<int>f;
-    int n;
-
-    box(int n):
-        f(n << 2), n(n) {};
-
-    box(vector<int>&v):
-        box(v.size()) {
-            mt(0,n - 1,v);
-        }
-    
-    void mt(int l,int r,vector<int>&v,int t = 1) {
-        if(l == r) return f.at(t) = v.at(l),void();
-        int mid = (l + r) >> 1;
-        mt(l,mid,v,left(t));
-        mt(mid + 1,r,v,right(t));
-        f.at(t) = f.at(left(t)) + f.at(right(t));
-        return;
-    }
-
-    void add(int l,int v,int t = 1,int nl = -1,int nr = -1) {
-        if(nl == -1 && nr == -1) nl = 0,nr = n - 1;
-        if(nl == nr) return f.at(t) += v,void();
-        int mid = (nl + nr) >> 1;
-        if(l > mid) add(l,v,right(t),mid + 1,nr);
-        else add(l,v,left(t),nl,mid);
-
-        f.at(t) = f.at(left(t)) + f.at(right(t));
-        return;
-    }
-
-    int sum(int l,int r,int t = 1,int nl = -1,int nr = -1) {
-        if(nl == -1 && nr == -1) nl = 0,nr = n - 1;
-        if(nl >= l && nr <= r) return f.at(t);
-        if(nr < l || nl > r) return 0;
-
-        int mid = (nl + nr) >> 1;
-        return sum(l,r,left(t),nl,mid) + sum(l,r,right(t),mid + 1,nr);
-    }
-};
-signed main() {
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int a,b;cin>>a>>b;
-    vector<int>f(a);
-    for(int &i : f) cin>>i;
+    bool is_occupied[3][5] = {};
+    for(int i = 2;i<5;i++) is_occupied[0][i] = 1;
+    for(int i = 3;i<5;i++) is_occupied[1][i] = 1;
 
-    box t(f);
-    while(b--) {
-        short a;cin>>a;
-        if(a == 1) {
-            int a,b;cin>>a>>b;
-            a--;
-            b = b - f.at(a);
-            t.add(a,b);
-            f.at(a) += b;
+    int seat_left[3] = {2,3,5};
+    const int seat_count[3] = {2,3,5};
+    while(1) {
+        if(seat_count[0] == 0 && seat_count[1] == 0 && seat_count[2] == 0) {
+            printf("N\n");
+            return 0;
         }
-        if(a == 2) {
-            int a,b;cin>>a>>b;
-            a--;b--;
-            cout<<t.sum(a,b)<<"\n";
+
+        printf("請輸入艙等: ");
+        int tmp;
+        while(scanf("%d",&tmp)) {
+            if(tmp == -1) return 0;
+            if(tmp <= 0 || tmp > 3) {
+                printf("X\n");
+                continue;
+            }
+
+            if(seat_left[tmp] == 0) {
+                printf("X\n");
+                continue;
+            }
+
+            break;
         }
+        int now = tmp - 1;
+
+        printf("請輸入座位: ");
+        while(scanf("%d",&tmp)) {
+            if(tmp <= 0 || tmp > seat_count[now]) {
+                printf("X\n");
+                continue;
+            }
+
+            break;
+        }
+
+        if(is_occupied[now][tmp - 1]) {
+            printf("F\n");
+            continue;
+        }
+
+        printf("S\n");
+        is_occupied[now][tmp - 1] = 1;
     }
-    return 0;
 }
