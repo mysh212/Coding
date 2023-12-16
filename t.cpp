@@ -123,7 +123,6 @@ int main() {
 				else 
 					printf("S\n"),ok = 1,economyclass = economyclass - 1;;
 				i = 1;
-				printf("%d", economyclass); 
 				
 				break;
 			}
