@@ -26,7 +26,7 @@ using namespace std;
 #define BL_SCORE 0
 #define SL_SCORE 0
 #define CR_COUNT 10
-#define MAX 2
+#define MAX 3
 
 pair<int,int> operator+ (pair<int,int>a,pair<int,int>b) {
 	return {a.first + b.first,a.second + b.second};
@@ -379,7 +379,14 @@ struct box_E24124723{
 			}
 		}
 		if(mark.empty()) return {0,0};
-		pair<int,int> ans({prev(mark.end())->second.first,prev(mark.end())->second.second});
+		pair<int,int> ans;
+		int mmax = prev(mark.end())->first;
+		for(auto i = prev(mark.end());abs(i->first - mmax) <= 10;i = prev(i)) {
+			// debug(i->first);
+			ans = ans + i->second;
+			if(i == mark.begin()) break;
+		}
+		// debug(mark.begin()->first);
 		return {-ans.first,-ans.second};
 	}
 
