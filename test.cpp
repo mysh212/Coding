@@ -1,6 +1,6 @@
 // Author : ysh
 // 2023/12/20 Wed 23:09:31
-// AC(0.8)
+// AC(0.83)
 #include<bits/stdc++.h>
 using namespace std;
 #include<slow>
@@ -281,7 +281,7 @@ struct box_E24124723{
 		}
 		// outl(c);
 		// repo(&i,f) outl(i);
-		return {c,0,0,0,0,ot,8,8};
+		return {c,0,0,0,0,ot,R,R};
 		assert(0);
 	}
 
@@ -440,7 +440,7 @@ struct box_E24124723{
 			}
 		}
 
-		if(ans.empty()) return {0,0,0,0,0,0,0,0};
+		if(ans.empty()) return fool(p);
 
 		long double mmax = -INFINITY;
 		vc<vc<int>>aans;
