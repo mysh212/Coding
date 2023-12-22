@@ -10,6 +10,22 @@ using namespace std;
 #define assert(...)
 #endif
 
+#ifdef LOCAL
+#define RAND_SEED 10
+#else
+#define RAND_SEED time(NULL)
+#endif
+
+#define DEEP_P1 2
+#define DEEP_P2 2
+#define AUTO_GAP 5
+#define ALLOW_RANDOM 1
+#define LINE_SCORE 0
+#define DC_SCORE 0
+#define BL_SCORE 0
+#define SL_SCORE 0
+#define CR_COUNT 10
+
 pair<int,int> operator+ (pair<int,int>a,pair<int,int>b) {
 	return {a.first + b.first,a.second + b.second};
 }
@@ -117,6 +133,156 @@ struct box_E24124723{
 		return 0;
 	}
 
+	bool canremove(pair<int,int>a,pair<int,int>b,int c,int op) {
+		assert(inside(a.first,a.second) && inside(b.first,b.second));
+		bool ok = false;
+		if(a == b) {
+			assert(f.att(a.first,a.second) == 0);
+
+			f.att(a.first,a.second) = c;
+			if(line(a.first,a.second)) ok = true;
+			f.att(a.first,a.second) = 0;
+		} else {
+			assert(f.att(a.first,a.second) == c && f.att(b.first,b.second) == 0);
+
+			f.att(a.first,a.second) = 0;
+			f.att(b.first,b.second) = c;
+			if(line(b.first,b.second)) ok = true;
+			f.att(a.first,a.second) = c;
+			f.att(b.first,b.second) = 0;
+		}
+		return ok;
+	}
+
+	inline int beline(int x,int y,int c) {
+		assert(inside(x,y));
+		assert(c != 0 && c != -1);
+		if(f.att(x,y) != 0 || f.att(x,y) == -1) return -1;
+
+		re(i,4) {
+			re(j,1,3) {
+				int nx = x + (xx[i] * dd[y] * j);
+				int ny = y + (yy[i] * dd[x] * j);
+
+				if(!inside(nx,ny)) break;
+				if(f.att(nx,ny) != c) break;
+				if(j == 2) return i;
+			}
+		}
+
+		re(i,2) {
+			re(j,0,3,2) {
+				int nx = x + (xx[i + j] * dd[y]);
+				int ny = y + (yy[i + j] * dd[x]);
+
+				if(!inside(nx,ny)) break;
+				if(f.att(nx,ny) == -1 || f.att(nx,ny) == 0) break;
+				if(!(f.att(nx,ny) == c)) break;
+				if(j == 2) return i;
+			}
+		}
+		return -1;
+	}
+
+	int countline(int x,int y,int c,int gap) {
+		int ans = 0;
+		assert(inside(x,y));
+		if(c == 0 || c == -1) return 0;
+
+		re(i,4) {
+			int now = 0;
+			re(j,0,3) {
+				int nx = x + (xx[i] * dd[y] * j);
+				int ny = y + (yy[j] * dd[x] * j);
+
+				if((!inside(nx,ny)) || (!(f.att(nx,ny) == c || f.att(nx,ny) == 0))) {
+					now = 0;
+					break;
+				}
+				if(f.att(nx,ny) == c) now++;
+			}
+			if(now >= gap) ans++;
+		}
+		return ans;
+	}
+
+	inline int strictline(int x,int y,int c,int t = -1) {
+		int now = beline(x,y,c);
+		if(t == -1) t = c;
+		if(now == -1) return -1;
+
+		now = (now + 1) & 1;
+		re(i,0,3,2) {
+			int nx = x + (xx[now + i] * dd[y]);
+			int ny = y + (yy[now + i] * dd[x]);
+
+			if(!inside(nx,ny)) continue;
+			if(f.att(nx,ny) == t) return now + i;
+		}
+		return -1;
+	}
+
+	pair<int,int> getremove(int op) {
+		if(anylone(op)) {
+			re(i,R) re(j,R) if(strictline(i,j,op) != -1) {
+				int ans = strictline(i,j,op);
+				int nx = i + (xx[ans] * dd[j]);
+				int ny = j + (yy[ans] * dd[i]);
+
+				assert(inside(nx,ny));
+				return {nx,ny};
+			}
+			re(i,R) re(j,R) if(f.att(i,j) == op && !line(i,j)) return {i,j};
+		} else {
+			for(int k = 2;k>0;k--) re(i,R) re(j,R) if(countline(i,j,op,3) >= k) return {i,j};
+			re(i,R) re(j,R) if(f.att(i,j) == op) return {i,j};
+		}
+		return {R,R};
+	}
+
+	vector<int> autoplace(int now) {
+		assert(now == 1);
+
+		const int x = 3,y = 3;
+		re(l,2) {
+			re(k,3) {
+				const int pre[] = {2,1,3};
+				int j = pre[k];
+				re(i,4) {
+					if(l == 1) i = i + 4;
+					int nx = x + (xx[i] * j);
+					int ny = y + (yy[i] * j);
+
+					assert(inside(nx,ny));
+					if(f.att(nx,ny) != 0) continue;
+					pair<int,int> ans({R,R});
+					if(canremove({nx,ny},{nx,ny},c,ot)) ans = getremove(ot);
+					return {c,nx,ny,nx,ny,ot,ans.first,ans.second};
+				}
+			}
+		}
+
+		return fool(now);
+	}
+
+	vc<int>fool(int p) {
+		assert(p == 1 || p == 2);
+		if(p == 1) re(i,R) re(j,R) {
+			re(k,R) re(l,R) {
+				if(valid({c,i,j,i,j,ot,k,l},p)) return {c,i,j,i,j,ot,k,l};
+			}
+			if(valid({c,i,j,i,j,ot,R,R},p)) return {c,i,j,i,j,ot,R,R};
+		}
+		if(p == 2) re(i,R) re(j,R) re(k,R) re(l,R) {
+			re(m,R) re(n,R) if(valid({c,i,j,k,l,ot,m,n},p)) return {c,i,j,k,l,ot,m,n};
+			if(valid({c,i,j,k,l,ot,R,R},p)) return {c,i,j,k,l,ot,R,R};
+		}
+		// outl(c);
+		// repo(&i,f) outl(i);
+		return {c,0,0,0,0,ot,8,8};
+		assert(0);
+	}
+
 	vc<vc<int>> move(vc<int>v) {
 		if(v == vector<int>({0,0,0,0,0,0,0,0})) return f;
 		assert(v.size() == 8);
@@ -147,9 +313,17 @@ struct box_E24124723{
 		if(d == 0) {
 			int ans = 0;
 			re(i,R) re(j,R) if(tb.line(i,j)) {
-				if(f.att(i,j) == c) ans++;
-				if(f.att(i,j) == ot) ans--;
+				if(f.att(i,j) == c) ans += LINE_SCORE;
+				if(f.att(i,j) == ot) ans -= LINE_SCORE;
 			}
+			re(i,R) re(j,R) if(tb.double_corner(i,j,c)) ans += DC_SCORE;
+			re(i,R) re(j,R) if(tb.double_corner(i,j,ot)) ans -= DC_SCORE;
+			re(i,R) re(j,R) if(tb.beline(i,j,c)) ans += BL_SCORE;
+			re(i,R) re(j,R) if(tb.beline(i,j,ot)) ans -= BL_SCORE;
+			re(i,R) re(j,R) if(tb.strictline(i,j,c)) ans += SL_SCORE;
+			re(i,R) re(j,R) if(tb.strictline(i,j,ot)) ans -= SL_SCORE;
+			ans += tb.count(c) * CR_COUNT;
+			ans -= tb.count(ot) * CR_COUNT;
 			// if(ans != 0) repo(&i,f) {
 			// 	repo(&j,i) {
 			// 		if(j == -1) out("  ");
@@ -207,8 +381,26 @@ struct box_E24124723{
 		return {-ans.first,-ans.second};
 	}
 
+	bool double_corner(int x,int y,int c) {
+		assert(inside(x,y));
+		if(f.att(x,y) != c) return false;
+
+		bool ans = 0;
+		re(i,4) {
+			re(j,1,3) {
+				int nx = x + (xx[i] * dd[y] * j);
+				int ny = y + (yy[i] * dd[x] * j);
+
+				if(!inside(nx,ny) || f.att(nx,ny) != c) break;
+				if(j == 2 && ans) return true;
+				if(j == 2) ans = 1;
+			}
+		}
+		return false;
+	}
+
 	vc<int> check() {
-		debug(p);
+		// debug(p);
 		vc<pair<int,int>>l,r,e;
 		re(i,R) re(j,R) {
 			if(f.att(i,j) == c) l.emplace_back(i,j);
@@ -244,13 +436,14 @@ struct box_E24124723{
 		long double mmax = -INFINITY;
 		vc<vc<int>>aans;
 		repo(&i,ans) {
-			auto tmp = ck(i.sd,ot,c,2,p);
+			auto tmp = (p == 1 ? ck(i.sd,ot,c,DEEP_P1,p) : ck(i.sd,ot,c,DEEP_P2,p));
 			m.insert({i.fs,-tmp.first * 1.0 / tmp.second});
 		}
 		repo(&j,m) mmax = max(mmax,j.sd);
 		repo(&k,m) if(k.second == mmax) aans.push_back(k.first);
+		if(aans.size() > AUTO_GAP && p == 1) return autoplace(p);
 
-		random_shuffle(all(aans));
+		if(ALLOW_RANDOM) random_shuffle(all(aans));
 		return aans.back();
 	}
 
@@ -261,8 +454,9 @@ struct box_E24124723{
 	}
 };
 
+int t_E24124723 = 0;
 vector<int> Algorithm(vector<vector<int>>&f,int c,int ot,int p) {
-	srand(time(NULL));
+	srand(RAND_SEED + t_E24124723++);
 	auto now = box_E24124723(f,c,ot,p);
 	auto ans = now.check();
 	f = now.move(ans);	
