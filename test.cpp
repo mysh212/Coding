@@ -1,5 +1,6 @@
 // Author : ysh
 // 2023/12/20 Wed 23:09:31
+// AC(0.8)
 #include<bits/stdc++.h>
 using namespace std;
 #include<slow>
@@ -21,10 +22,11 @@ using namespace std;
 #define AUTO_GAP 5
 #define ALLOW_RANDOM 1
 #define LINE_SCORE 0
-#define DC_SCORE 0
+#define DC_SCORE 3
 #define BL_SCORE 0
 #define SL_SCORE 0
 #define CR_COUNT 10
+#define MAX 2
 
 pair<int,int> operator+ (pair<int,int>a,pair<int,int>b) {
 	return {a.first + b.first,a.second + b.second};
