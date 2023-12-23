@@ -1,6 +1,6 @@
 // Author : ysh
 // 2023/12/20 Wed 23:09:31
-// AC(0.83)
+// AC(0.86)
 #include<bits/stdc++.h>
 using namespace std;
 #include<slow>
@@ -26,6 +26,8 @@ using namespace std;
 #define BL_SCORE 0
 #define SL_SCORE 0
 #define CR_COUNT 10
+#define WIN_SCORE 20
+#define ALLOW_GAP 10
 #define MAX 3
 
 pair<int,int> operator+ (pair<int,int>a,pair<int,int>b) {
@@ -312,6 +314,7 @@ struct box_E24124723{
 
 	pair<int,int> ck(vc<vc<int>>f,int c,int ot,int d,int p) {
 		box_E24124723 tb = box_E24124723(f,c,ot,p);
+		// if(count(c) <= 2) return {-WIN_SCORE,1};
 		if(d == 0) {
 			int ans = 0;
 			re(i,R) re(j,R) if(tb.line(i,j)) {
@@ -326,6 +329,8 @@ struct box_E24124723{
 			re(i,R) re(j,R) if(tb.strictline(i,j,ot)) ans -= SL_SCORE;
 			ans += tb.count(c) * CR_COUNT;
 			ans -= tb.count(ot) * CR_COUNT;
+			if(count(ot) <= 2) ans += WIN_SCORE;
+			if(count(c) <= 2) ans -= WIN_SCORE;
 			// if(ans != 0) repo(&i,f) {
 			// 	repo(&j,i) {
 			// 		if(j == -1) out("  ");
@@ -360,6 +365,28 @@ struct box_E24124723{
 		}
 		if(p == 2) {
 			r.emplace_back(R,R);
+			if(count(c) <= 3) {
+				// throw "incompleteexception";
+
+				repo(&i,l) repo(&j,e) repo(&k,r) {
+					int x = i.fs;
+					int y = i.sd;
+					int nx = j.fs;
+					int ny = j.sd;
+					int dx = k.fs;
+					int dy = k.sd;
+
+					vc<int> now = {c,x,y,nx,ny,ot,dx,dy};
+					if(tb.valid(now,p)) {
+						auto tmp = ck(box_E24124723(f,c,ot,p).move(now),ot,c,d - 1,p);
+						if(tmp == make_pair(0,0)) continue;
+						long double found = tmp.first / tmp.second;
+						if(mark.find(found) == mark.end()) mark.insert({found,tmp});
+						else mark.find(found)->second = mark.find(found)->second + tmp;
+					}
+				}
+			}
+
 			repo(&i,l) re(k,4) repo(&j,r) {
 				int x = i.fs;
 				int y = i.sd;
@@ -381,7 +408,7 @@ struct box_E24124723{
 		if(mark.empty()) return {0,0};
 		pair<int,int> ans;
 		int mmax = prev(mark.end())->first;
-		for(auto i = prev(mark.end());abs(i->first - mmax) <= 10;i = prev(i)) {
+		for(auto i = prev(mark.end());abs(i->first - mmax) <= ALLOW_GAP;i = prev(i)) {
 			// debug(i->first);
 			ans = ans + i->second;
 			if(i == mark.begin()) break;
