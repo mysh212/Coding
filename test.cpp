@@ -1,6 +1,6 @@
 // Author : ysh
 // 2023/12/20 Wed 23:09:31
-// AC(0.86)
+// AC(0.9)
 #include<bits/stdc++.h>
 using namespace std;
 #include<slow>
@@ -26,9 +26,13 @@ using namespace std;
 #define BL_SCORE 0
 #define SL_SCORE 0
 #define CR_COUNT 10
-#define WIN_SCORE 20
+#define WIN_SCORE 47
 #define ALLOW_GAP 10
 #define MAX 3
+
+#define ALLOW_TEST
+#define TEST l
+#define TIMES 30
 
 pair<int,int> operator+ (pair<int,int>a,pair<int,int>b) {
 	return {a.first + b.first,a.second + b.second};
@@ -385,23 +389,23 @@ struct box_E24124723{
 						else mark.find(found)->second = mark.find(found)->second + tmp;
 					}
 				}
-			}
+			} else {
+				repo(&i,l) re(k,4) repo(&j,r) {
+					int x = i.fs;
+					int y = i.sd;
 
-			repo(&i,l) re(k,4) repo(&j,r) {
-				int x = i.fs;
-				int y = i.sd;
+					int nx = x + (xx[k] * dd[y]);
+					int ny = y + (yy[k] * dd[x]);
 
-				int nx = x + (xx[k] * dd[y]);
-				int ny = y + (yy[k] * dd[x]);
-
-				if(!inside(nx,ny)) continue;
-				auto now = {c,x,y,nx,ny,ot,j.fs,j.sd};
-				if(tb.valid(now,p)) {
-					auto tmp = ck(box_E24124723(f,c,ot,p).move(now),ot,c,d - 1,p);
-					if(tmp == make_pair(0,0)) continue;
-					long double found = tmp.first / tmp.second;
-					if(mark.find(found) == mark.end()) mark.insert({found,tmp});
-					else mark.find(found)->second = mark.find(found)->second + tmp;
+					if(!inside(nx,ny)) continue;
+					auto now = {c,x,y,nx,ny,ot,j.fs,j.sd};
+					if(tb.valid(now,p)) {
+						auto tmp = ck(box_E24124723(f,c,ot,p).move(now),ot,c,d - 1,p);
+						if(tmp == make_pair(0,0)) continue;
+						long double found = tmp.first / tmp.second;
+						if(mark.find(found) == mark.end()) mark.insert({found,tmp});
+						else mark.find(found)->second = mark.find(found)->second + tmp;
+					}
 				}
 			}
 		}
