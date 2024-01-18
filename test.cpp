@@ -1,181 +1,123 @@
-// Author : ysh
-// 2023/12/25 Mon 13:23:48
-#include<iostream>
-#include<vector>
-#include<assert.h>
+//*********************
+//電機一甲 412241080 張靖妍
+//*********************
+#define _CRT_SECURE_NO_WARNINGS
 
-using namespace std;
-#ifdef LOCAL
-#include<debug.h>
-#else
-#define debug(...) '*'
-#define printf(...) '*'
-#endif
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
-const int xx[] = {-1,0,1,0,1,-1,1,-1};
-const int yy[] = {0,1,0,-1,1,1,-1,-1};
+int physical_attack, magic_attack, qigong_attack;
 
-#undef N
-#undef M
-#undef TIMES
-#undef inside
+bool AttackResult(int RandomAttack, int PlayerAttack);
 
-#define N 7
-#define M 6
-#define TIMES 1
-#define inside(i,j) ((i >= 0 && i < N && j >= 0 && j < M))
+int main(void)
+{
+	srand(time(NULL));
+	int round = 1;
 
-#ifndef AUTO
-#define Player1 player
-#define Player2 player
-#endif
-bool check_buttom(vector<vector<int>>&f) {
-    for(auto &i : f) {
-        int last = 0;
-        for(int &j : i) {
-            if(last != 0 && j == 0) return false;
-            last = j;
-        }
-    }
-    return true;
+	// if (round == 1) {
+		printf("出現了敵人\n");  // 在這裡執行的話一定是第一次
+	// }
+	// else {
+	// 	printf("又出現了敵人\n");
+	// }
+	while (1) {
+        if(round != 1) printf("又出現了敵人\n"); // 每次開始新的一輪前都確認是不是第一輪
+		int RandomAttack, PlayerAttack;
+		RandomAttack = 1 + (rand() % 3);
+		PlayerAttack = rand() % 4;
+
+		switch (RandomAttack) {
+		case 1:
+			printf("敵人使出了物理攻擊\n");
+			break;
+
+		case 2:
+			printf("敵人使出了魔法攻擊\n");
+			break;
+
+		case 3:
+			printf("敵人使出了氣功攻擊\n");
+			break;
+		}
+		printf("你必須使用三種攻擊應對(命中率皆為75%):物理攻擊(1)、魔法攻擊(2)、氣功攻擊(3)、結束遊戲(-1):");
+		scanf("%d", &PlayerAttack);
+		switch (PlayerAttack) {
+		case 1:
+			printf("你使出了物理攻擊\n");
+			break;
+
+		case 2:
+			printf("你使出了魔法攻擊\n");
+			break;
+
+		case 3:
+			printf("你使出了氣功攻擊\n");
+			break;
+		}
+
+		if (PlayerAttack == -1) {
+			printf("退出遊戲，遊戲結束\n");
+			break;
+		}
+		if(AttackResult(RandomAttack, PlayerAttack)) return 0; // 如果可以結束就直接結束
+	    round++;                                // 每次結束前都要加一
+	}
+	return 0;
+
 }
-inline bool check_win(vector<vector<int>>&f,int c) {
-    for(int i = 0;i<N;i++) {
-        for(int j = 0;j<M;j++) {
-            if(f.at(i).at(j) != c) continue;
-            for(int k = 0;k<=7;k++) {
-                for(int l = 0;l<=3;l++) {
-                    // debug(i,j,k,l,c);
-                    int nx = i + (xx[k] * l);
-                    int ny = j + (yy[k] * l);
 
-                    if(!inside(nx,ny)) break;
-                    if(f.at(nx).at(ny) != c) break;
-                    if(l == 3) return true;
-                }
-            }
-        }
-    }
-    return false;
-}
-inline bool check_filled(vector<vector<int>>&f) {
-    for(int i = 0;i<N;i++) {
-        for(int j = 0;j<M;j++) {
-            if(f.at(i).at(j) == 0) return false;
-        }
-    }
-    return true;
-}
-inline bool check_only_one_move(vector<vector<int>>&last,vector<vector<int>>&f,int c) {
-    // debug(last,f);
-    int diff = 0;
-    for(int i = 0;i<N;i++) {
-        for(int j = 0;j<M;j++) {
-            if(last.at(i).at(j) == 0 && f.at(i).at(j) == c) diff++;
-            else if(last.at(i).at(j) != f.at(i).at(j)) return false;
-        }
-    }
-    if(diff != 1) return false;
-    return true;
-}
-short check(vector<vector<int>>&last,vector<vector<int>>&f,int c) {
-    // debug(c);
-    assert(!check_win(last,c));
-    if(!check_buttom(f)) return cerr<<"Invalid board\n",-1;
-    if(!check_only_one_move(last,f,c)) return cerr<<"Invalid movement\n",-1;
+	bool AttackResult(int RandomAttack, int PlayerAttack) { // 這裡回傳要不要結束遊戲
+		switch (PlayerAttack) {
+		case 1:                     /*你使出了物理攻擊*/
+			switch (RandomAttack) {
+			case 1:                 /*敵人使出了物理攻擊*/
+				printf("雙方都使出了物理攻擊，互相抵銷了\n");    
+				return false;
 
-    if(check_win(f,c)) return 1;
-    return 0;
-}
-void pc(vector<vector<int>>&f) {
-    for(int i = 0;i<M;i++) {
-        for(int j = 0;j<N;j++) {
-            if(f.at(j).at(i) == 0) cout<<"_ ";
-            else cout<<(f.at(j).at(i) == 1 ? 1 : 2)<<" ";
-        }
-        cout<<"\n";
-    }
-    for(int i = 1;i<(N << 1);i++) cout<<'-';
-    cout<<"\n";
-    for(int i = 1;i<=N;i++) cout<<i<<" \n"[i == N];
-    return;
-}
-void player(vector<vector<int>>&f,int c,int ot) {
-    cerr<<"=== Player "<<(c == 1 ? 1 : 2)<<" ===\n";
-    cerr<<"Input the number of line you want to walk: ";
-    assert(!check_filled(f));
-    int n;
-    while(cin>>n) {
-        if(n >= 1 && n <= N) {
-            for(int i = M - 1;i>=0;i--) {
-                if(f.at(n - 1).at(i) == 0) {
-                    f.at(n - 1).at(i) = c;
-                    goto yes;
-                }
-            }
-            goto no;
+			case 2:                 /*敵人使出了魔法攻擊*/
+				printf("物理攻擊克制魔法攻擊，你擊敗了敵人\n");
+				printf("\n");
+				printf("你擊敗了敵人，你獲得了勝利\n");
+				break;
 
-            yes:
-            break;
+			case 3:                /*敵人使出了氣功攻擊*/
+				printf("你被擊敗了\n");
+				break;
+			}
+            break;                  // 大switch也要結束啦
+		case 2:                     /*你使出了魔法攻擊*/
+			switch (RandomAttack) {
+			case 1:                 /*敵人使出了物理攻擊*/
+				printf("你被擊敗了\n");
+				break;
 
-            no:;
-        }
-        cerr<<"Input again.\n";
-    }
+			case 2:                 /*敵人使出了魔法攻擊*/
+				printf("雙方都使出了魔法攻擊，互相抵銷了\n");
+				return false;
 
-    return;
-}
-int main() {
-    // ios::sync_with_stdio(false);
-    // cin.tie(0);
+			case 3:                /*敵人使出了氣功攻擊*/
+				printf("你擊敗了敵人，你獲得了勝利\n");
+				break;
+			}
+            break;                  // 大switch也要結束啦拉拉
+		case 3:                     /*你使出了氣功攻擊*/
+			switch (RandomAttack) {
+			case 1:                 /*敵人使出了物理攻擊*/
+				printf("你擊敗了敵人，你獲得了勝利\n");
+				break;
 
-    vector<vector<int>>last,f(N,vector<int>(M));
+			case 2:                /*敵人使出了魔法攻擊*/
+				printf("你被擊敗了\n");
+				break;
 
-    int n = TIMES;
-    int a,b;a = b = 0;
-    int both = 0;
-    int t = 0;
-    while(n--) {
-        cout<<"[Round "<<t + 1<<"]\n";
-        f = vector<vector<int>>(N,vector<int>(M));
-        while(1) {
-            int now = ((t + 1) & 1 == 1 ? 1 : -1);
-            int ot = -now;
-            for(int i = 0;i<=1;i++) {
-                last = f;
-                pc(f);
-                if(now == 1) Player1(f,now,ot);
-                else Player2(f,now,ot);
-                short res = check(last,f,now);
-                if(res == -1) {
-                    cerr<<"[Game Number "<<++t<<" : Player"<<(now == 1 ? 2 : 1)<<" wins.]\n";
-                    if(now == 1) b++;
-                    else a++;
-                    goto todo;
-                }
-                if(res == 1) {
-                    cerr<<"[Game Number "<<++t<<" : Player"<<(now == 1 ? 1 : 2)<<" wins.]\n";
-                    if(now == 1) a++;
-                    else b++;
-                    goto todo;
-                }
-                assert(res == 0);
-                swap(now,ot);
-                if(check_filled(f)) {
-                    both++;
-                    cerr<<"[Game Number "<<++t<<" : Drawed.]\n";
-                    goto todo;
-                }
-            }
-        }
-        todo:
-        pc(f);
-        continue;
-    }
+			case 3:                 /*敵人使出了氣功攻擊*/
+				printf("雙方都使出了氣功攻擊，互相抵銷了\n");
+				return false;
+			}
+			break;
+		}
+        return true;                        // 放心結束
+	}
 
-    cout<<"Final result: \n";
-    cout<<"Player 1 wins: "<<a<<" times.\n";
-    cout<<"Player 2 wins: "<<b<<" times.\n";
-    cout<<"Draw: "<<both<<" times.\n";
-    return 0;
-}

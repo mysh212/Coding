@@ -1,11 +1,11 @@
-AGAR-king2.cpp priority_queue
-"palace emissary".cpp choj
-palace-emissary.cpp DFS
-palace-emissary.cpp BFS
-fast-power.cpp choj
-t.cpp test
-fast-power.cpp bit
-fast-power.cpp choj
+AGAR-king2.cpp	priority_queue
+"palace emissary".cpp	choj
+palace-emissary.cpp	DFS
+palace-emissary.cpp	BFS
+fast-power.cpp	choj
+t.cpp	test
+fast-power.cpp	bit
+fast-power.cpp	choj
 fast-power.cpp	test
 a-city-without-myself.cpp	choj
 a-city-without-myself.cpp	bit
@@ -115,7 +115,7 @@ APCS-11001-3.cpp	set
 APCS-11001-4.cpp	DP
 AP325-d080.cpp	DP
 AP325-d080.cpp	eg.
-Nearest-Smaller-Values.cpp  priority_queue
+Nearest-Smaller-Values.cpp	priority_queue
 Knapsack1.cpp	DP
 Cut.cpp	DP
 AP325-d079-3.cpp	DP
@@ -255,7 +255,7 @@ AP325-d064-5.cpp	tree
 AP325-d064-5.cpp	BIT
 Zerojudge-d539-2.cpp	seg_tree
 Range-Update-Queries.cpp	seg_tree
-Range-Update-Queries.cpp	lazy_tag
+Range-Update-Queries.cpp	lazy-tag
 Range-Update-Queries.cpp	tree
 Range-Update-Queries-2.cpp	BIT
 Range-Update-Queries-2.cpp	tree
@@ -265,7 +265,7 @@ Zerojudge-b123-2.cpp	DP
 Zerojudge-b123-2.cpp	re
 Zerojudge-d799.cpp	seg_tree
 Zerojudge-d799.cpp	tree
-Zerojudge-d799.cpp	lazy_tag
+Zerojudge-d799.cpp	lazy-tag
 Zerojudge-d799.cpp	own-template
 Prefix-Sum-Queries-2.cpp	seg_tree
 Prefix-Sum-Queries-3.cpp	seg_tree
@@ -407,7 +407,7 @@ TIOJ-2283.cpp	Dijkstra
 TIOJ-2283.cpp	graph
 TIOJ-2283.cpp	difference
 Save-the-Magazines.cpp	DP
-Quests.cpp	binary-search
+Quests.cpp	binary_search
 Zerojudge-d799-2.cpp	lazy-tag
 Zerojudge-d799-2.cpp	seg_tree
 Distinct-Values-Queries.cpp	seg_tree
@@ -476,7 +476,7 @@ Buying-Mascots.cpp	DP
 Exterior.cpp	graph
 Exterior.cpp	Dijkstra
 Zerojudge-d799-4.cpp	seg_tree
-Zerojudge-d799-4.cpp	lazy_tag
+Zerojudge-d799-4.cpp	lazy-tag
 Study-Plan.py	DP
 Legacy.cpp	seg_tree
 Legacy.cpp	graph
@@ -563,3 +563,26 @@ Planets-Queries-I.cpp	tree
 Planets-Queries-I.cpp	DP
 Round-Trip-II-3.cpp	graph
 Era.py	DP
+Subsequence-Addition-Easy-Version.cpp	bitset
+Subsequence-Addition-Easy-Version.cpp	greedy
+Subsequence-Addition-Hard-Version.cpp	DP
+Zerojudge-a302.py	fast-power
+Zerojudge-a302.py	math
+Zerojudge-a302.cpp	fast-power
+Zerojudge-a302.cpp	math
+APCS-11301-3.cpp	graph
+APCS-11301-3.cpp	DAG
+APCS-11301-3.cpp	DFS
+APCS-11301-3.cpp	tapo
+APCS-11301-4.cpp	DP
+APCS-11301-4.cpp	pref
+Infinite-monkey-theorem.cpp	KMP
+Infinite-monkey-theorem.cpp	DP
+Distance-Queries-3.cpp	graph
+Distance-Queries-3.cpp	LCA
+Distance-Queries-3.cpp	BFS
+Distance-Queries-3.cpp	DP
+Zerojudge-b966-2.cpp	greedy
+Zerojudge-b966-3.cpp	seg_tree
+Zerojudge-b966-3.cpp	lazy-tag
+Zerojudge-b966-3.cpp	DC
