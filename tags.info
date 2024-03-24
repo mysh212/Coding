@@ -586,3 +586,13 @@ Zerojudge-b966-2.cpp	greedy
 Zerojudge-b966-3.cpp	seg_tree
 Zerojudge-b966-3.cpp	lazy-tag
 Zerojudge-b966-3.cpp	DC
+Zerojudge-c495-2.cpp	MST
+Zerojudge-c495-2.cpp	graph
+Zerojudge-c495-2.cpp	BFS
+Zerojudge-c495-2.cpp	LCA
+Zerojudge-c495-2.cpp	greedy
+Vlad-and-a-Sum-of-Sum-of-Digits.cpp	DP
+Coin-Combinations-I.cpp	DP
+Unordered-Subsequence.cpp	binary_search
+Base-n.py	binary_search
+Zerojudge-f315.cpp	BIT

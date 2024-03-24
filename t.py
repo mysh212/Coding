@@ -1,14 +1,8 @@
 # Author : ysh
-# 2024/01/14 Sun 20:56:16
-n,m = [int(i) for i in input().split()]
-assert(1 <= n <= 26 and 1 <= n <= 1000)
-f = {}
-ans = 0.0
-for i in range(n):
-    a,b = input().split()
-    assert(f.get(a,-1) == -1)
-    f[a] = 1
-    ans = ans + float(b)
-assert(abs(ans - 1) <= 0.000001)
-assert(len(input()) <= 10)
-quit()
+# 2024/03/05 Tue 18:04:01
+mark = ['1111110','0110000','1101101','1111001','0110011','1011011','1011111','1110000','1111111','1111011']
+for i in range(len(mark)):
+    mark[i] = mark[i].replace('1','2').replace('0','1').replace('2','0')
+
+for i in range(1 <<4)[::-1]:
+    print(f'else if(in[{i}]) BCD = 4\'b{format(i,'b')}')

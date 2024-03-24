@@ -3,8 +3,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(int argc, char *args[]) {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
+    // ios::sync_with_stdio(false);
+    // cin.tie(0);
 
     clock_t t = clock();
     if(argc == 1) {
@@ -12,8 +12,10 @@ int main(int argc, char *args[]) {
         return -1;
     }
     char x[10000];
-    strcat(x,"call ");
-    strcat(x,args[1]);
+    strcat(x,"call");
+    char** p = &args[1];
+    for(;*p != NULL;p++) strcat(x," "),strcat(x,*p);
+    cerr<<"[Running command "<<x<<"]\n\n";
     // cerr<<x;
     // system("pause");
     int tmp = system(x);

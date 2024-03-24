@@ -34,7 +34,7 @@ bool walk(int x,int y) {
             return 1;
         }
         if(walk(i.first,y)) {
-            mmax = max(mmax,i.second);
+            mmax = max(mmax ,i.second);
             mark.at(x) = 0;
             return 1;
         }

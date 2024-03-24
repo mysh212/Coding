@@ -3,6 +3,7 @@
 import os
 import requests, bs4
 from datetime import datetime
+from problem_special import *
 import codeforces
 
 template = 'export-md\\export-md\\template.md'
@@ -37,8 +38,8 @@ def get_title(name: str,url: str):
         return f'{get_judge(url)} - {name.replace('.cpp','').replace('.py','')}'
     if url.find('luogu.') != -1:
         return f'{get_judge(url)} - {name.replace('luogu-','').replace('.cpp','').replace('.py','')}'
-    if url.find('tioj') != -1:
-        return f'{get_judge(url)} - {name.replace('tioj-','').replace('TIOJ-','').replace('.cpp','').replace('.py','')}'
+    # if url.find('tioj') != -1:
+    #     return f'{get_judge(url)} - {name.replace('tioj-','').replace('TIOJ-','').replace('.cpp','').replace('.py','')}'
     try:
         url = url.replace('choj.me','oj.chsh.chc.edu.tw')
         r = requests.get(url)
@@ -107,7 +108,7 @@ def makefile(title:str,name:str,date:str,tag:str,code:str,url:str = '',judge = '
         t = 'py'
     ans = ans.replace('<type>',t)
     ans = ans.replace('<judge>',judge)
-    ans = ans.replace('<special>',get_special(url))
+    ans = ans.replace('<special>',if_bad_problem(code) + get_special(url))
     return ans
 
 def file_exist(x: str) -> bool:
