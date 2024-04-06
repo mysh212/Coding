@@ -1,5 +1,10 @@
 # Author : ysh
-# 2024/04/01 Mon 20:10:46
+# 2024/04/01 Mon 20:20:43
+# https://codeforces.com/contest/1950/problem/D
+import sys
+input = sys.stdin.readline
+print = sys.stdout.write
+
 f = []
 R = 10 ** 5
 
@@ -33,3 +38,5 @@ ck()
 for i in range(int(input())):
     if int(input()) in s: print('YES')
     else: print('NO')
+    print('\n')
+quit()

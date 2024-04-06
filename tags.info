@@ -596,3 +596,6 @@ Coin-Combinations-I.cpp	DP
 Unordered-Subsequence.cpp	binary_search
 Base-n.py	binary_search
 Zerojudge-f315.cpp	BIT
+Zerojudge-n362.cpp	prime
+Zerojudge-n414.cpp	BFS
+Nearly-Shortest-Repeating-Substring.cpp	prime
