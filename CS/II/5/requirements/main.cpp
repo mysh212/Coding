@@ -1,10 +1,11 @@
 #include<iostream>
 #include<assert.h>
 #include<vector>
+#include<iomanip>
 using namespace std;
 
 #define DEBUG
-#include "matrix.hpp"
+#include "matrix.cpp"
 
 #define displayData print
 #define setData set
@@ -18,6 +19,7 @@ using Matrix = matrix<double>;
 
 int main()
 {
+	cout<<fixed<<setprecision(2);
 	Matrix m1;
 
 	double d[9] = {1,2,3,4,5,6,7,8,9};
@@ -43,7 +45,7 @@ int main()
 		cout<<"m2 and m3 are different";
 
 	Matrix m4(3,3);
-	cout<<"Please enter 9 doubles for matrix m4:"<<endl;
+	cout<<"\nPlease enter 9 doubles for matrix m4:"<<endl;
 	cin>>m4;
 	cout<<"Matrix m4 is : "<<m4<<endl;
 	

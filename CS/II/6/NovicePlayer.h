@@ -1,13 +1,15 @@
 #ifndef NOVICEPLAYER_H
 #define NOVICEPLAYER_H
-#include <iomanip>
-#include <iostream>
-#include <string>
-using namespace std;
+// #include <iomanip>
+// #include <iostream>
+// #include <string>
+// using namespace std;
 
 class NovicePlayer
 {
 private:
+	static constexpr int ct[] = {100,40,20,20};
+	static constexpr int tz[] = {10,5,5,5};
 	string name;
 	int hp;
 	int mp;
@@ -29,6 +31,7 @@ public:
 	void setName(string);
 	string getName()const;
 
+	void preLevel(int);
 	void setLevel(int);
 	int getLevel()const;
 
@@ -49,6 +52,7 @@ public:
     int getMaxHP() const;
 	int getMaxMP() const;
 	int getLvupExp() const;
+	void upgrade();
 
 	void print() {
 		cout << "-------------------------" << endl;

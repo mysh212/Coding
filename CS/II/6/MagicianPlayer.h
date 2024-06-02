@@ -4,7 +4,11 @@
 
 class MagicianPlayer :public NovicePlayer
 {
-public:
+	private:
+	static constexpr int ct[] = {120,100,30,20};
+	static constexpr int tz[] = {15,15,8,7};
+
+	public:
 	MagicianPlayer();
 	MagicianPlayer(int);
 	MagicianPlayer(int, string);

@@ -1,35 +1,20 @@
 # Author : ysh
-# 2024/04/01 Mon 20:10:46
-f = []
-R = 10 ** 5
+# 2024/05/16 Thu 22:53:33
+from math import ceil, log
 
-def check(now = ''):
-    if int([now,'0'][now == '']) > R or len(now) > 6: return;
-    if now != '': f.append(int(now));
-    check(now + '0')
-    check(now + '1')
-    return
-
-def unique(x):
-    ans = []
-    for i in x:
-        if len(ans) != 0 and ans[len(ans) - 1] == i: continue;
-        ans.append(i)
-    return ans
-
-check()
-f = unique(sorted(f))
-s = set(f)
-
-def ck(c = 1,now = 2):
-    if c > R: return;
-    s.add(c)
-    for i in range(now,len(f)):
-        ck(c * f[i],i)
-    return
-
-ck()
 
 for i in range(int(input())):
-    if int(input()) in s: print('YES')
-    else: print('NO')
+    n = int(input())
+    f = [int(i) for i in input().split()]
+    ans = 0
+    last = -1
+    for i in f:
+        if last == -1:
+            last = i
+            continue
+        if not (last <= i):
+            pre = ceil((log(last / i,2)))
+            ans += pre
+            i = i << pre
+        last = i
+    print(ans)

@@ -1,0 +1,44 @@
+#define __overload_for__(i,j,k,l,m,...) m
+#define re_(i) rep(_,i)
+#define rep(i,j) for(int i = 0;i<j;i++)
+#define repo(i,j) for(auto i : j)
+#define repof(i,j,k) for(int i = j;i<k;i++)
+#define repofd(i,j,k,l) for(int i = j;i<k;i = i + l)
+#define re(...) __overload_for__(__VA_ARGS__,repofd,repof,rep,re_)(__VA_ARGS__)
+#define pb(...) push_back(__VA_ARGS__)
+#define bg(i) i.begin()
+#define ed(i) i.end()
+#define all(i) bg(i),ed(i)
+#define rall(i) i.rbegin(),i.rend()
+#define vc vector
+#define nl cout<<"\n"
+#define out(i) cout<<i
+#define outs(i) cout<<i<<" "
+#define outl(i) cout<<i<<"\n"
+#define outt(i) out(#i)
+#ifdef LOCAL
+#include<debug.h>
+#else
+#define debug(...) '*'
+#endif
+
+template<class T>
+istream& operator>>(istream& fin,vector<T>&f) {
+    for(auto &&i : f) fin>>i;
+    return fin;
+}
+template<class T,class R>
+istream& operator>>(istream& fin,pair<T,R>&x) {
+    fin>>x.first>>x.second;
+    return fin;
+}
+template<class T>
+ostream& operator<<(ostream& fout,vector<T>&f) {
+    for(auto &i : f) fout<<i<<" ";
+    return fout;
+}
+template<class T,class R>
+ostream& operator<<(ostream& fout,pair<T,R>&x) {
+    fout<<x.first<<" "<<x.second;
+    return fout;
+}

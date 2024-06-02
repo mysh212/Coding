@@ -1,29 +1,52 @@
 // Author : ysh
-// 2024/03/28 Thu 09:59:13
-#include<stdio.h>
+// 2024/04/13 Sat 23:39:10
+#include<bits/stdc++.h>
 using namespace std;
-void print(int ** f) {
-    for(int i = 0;i<10;i++) {
-        for(int j = 0;j<10;j++) {
-            printf("%d ",f[i][j]);
-        }
-        printf("\n");
+#include<slow>
+string input() {
+    string tmp;cin>>tmp;
+    return tmp;
+}
+string upper(string x) {
+    for(char &i : x) {
+        if(islower(i)) i = i + ('A' - 'a');
     }
+    return x;
+}
+string replace(string x,string from,string to) {
+    while(x.find(from) != string::npos) {
+        int now = x.find(from);
+        if(now == 0) x = to + x.substr(from.size());
+        else x = x.substr(0,now) + to + x.substr(now + from.size());
+    }
+    return x;
+}
+inline bool isin(auto a,auto b) {
+    for(auto &i : b) if(i == a) return 1;
+    return 0;
+}
+inline void print(auto x,auto end = "\n") {
+    cout<<x<<end;
     return;
 }
-int main() {
-    // ios::sync_with_stdio(false);
-    // cin.tie(0);
 
-    int f[10][10] = {};
-    int t = 0;
-    for(int i = 0;i<10;i++) {
-        for(int j = 0;j<10;j++) {
-            t = t + 1;
-            f[i][j] = t;
-        }
+string n;
+vc<char>pre({'A','B','C','D'});
+vc<char>useless({'(',')',' '});
+
+string check(auto x) {
+    auto p = n;
+    re(i,pre.size()) {
+        p = replace(p,string(pre[i]) + "'",(x[i] ? '0' : '1'));
+        p = replace(p,pre[i],x[i]);
     }
+    return p;
+}
 
-    print(&(f[0]));
-    return 0;
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    // cout<<replace("123 456 123","123","789");
+    cout<<isin('a',string("abc"));
 }

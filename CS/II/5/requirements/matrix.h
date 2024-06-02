@@ -1,5 +1,5 @@
 // #include<iostream>
-using namespace std;
+// using namespace std;
 
 #ifndef MATRIX_H
 #define MATRIX_H
@@ -32,7 +32,7 @@ class matrix{
 	matrix<T> operator+(int a);
 	matrix<T> operator+=(matrix a);
 	matrix<T> operator+=(int a);
-	matrix<T> operator++(int x = 0);
+	matrix<T> operator++(int x);
 	matrix<T> operator()();
 	matrix<T> operator*(matrix a);
 	matrix<T> operator=(matrix a);

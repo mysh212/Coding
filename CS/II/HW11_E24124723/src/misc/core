@@ -1,0 +1,61 @@
+#define say(i) core::says::__get_text_content__(#i)
+
+
+
+
+
+int n = 0;
+
+
+
+
+namespace core{
+    string join(string a,vector<string> b) {
+        if(b.empty()) return "";
+        string ans = b.at(0);
+        for(int i = 1,len = b.size();i<len;i++) {
+            ans = ans + a + b.at(i);
+        }
+        return ans;
+    }
+    vector<string> split(string a,string b) {
+        vector<string>ans;
+        while(a.find(b) != string::npos) {
+            ans.push_back(a.substr(0,a.find(b)));
+            a = a.substr(a.find(b) + b.size());
+        }
+        if(a != "") ans.push_back(a);
+        return ans;
+    }
+    inline bool alldigit(string a) {
+        if(a == "") return false;
+        for(char &i : a) if(!isdigit(i)) return false;
+        return true;
+    }
+    namespace says{
+        map<string,string>__text_content__;
+        void __init_text_content__() {
+            ifstream __in__("src/misc/zh-TW.st");
+            string a,b;
+            while(getline(__in__,a)) {
+                auto tmp = split(a,"\t");
+                if(tmp.size() < 2) assert("STRING SIZE IST NOT AS EXPECTED" && false);
+                __text_content__.insert({tmp.at(0),tmp.at(1)});
+            }
+        }
+        string __get_text_content__(string x) {
+            if(__text_content__.empty()) __init_text_content__();
+            return __text_content__.find(x)->second;
+        }
+    }
+}
+
+// inline istream& operator>>(istream& in,int &x) {
+//     string now;in>>now;
+//     while(!core::alldigit(now)) {
+//         outl(say(is_not_int));
+//         in>>now;
+//     }
+//     x = stoi(now);
+//     return in;
+// }

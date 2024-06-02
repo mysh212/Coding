@@ -4,7 +4,11 @@
 
 class KnightPlayer :public NovicePlayer
 {
-public:
+	private:
+	static constexpr int ct[] = {150,70,40,20};
+	static constexpr int tz[] = {25,10,10,2};
+	
+	public:
 	KnightPlayer();
 	KnightPlayer(int);
 	KnightPlayer(int, string);
