@@ -79,6 +79,7 @@
         "max_value": "cpp",
         "tree": "cpp",
         "slow": "cpp",
-        "table": "cpp"
+        "table": "cpp",
+        "core": "cpp"
     }
 }

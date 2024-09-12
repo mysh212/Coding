@@ -1,4 +1,10 @@
-
+// Author : ysh
+// 2024/06/02 Sun 20:19:22
+fun main() {
+    var (a,b) = readLine()!!.split(' ').map {x -> x.toInt()};
+    println("$a $b");
+}
+/*
 fun main() {
     var (n,a,b) = readLine()!!.split(' ').map {it.toInt()}
     var f = (0 .. n - 1).toMutableList()
@@ -17,4 +23,4 @@ fun main() {
     }
     return
 }
-
+*/

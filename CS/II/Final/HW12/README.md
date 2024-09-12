@@ -5,7 +5,7 @@
 > 以 `Windows` 系統示範
 
 ```bash
-g++ main.cpp -o main.exe -O2 -g -std=c++20 -static-libgcc -DLOCAL
+g++ main.cpp -o main.exe -O2 -g -std=c++17 -static-libgcc
 ```
 
 執行
@@ -31,3 +31,8 @@ call main.exe
 `X` **輸掉的怪物**
 
 > ~~是說到現在還沒有人能打贏怪物喔~~
+
+
+### 作弊
+
+輸入 `K` 以顯示解答!

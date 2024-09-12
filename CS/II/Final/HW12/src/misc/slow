@@ -22,19 +22,6 @@
 #define debug(...) '*'
 #endif
 
-
-#ifdef cin
-template<class T>
-__fast_read& operator>>(__fast_read& fin,vector<T>&f) {
-    for(auto &&i : f) fin>>i;
-    return fin;
-}
-template<class T,class R>
-__fast_read& operator>>(__fast_read& fin,pair<T,R>&x) {
-    fin>>x.first>>x.second;
-    return fin;
-}
-#else
 template<class T>
 istream& operator>>(istream& fin,vector<T>&f) {
     for(auto &&i : f) fin>>i;
@@ -45,7 +32,6 @@ istream& operator>>(istream& fin,pair<T,R>&x) {
     fin>>x.first>>x.second;
     return fin;
 }
-#endif
 template<class T>
 ostream& operator<<(ostream& fout,vector<T>&f) {
     for(auto &i : f) fout<<i<<" ";

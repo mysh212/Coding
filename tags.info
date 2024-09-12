@@ -601,3 +601,7 @@ Zerojudge-n414.cpp	BFS
 Nearly-Shortest-Repeating-Substring.cpp	prime
 Zerojudge-b966-4.cpp	sort
 Zerojudge-b966-4.cpp	sweep-line
+Frog.py	fast-power
+Frog.py	math
+Count-Arithmetic-Subarrays.py	two-pointer
+Bonus-EXP.cpp	DP
