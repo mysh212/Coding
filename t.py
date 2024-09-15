@@ -1,19 +1,20 @@
 # Author : ysh
 # 2024/09/11 Wed 22:19:22
-from core.general import *
+# from core.general import *
 
-n = [i.replace('^','').replace('*','').replace('(','').replace(')','').replace('-','+-').replace('++-','+-').replace(' ','').replace('\t','') for i in input().split(')(')]
+token = input()
+n = [i.replace('^','').replace('*','').replace('(','').replace(')','').replace('-','+-').replace('++-','+-').replace(' ','').replace('\t','') for i in token.split(')(')]
 
-print(n)
+# print(n)
 
 p = set([i for i in ''.join(n) if not i.isdigit() and i not in ['+','-','*','^']])
-print(p)
+# print(p)
 
 t = 0
 tmp = {}
 for i in p: tmp[i] = t;t = t + 1;
 
-print(tmp)
+# print(tmp)
 p = tmp
 
 m = len(p)
@@ -55,7 +56,8 @@ def get_item(x: str) -> list:
         if x[i].isdigit() or x[i] == '-': c = c + x[i];
         # elif i == len(x) - 1: x = '';break;
         else: x = x[i:];break;
-    c = 1 if c == '' else int(c)
+    # debug(c)
+    c = [1, -1][c == '-'] if c == '' or c == '-' else int(c)
 
     ans = []
     # info([c, x])
@@ -78,25 +80,25 @@ def get_item(x: str) -> list:
 
 def text_rollback(x: list) -> str:
     ans = []
-    warning(x)
+    # warning(x)
     for i in x[1]:
         ans.append(f'{i[0]}^{i[1]}' if i[1] != 1 else str(i[0]))
-    return ((str(x[0]) + '*') if x[0] != 1 else '') + '*'.join(ans)
+    return ((str(x[0]) + '*') if x[0] != 1 else '') + ''.join(ans)
 
 def rollback(x: list) -> str:
-    return ' + '.join([text_rollback(j) for j in x]).replace(' + -',' - ').replace(' - 1*',' - ').replace('*','').replace('^','')
+    return ' + '.join([text_rollback(j) for j in x]).replace(' + -',' - ').replace(' - 1*',' - ')
 
 now = [[1,[]]]
-debug([split_item(i) for i in n])
+# debug([split_item(i) for i in n])
 for i in [[get_item(j) for j in split_item(i)] for i in n]:
     # now = multi(now,i)
     tmp = []
     for j in range(len(now)):
         for k in range(len(i)):
-            debug([now[j], i[k]])
+            # debug([now[j], i[k]])
             tmp.append(multi(now[j], i[k]))
     now = (tmp)
-debug(now)
+# debug(now)
 
 for i in range(len(now)):
     now[i] = ([now[i][0], sorted(now[i][1])])
@@ -125,4 +127,5 @@ for i in ans:
 
 # now = ans
 
-print(rollback(now))
+print((rollback(now) if not (token.find('*') == -1 and token.find('^') == -1) else rollback(now).replace('*','').replace('^','')).replace(' ',''))
+quit()
