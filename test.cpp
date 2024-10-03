@@ -13,15 +13,16 @@ int main() {
     vector<int>f(n);
     for(int &i : f) i = rand();
 
-    heap<int>t;
+    heap<int, less<int>>t;
     for(int &i : f) t.push(i);
 
     f = vector<int>(0);
     while(!t.empty()) {
-        f.push_back(t.root -> n);
+        f.push_back(t.top());
+        cerr<<t.top()<<" ";
         t.pop();
     }
 
-    assert(is_sorted(f.begin(),f.end()));
+    assert(is_sorted(f.rbegin(),f.rend()));
     return 0;
 }

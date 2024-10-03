@@ -36,7 +36,7 @@ struct heap{
         if(l <= r) push(x, root -> left), ans = root -> left;
         else push(x, root -> right), ans = root -> right;
 
-        if(root -> n > ans -> n) swap(root -> n, ans -> n);
+        if(cp(root -> n, ans -> n)) swap(root -> n, ans -> n);
     }
     void push(T x) {_size++; return push(x, root);}
 
