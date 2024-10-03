@@ -80,6 +80,7 @@
         "tree": "cpp",
         "slow": "cpp",
         "table": "cpp",
-        "core": "cpp"
+        "core": "cpp",
+        "heap": "c"
     }
 }
