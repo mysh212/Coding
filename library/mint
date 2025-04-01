@@ -1,0 +1,223 @@
+
+struct mint{
+    bool neg = 0;
+    deque<short>f;
+    friend istream& operator>>(istream& in, mint& x) {
+        string tmp;
+        in >> tmp;
+        x = mint(tmp);
+        return in;
+    }
+    friend ostream& operator<<(ostream& out, mint x) {
+        if(x.f.empty()) return out << 0;
+        if(x.f.at(0) == 0 and x.f.size() == 1) return out << 0;
+        if(x.neg) outt(-);
+        for(int i = x.f.size() - 1;i>=0;i--) {
+            out(x.f.at(i));
+        }
+        return out;
+    }
+    mint(string tmp) {
+        if(tmp.at(0) == '-') tmp = tmp.substr(1, tmp.size() - 1), neg = 1;
+        reverse(all(tmp));
+        for(char &i : tmp) {
+            if(i == ' ' || i == '\t' || i == '\n') continue;
+            assert(isdigit(i));
+            f.push_back(i & 15);
+        }
+    }
+    mint(long long tmp = 0) {
+        while(tmp != 0) {
+            f.push_back(tmp % 10);
+            tmp = tmp / 10;
+        }
+        // reverse(f.begin(),f.end());
+    }
+    friend mint operator-(mint x) {
+        mint ans = x;
+        ans.neg ^= 1;
+        return ans;
+    }
+    mint operator=(mint x) {
+        neg = x.neg;
+        f = x.f;
+        return *this;
+    }
+    mint operator=(auto x) {
+        return *this = mint(x);
+    }
+    mint operator+(mint x) {
+        if(neg) return x - (-(*this));
+        if(x.neg) return *this - (-x);
+        mint aans;
+        short hold = 0;
+        int a = f.size();
+        int b = x.f.size();
+        int n = max(a,b);
+        aans.f.resize(n);
+        for(int i = 0;i<n;i++) {
+            int l = (i >= a ? 0 : f.at(i));
+            int r = (i >= b ? 0 : x.f.at(i));
+            int ans = l + r + hold;
+            if(ans >= 10) hold = 1, aans.f.at(i) = ans - 10;
+            else hold = 0, aans.f.at(i) = ans;
+        }
+        if(hold != 0) aans.f.push_back(hold);
+        return aans;
+    }
+    mint operator-(mint x) {
+        if(neg) return -(-(*this) + x);
+        if(x.neg) return *this + (-x);
+        if(*this < x) return -(x - *this);
+        bool hold = 0;
+        int a = f.size();
+        int b = x.f.size();
+        int n = max(a, b);
+        mint aans;
+        aans.f.resize(n);
+        re(i, n) {
+            int l = (i >= a ? 0 : f.at(i));
+            int r = (i >= b ? 0 : x.f.at(i));
+            int ans = l - r - (hold ? 1 : 0);
+            // exit(1);
+            if(ans < 0) hold = 1, aans.f.at(i) = ans + 10;
+            else hold = 0, aans.f.at(i) = ans;
+        }
+        while(aans.f.back() == 0 && aans.f.size() > 1) aans.f.pop_back();
+        return aans;
+    }
+    static pair<mint, mint> div(mint l, mint r) {
+        if(l.neg || r.neg) {
+            auto ans = (l.neg ? div(-l, r) : div(l, -r));
+            if(ans.second != 0) ans.first = -ans.first - 1;
+            return ans;
+        }
+        assert(r != 0);
+        int a = l.f.size();
+        int b = r.f.size();
+        if(a < b) return {mint(0), l};
+        r = r.upper(a - b + 1);
+        mint ans = 0;
+        re(a - b + 1) {
+            // cerr<<1;
+            ans = ans.upper(1);
+            r.f.pop_front();
+            // debug(l,r);
+            // outs(l), outl(r);
+            // debug(l >= r);
+            while(l >= r) l = l - r, ans = ans + 1;
+        }
+        return {ans, l};
+    }
+    mint operator/(mint x) {
+        if(neg and x.neg) return ((-(*this)) / (-x));
+
+        assert(x != 0);
+        int a = f.size();
+        int b = x.f.size();
+        return div(*this, x).first;
+    }
+    mint operator%(mint x) {
+        if(neg and x.neg) return -((-(*this)) % (-x));
+        if(neg) {
+            mint ans = ((x) - ((-(*this)) % (x)));
+            return (ans >= x ? ans - x : ans);
+        }
+        if(x.neg) {
+            mint ans = ((-x) - (*this % (-x)));
+            return -(ans >= -x ? ans + x : ans);
+        }
+
+        return div(*this, x).second;
+    }
+    inline bool operator<(const mint x) const {
+        if(neg && !x.neg) return 1;
+        if(!neg && x.neg) return 0;
+        if(neg && x.neg) return -x < -(*this);
+        int a = f.size();
+        int b = x.f.size();
+        if(a > b) return 0;
+        if(a < b) return 1;
+        for(int i = a - 1;i>=0;i--) {
+            if(f.at(i) < x.f.at(i)) return 1;
+            if(f.at(i) > x.f.at(i)) return 0;
+        }
+        return 0;
+    }
+    inline void trim() {
+        while(f.size() > 1 and f.back() == 0) f.pop_back();
+        return;
+    }
+    mint times(int t) {
+        assert(0 <= t and t <= 9);
+        short hold = 0;
+        mint ans = *this;
+        repo(&i, ans.f) {
+            i = (i * t) + hold;
+            hold = i / 10;
+            i = i % 10;
+        }
+        if(hold != 0) ans.f.push_back(hold);
+        ans.trim();
+        // debug(*this, '*', t, ans);
+        // outs(*this);
+        // outs(t);
+        // outl(ans);
+        return ans;
+    }
+    mint upper(int t) {
+        mint ans = *this;
+        re(t) {
+            ans.f.push_front(0);
+        }
+        ans.trim();
+        // outs()
+        return ans;
+    }
+    mint operator*(mint x) {
+        if(neg) return -((-(*this)) * x);
+        if(x.neg) return -(*this * (-x));
+        mint ans = 0;
+        int t = 0;
+        repo(&i, x.f) {
+            ans += this->times(i).upper(t++);
+        }
+        ans.trim();
+        return ans;
+    }
+    inline bool operator==(const mint x) const {
+        if(neg ^ x.neg) return 0;
+        if(f != x.f) return 0;
+        return 1;
+    }
+    inline bool operator!=(const mint x) const {
+        return !(*this == x);
+    }
+    inline bool operator>(const mint x) const {
+        return !((*this < x) || (*this == x));
+    }
+    inline bool operator<=(const mint x) const {
+        return (*this < x) || (*this == x);
+    }
+    inline bool operator>=(const mint x) const {
+        return (*this > x) || (*this == x);
+    }
+    inline mint operator++() {
+        return *this += 1;
+    }
+    inline mint operator--() {
+        return *this -= 1;
+    }
+    inline mint operator+=(mint x) {
+        return *this = *this + x;
+    }
+    inline mint operator-=(mint x) {
+        return *this = *this - x;
+    }
+    inline mint operator*=(mint x) {
+        return *this = *this * x;
+    }
+    // inline mint operator/=(mint x) {
+    //     return *this = *this / x;
+    // }
+};

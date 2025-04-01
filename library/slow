@@ -12,9 +12,9 @@
 #define rall(i) i.rbegin(),i.rend()
 #define vc vector
 #define nl cout<<"\n"
-#define out(i) cout<<i
-#define outs(i) cout<<i<<" "
-#define outl(i) cout<<i<<"\n"
+#define out(i) cout<<(i)
+#define outs(i) cout<<(i)<<" "
+#define outl(i) cout<<(i)<<"\n"
 #define outt(i) out(#i)
 #ifdef LOCAL
 #include<debug.h>
@@ -36,23 +36,23 @@ __fast_read& operator>>(__fast_read& fin,pair<T,R>&x) {
 }
 #else
 template<class T>
-istream& operator>>(istream& fin,vector<T>&f) {
+std::istream& operator>>(std::istream& fin,std::vector<T>&f) {
     for(auto &&i : f) fin>>i;
     return fin;
 }
 template<class T,class R>
-istream& operator>>(istream& fin,pair<T,R>&x) {
+std::istream& operator>>(std::istream& fin,std::pair<T,R>&x) {
     fin>>x.first>>x.second;
     return fin;
 }
 #endif
 template<class T>
-ostream& operator<<(ostream& fout,vector<T>&f) {
+std::ostream& operator<<(std::ostream& fout,std::vector<T>&f) {
     for(auto &i : f) fout<<i<<" ";
     return fout;
 }
 template<class T,class R>
-ostream& operator<<(ostream& fout,pair<T,R>&x) {
+std::ostream& operator<<(std::ostream& fout,std::pair<T,R>&x) {
     fout<<x.first<<" "<<x.second;
     return fout;
 }
