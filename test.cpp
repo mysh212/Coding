@@ -1,150 +1,69 @@
+// Author : ysh
+// 2025/05/24 Sat 21:08:32
 #include<bits/stdc++.h>
-
 using namespace std;
+// #include<heap>
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
-typedef long long LL;
-typedef pair<LL, LL> pii;
+    printf("Please input starting city number: ");
+    int a;scanf("%d", &a);a--;
+    printf("Please input destination city number: ");
+    int b;scanf("%d", &b);b--;
+    // The shortest distance from 1 to 6 is 13 
+    // The shortest path: 1 > 2 > 3 > 5 > 4 > 6
 
-class num
-{
-    public:
-        LL a[2005];
-        bool neg=0;
-        num(){}
-        num(string s){
-            memset(a, 0, sizeof(a));
-            for(int i=s.size()-1, p=0; i>=0; i--, p++){
-                a[p] = s[i] - '0';
-            }
+    int n, m;n = m = 0;
+    vector<vector<pair<int,int>>>f;
+    ifstream in("0.in");
+    {
+        vector<array<int, 3>>pre;
+        int a, b, c;
+        while(in >> a >> b >> c) {
+            n = max({n, a, b});
+            m++;
+            a--;b--;
+            pre.push_back({a, b, c});
+            pre.push_back({b, a, c});
         }
-        bool operator==(const num& n2) const{
-            for(int i=2000; i>=0; i--){
-                if(a[i] != n2.a[i]){
-                    return 0;
-                }
-            }
-            return 1;
-        }
-        bool operator>(const num& n2) const{
-            for(int i=2000; i>=0; i--){
-                if(a[i] != n2.a[i]){
-                    return a[i] > n2.a[i];
-                }
-            }
-            return 0;
-        }
-        bool operator<(const num& n2) const{
-            for(int i=2000; i>=0; i--){
-                if(a[i] != n2.a[i]){
-                    return a[i] < n2.a[i];
-                }
-            }
-            return 0;
-        }
-        bool operator<=(const num& n2) const {
-            return !(*this > n2);
-        }
-        bool operator>=(const num& n2) const {
-            return !(*this < n2);
-        }
-        void shiftl(){
-            for(int i=0; i<2000; i++){
-                a[i] = a[i+1];
-            }
-        }
-        num operator+(const num& n2) const{
-            num n3("0");
-            for(int i=0; i<=2000; i++){
-                n3.a[i] = a[i] + n2.a[i];
-            }
-            return n3.tidy();
-        }
-        num operator-(const num& nin) const{
-            num n1=*this, n2=nin, n3("0");
-            if(n1 < n2){
-                n3.neg = 1;
-                swap(n1, n2);
-            }
-            for(int i=0; i<=2000; i++){
-                if(n1.a[i] < n2.a[i]){
-                    n1.a[i] += 10;
-                    n1.a[i+1] -= 1;
-                }
-                n3.a[i] = n1.a[i] - n2.a[i];
-            }
-            return n3.tidy();
-        }
-        num operator*(const num& n2) const{
-            num n1=*this, n3("0");
-            for(int i=0; i<=1000; i++){
-                for(int j=0; j<=1000; j++){
-                    n3.a[i+j] += n1.a[i] * n2.a[j];
-                }
-            }
-            return n3.tidy();
-        }
-        num operator/(const num& nin) const{
-            num n1=*this, n2=nin, n3("0"), ten("10"), zero("0"), one("1");
-            LL cnt=1;
-            while(n2*ten <= n1){
-                n2 = n2 * ten;
-                cnt++;
-            }
-            while(cnt--){
-                n3 = n3 * ten;
-                while(n2 <= n1){
-                    n1 = n1 - n2;
-                    n3 = n3 + one;
-                }
-                n2.shiftl();
-            }
-            return n3.tidy();
-        }
-        num operator%(const num& n2) const{
-            num n1=*this;
-            return n1 - (n1/n2) * n2;
-        }
-        num& tidy(){
-            for(int i=0; i<=2000; i++){
-                if(a[i] >= 10){
-                    a[i+1] += a[i] / 10;
-                    a[i] %= 10;
-                }
-            }
-            return *this;
-        }
-        void print(){
-            if(neg){
-                cout << '-';
-            }
-            bool first = 1;
-            for(int i=2000; i>=0; i--){
-                if(first && a[i]){
-                    first = 0;
-                }
-                if(!first){
-                    cout << a[i];
-                }
-            }
-            cout << (first ? "0" : "") << ' ';
-        }
-};
-
-int main()
-{
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    int t;
-    string s1, s2;
-    cin >> t;
-    while(t--){
-        cin >> s1 >> s2;
-        num n1(s1), n2(s2);
-        (n1 + n2).print();
-        (n1 - n2).print();
-        (n1 * n2).print();
-        (n1 / n2).print();
-        (n1 % n2).print();
-        cout << '\n';
+        f.resize(n);
+        for(auto &i : pre) f.at(i[0]).push_back({i[1], i[2]});
     }
+
+    vector<bool>mark(n);
+    vector<int>re(n);
+    priority_queue<array<int, 3>, vector<array<int, 3>>, greater<array<int, 3>>>q;
+    q.push({0, -1, a});
+    while(!q.empty()) {
+        auto now = q.top(); q.pop();
+        int l = now[0];
+        int last = now[1];
+        int d = now[2];
+        
+        if(mark.at(d)) continue;
+        mark.at(d) = 1;
+        re.at(d) = last;
+
+        if(d == b) {
+            printf("The shortest distance from %d to %d is %d\n", a + 1, b + 1, l);
+            break;
+        }
+        
+        for(auto &i : f.at(d)) {
+            q.push({l + i.second, d, i.first});
+        }
+    }
+
+    // for(int &i : re) cout<<i<<" ";
+
+    vector<int>ans;
+    int d = b;
+    while(d != a) ans.push_back(d), d = re.at(d);
+
+    reverse(ans.begin(), ans.end());
+    printf("The shortest path: %d", a + 1);
+    for(int &i : ans) printf(" > %d",i + 1);
+
     return 0;
 }

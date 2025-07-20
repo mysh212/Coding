@@ -217,6 +217,14 @@ struct mint{
     inline mint operator*=(mint x) {
         return *this = *this * x;
     }
+    template<typename T>
+    operator T() {
+        T now = 0;
+        for(short &i : f) {
+            now = (now * 10) + i;
+        }
+        return now;
+    }
     // inline mint operator/=(mint x) {
     //     return *this = *this / x;
     // }

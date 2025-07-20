@@ -81,6 +81,8 @@
         "slow": "cpp",
         "table": "cpp",
         "core": "cpp",
-        "heap": "c"
+        "heap": "c",
+        "mint": "cpp",
+        "fib": "cpp"
     }
 }
