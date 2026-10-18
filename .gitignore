@@ -1,6 +1,7 @@
 clock.exe 
 eo.exe
 *.exe
+*.o
 *.in
 *.out
 *.tmp
