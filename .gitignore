@@ -12,3 +12,4 @@ export-md/export-md
 export-md/__pycache__
 *.jar
 core
+*.dSYM
