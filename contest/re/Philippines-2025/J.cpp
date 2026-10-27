@@ -29,31 +29,35 @@ int main() {
 
     vc<bool>mark(a);
     function<bool(int)> check = [&] (int x) {
+        // if(in.at(x) < 3) return false;
+
         queue<pair<int, int>>q;
-        vc<bool>mk(a);
-        q.push({0, x});
+        vc<int>mk(a);
+        for(int &i : f.at(x)) q.push({-1, i});
 
         int ans = 0;
-        while(!mk.empty()) {
+        while(!q.empty()) {
             auto [l, d] = q.front(); q.pop();
-
-            if(mk.at(d)) continue;
-            mk.at(d) = 1;
-
-            if(ans >= 2) break;
-
-            if(l >= 2) {
-                ans++;
+            
+            if(l != -1) {
+                mk.at(l)++;
+                if(mk.at(l) == 2) ans++;
                 continue;
             }
+            
+            if(ans >= 2) break;
 
-            for(int &i : f.at(d)) q.push({l + 1, i});
+            for(int &i : f.at(d)) q.push({d, i});
         }
 
-        return ans >= 2;
+	debug(x, mk);
+
+        if(ans >= 2) return true;
+	return false;
     };
 
     re(i, a) ok.at(i) = ok.at(i) || check(i);
+    debug(ok);
 
     ct = 0;
     re(i, a) if(ok.at(i)) ct++;
