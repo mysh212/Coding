@@ -1,126 +1,71 @@
 // Author : ysh
-// 2026/10/31 Sat 19:01:18
-#include<bits/stdc++.h>
-using namespace std;
+// 2026/11/12 Thu 12:40:49
+#include<iostream>
+#include<cassert>
+#include<mpi.h>
 #include<slow>
+using namespace std;
+#define world MPI_COMM_WORLD
+vector<int>f;
+inline deque<int> mg(int l, int r) {
+    if(l == r) return {f.at(l)};
 
-struct Edge {
-    int u, v, w;
-    inline friend istream& operator>>(istream& in, Edge &x) {
-        in>>x.u>>x.v>>x.w;
-        return in;
-    }
-};
+    int mid = (l + r) >> 1;
 
-std::vector<int> mst_edge_queries(int n, const std::vector<Edge> &edges, const std::vector<std::vector<int>> &queries) {
-// Author : ysh
-// 2026/10/31 Sat 19:01:18
-struct mgr {
-    int n;
-    vector<int>color;
-    vector<int>mark;
+    auto ll = mg(l, mid);
+    auto rr = mg(mid + 1, r);
 
-    mgr(int n = 0):
-        n(n), color(n) {
-            iota(color.begin(), color.end(), 0);
-        };
+    #undef nl
+    int nl, nr;nl = nr = 0;
+    int now = 0;
 
-    inline int ff(int x) {
-        if(color.at(x) == x) return x;
-        return color.at(x) = ff(color.at(x));
-    }
-
-    inline void rollback() {
-        for(auto &i : mark) color.at(i) = i;
-        return;
-    }
-
-    inline void mg(int a, int b) {
-        return mark.push_back(ff(a)), color.at(ff(a)) = ff(b), void();
-    }
-};
-    int a, b;a = n, b = edges.size();
-
-    // color = _color = vector<int>(a);
-    // iota(color.begin(), color.end(), 0);
-    // iota(_color.begin(), _color.end(), 0);
-
-    mgr mgrrr(b);
-
-    int t = 0;
-    vector<array<int, 4>>f(b);
-    // for(auto &i : f) cin>>i[0]>>i[1]>>i[2], i[0]--, i[1]--, i[3] = t++;
-    for(int i = 0;i<b;i++) f.at(i) = {edges.at(i).u - 1, edges.at(i).v - 1, edges.at(i).w, t++};
-
-    vector<vector<array<int, 3>>>v(a);
-    for(auto &[l, r, t, d] : f) v.at(l).push_back({r, t, d}), v.at(r).push_back({l, t, d});
-
-    vector<int>mark(a, INT_MAX), mk(a);
-    vector<bool>ok(b);
-    using T = array<int, 4>;
-    priority_queue<T, vector<T>, greater<T>>q;
-    q.push({0, -1, 0, -1});
-    while(!q.empty()) {
-        auto [l, x, y, k] = q.top(); q.pop();
-
-        if(mark.at(y) < l) continue;
-        if(k != -1) ok.at(k) = 1;
-        if(mark.at(y) == l) {
-            mgrrr.mg(mk.at(y), k);
-            continue;
-        }
-        mark.at(y) = l;
-        mk.at(y) = k;
-
-        #undef nl
-        for(auto &[nd, nl, nk] : v.at(y)) {
-            if(nd == x) continue;
-            q.push({nl, y, nd, nk});
+    deque<int>f(r - l + 1);
+    while(!(nl == mid - l + 1 && nr == r - mid)) {
+        if(nl == mid - l + 1) f.at(now++) = rr.at(nr++);
+        else if(nr == r - mid) f.at(now++) = ll.at(nl++);
+        else {
+            if(ll.at(nl) < rr.at(nr)) f.at(now++) = ll.at(nl++);
+            else f.at(now++) = rr.at(nr++);
         }
     }
-    debug(ok);
-    debug(mark);
-    re(i, b) mgrrr.ff(i);
-    debug(mgrrr.color);
 
-    vector<int>aans;
-    mgr tp(a);
-    for(auto &i : queries) {
-        int ans = 0;
-
-        tp.rollback();
-        for(auto n : i) {
-            n--;
-
-            if(!ok.at(n)) continue;
-            if(tp.ff(f.at(n)[0]) == tp.ff(f.at(n)[1])) continue;
-
-            ans++;
-            tp.mg(f.at(n)[0], f.at(n)[1]);
-            // s.insert(mgrrr.ff(n));
-        }
-        aans.push_back(ans);
-    }
-    return aans;
+    return f;
 }
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
+int main(int ac, char* as[]) {
+    // ios::sync_with_stdio(false);
+    // cin.tie(0);
 
-    int a, b;cin>>a>>b;
-    vector<Edge>f(b);
-    for(auto &i : f) cin>>i;
+    MPI_Init(&ac, &as);
 
-    int q;cin>>q;
-    vector<vector<int>>qq(q);
-    for(auto &i : qq) {
-        int n;cin>>n;
-        while(n--) {
-            int n;cin>>n;
-            i.push_back(n);
-        }
+    int rank, ws;
+
+    MPI_Comm_rank(world, &rank);
+    MPI_Comm_size(world, &ws);
+
+    {
+        int n;
+        if(rank == 0) cin>>n;
+
+        MPI_Bcast(&n, 1, MPI_INT, 0, world);
+
+        vector<int>f(n);
+        if(rank == 0) cin>>f;
+        while(n % ws) n++, f.push_back(-1);
+
+        int m = n / ws;
+        vector<int>v(m);
+
+        MPI_Scatter(f.data(), m, MPI_INT, v.data(), m, MPI_INT, 0, world);
+
+        ::f = v;
+
+        auto p = mg(0, m - 1);
+        vector<int>ans(p.begin(), p.end());
+
+        MPI_Gather(ans.data(), m, MPI_INT, f.data(), m, MPI_INT, 0, world);
+
+        outl(f);
     }
 
-    for(int &i : mst_edge_queries(a, f, qq)) cout<<i<<"\n";
-    return 0;
+    MPI_Finalize();
 }
