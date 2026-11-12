@@ -13,3 +13,4 @@ export-md/__pycache__
 *.jar
 core
 *.dSYM
+.DS_Store

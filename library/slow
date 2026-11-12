@@ -25,21 +25,34 @@
 
 #ifdef cin
 template<class T>
+__fast_read& operator>>(__fast_read& fin,vector<T>&f);
+template<class T,class P>
+__fast_read& operator>>(__fast_read& fin,pair<T,P>&x);
+template<class T,std::size_t P>
+__fast_read& operator>>(__fast_read& fin,std::array<T,P>&x);
+
+template<class T>
 __fast_read& operator>>(__fast_read& fin,vector<T>&f) {
     for(auto &&i : f) fin>>i;
     return fin;
 }
-template<class T,class R>
-__fast_read& operator>>(__fast_read& fin,pair<T,R>&x) {
+template<class T,class P>
+__fast_read& operator>>(__fast_read& fin,pair<T,P>&x) {
     fin>>x.first>>x.second;
+    return fin;
+}
+template<class T,std::size_t P>
+__fast_read& operator>>(__fast_read& fin,std::array<T,P>&x) {
+    re(i, P) fin>>x[i];
     return fin;
 }
 #else
 template<class T>
 std::istream& operator>>(std::istream& fin,std::vector<T>&f);
-
 template<class T,class P>
 std::istream& operator>>(std::istream& fin,std::pair<T,P>&x);
+template<class T,std::size_t P>
+std::istream& operator>>(std::istream& fin,std::array<T,P>&x);
 
 template<class T>
 std::istream& operator>>(std::istream& fin,std::vector<T>&f) {
@@ -51,10 +64,14 @@ std::istream& operator>>(std::istream& fin,std::pair<T,P>&x) {
     fin>>x.first>>x.second;
     return fin;
 }
+template<class T,std::size_t P>
+std::istream& operator>>(std::istream& fin,std::array<T,P>&x) {
+    re(i, P) fin>>x[i];
+    return fin;
+}
 #endif
 template<class T>
 std::ostream& operator<<(std::ostream& fout,std::vector<T>&f);
-
 template<class T,class P>
 std::ostream& operator<<(std::ostream& fout,std::pair<T,P>&x);
 
@@ -66,5 +83,10 @@ std::ostream& operator<<(std::ostream& fout,std::vector<T>&f) {
 template<class T,class P>
 std::ostream& operator<<(std::ostream& fout,std::pair<T,P>&x) {
     fout<<x.first<<" "<<x.second;
+    return fout;
+}
+template<class T,std::size_t P>
+std::ostream& operator<<(std::ostream& fout,std::array<T, P>&x) {
+    re(i, P) fout<<x[i]<<" \n"[i == P - 1];
     return fout;
 }
